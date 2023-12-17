@@ -65,7 +65,7 @@ export default async function AppHeader() {
 }
 function RenderHeaderItems(props: any) {
 	return (
-		<ul className="menu menu-horizontal bg-base-200 rounded-box">
+		<ul className="menu menu-horizontal rounded-box">
 			{props.items.map((r: any) => {
 				return (
 					<Link href={`/${r.url}`} key={r.url}>

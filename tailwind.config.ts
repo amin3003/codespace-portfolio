@@ -8,13 +8,12 @@ const config: Config = {
 	],
 	daisyui: {
 		themes: [
-			'dark',
-			// {
-			// 	dark: {
-			// 		// ...require('daisyui/src/theming/themes')['dark'],
-			// 		primary: '#fa88fa',
-			// 	},
-			// },
+			{
+				dark: {
+					...require('daisyui/src/theming/themes')['dark'],
+					primary: '#fafa99',
+				},
+			},
 		],
 	},
 	theme: {
