@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@azrico/global": "^1.3.67",
 		"@azrico/object": "^1.4.91",
 		"bootstrap-icons": "^1.11.1",
 		"next": "^14.0.1",
