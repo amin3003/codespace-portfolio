@@ -24,7 +24,7 @@ export default function RootLayout({ children, params: { locale } }: any) {
 		<html lang={locale} data-theme="draclua">
 			<body className={inter.className}>
 				<AppHeader />
-				<main className="flex-1 overflow-y-auto min-h-screen">{children}</main>
+				<main className="flex-1 overflow-y-auto min-h-screen ">{children}</main>
 				<Footer />
 			</body>
 		</html>
