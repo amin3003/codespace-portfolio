@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-
+import './globals.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import AppHeader from '@c/Header/AppHeader';
@@ -18,15 +18,6 @@ export const metadata: Metadata = {
 	description: '',
 };
 
-export default function RootLayout({ children, params: { locale } }: any) {
-	if (!locales.includes(locale as any)) notFound();
-	return (
-		<html lang={locale} data-theme="draclua">
-			<body className={inter.className}>
-				<AppHeader />
-				<main className="flex-1 overflow-y-auto min-h-screen">{children}</main>
-				<Footer />
-			</body>
-		</html>
-	);
+export default function RootLayout({ children }: any) {
+	return children;
 }
