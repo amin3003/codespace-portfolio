@@ -9,9 +9,10 @@ const config: Config = {
 	daisyui: {
 		themes: [
 			{
-				dark: {
-					...require('daisyui/src/theming/themes')['dark'],
-					primary: '#fafa99',
+				dracula: {
+					...require('daisyui/src/theming/themes')['dracula'],
+
+					primary: '#a991f7',
 				},
 			},
 		],

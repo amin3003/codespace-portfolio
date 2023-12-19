@@ -33,25 +33,12 @@ export default async function AppHeader() {
 		'header_categories',
 		initial_header_categories
 	);
+
 	return (
 		<>
-			<nav className="flex flex-row p-2 bg-main-200">
-				<div className="flex flex-row gap-1 items-center">
-					<RenderHeaderItems items={final_topbar_left_buttons} />
-				</div>
-				<div className="flex-1"></div>
-				<div className="flex flex-row items-center gap-2">
-					<input
-						type="text"
-						placeholder="جست و جوی محصولات"
-						className="input w-full max-w-xs"
-					/>
-				</div>
-			</nav>
-
 			<header
 				style={{ top: -1 }}
-				className="sticky z-50 bg-main-200 p-3 w-full flex flex-row shadow-md gap-1"
+				className="sticky z-50 bg-transparent p-3 w-full flex flex-row shadow-md gap-1"
 			>
 				<div className="flex-1">
 					<RenderHeaderItems items={final_header_left_buttons} />
