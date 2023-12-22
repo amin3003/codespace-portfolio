@@ -40,6 +40,18 @@
     "@azrico/types" "^1.0.2"
     lodash.clonedeep "^4.5.0"
 
+"@azrico/string@^1.2.91":
+  version "1.2.91"
+  resolved "https://registry.yarnpkg.com/@azrico/string/-/string-1.2.91.tgz#873adb6a58370cbefebe89ee620618ba36377416"
+  integrity sha512-QBgkucvRaTUdaU2ADnzs/PglsTqcRhOdbvEWu2Hf7pvXUYg/ePF8RUswB8yQm1OELZveJ8SsdhtI4nzan9duWw==
+  dependencies:
+    dompurify "^2.3.10"
+    he "^1.2.0"
+    lz-string "^1.5.0"
+    persian-rex "^2.3.3"
+    search-query-parser "^1.6.0"
+    truncate-utf8-bytes "^1.0.2"
+
 "@azrico/types@^1.0.2":
   version "1.0.4"
   resolved "https://registry.npmjs.org/@azrico/types/-/types-1.0.4.tgz"
@@ -835,6 +847,11 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+dompurify@^2.3.10:
+  version "2.4.7"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.4.7.tgz#277adeb40a2c84be2d42a8bcd45f582bfa4d0cfc"
+  integrity sha512-kxxKlPEDa6Nc5WJi+qRgPbOAbgTpSULL+vI3NUXsZMlkJxTqYI9wg5ZTay2sFrdZRWHPWNi+EdAhcJf81WtoMQ==
+
 electron-to-chromium@^1.4.601:
   version "1.4.614"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.614.tgz"
@@ -1427,6 +1444,11 @@ hasown@^2.0.0:
   dependencies:
     function-bind "^1.1.2"
 
+he@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
+  integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
 ignore@^5.2.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.3.0.tgz"
@@ -1811,6 +1833,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lz-string@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.5.0.tgz#c1ab50f77887b712621201ba9fd4e3a6ed099941"
+  integrity sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==
+
 merge-options@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/merge-options/-/merge-options-3.0.4.tgz"
@@ -2100,6 +2127,11 @@ path-type@^4.0.0:
   resolved "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
+persian-rex@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/persian-rex/-/persian-rex-2.3.3.tgz#94ea14293959fa22d7c99fb374a07569300530f2"
+  integrity sha512-XjMb092X/4JQJ1aDjNLxnaREdmvWbTecPj7R/caD2wgO6bezC8GTCK8AeaJriVa039vflwoA3X2X40OQh5pr4g==
+
 picocolors@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/picocolors/-/picocolors-1.0.0.tgz"
@@ -2369,6 +2401,11 @@ scheduler@^0.23.0:
   dependencies:
     loose-envify "^1.1.0"
 
+search-query-parser@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/search-query-parser/-/search-query-parser-1.6.0.tgz#d69ade33f3685cae25613a70189b7b18970b46f1"
+  integrity sha512-bhf+phLlKF38nuniwLcVHWPArHGdzenlPhPi955CR3vm1QQifXIuPHwAffhjapojdVVzmv4hgIJ6NOX1d/w+Uw==
+
 semver@^6.3.1:
   version "6.3.1"
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
@@ -2586,6 +2623,13 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+truncate-utf8-bytes@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/truncate-utf8-bytes/-/truncate-utf8-bytes-1.0.2.tgz#405923909592d56f78a5818434b0b78489ca5f2b"
+  integrity sha512-95Pu1QXQvruGEhv62XCMO3Mm90GscOCClvrIUwCM0PYOXK3kaF3l3sIHxx71ThJfcbM2O5Au6SO3AWCSEfW4mQ==
+  dependencies:
+    utf8-byte-length "^1.0.1"
+
 ts-api-utils@^1.0.1:
   version "1.0.3"
   resolved "https://registry.npmjs.org/ts-api-utils/-/ts-api-utils-1.0.3.tgz"
@@ -2704,6 +2748,11 @@ use-intl@^3.3.2:
   dependencies:
     "@formatjs/ecma402-abstract" "^1.11.4"
     intl-messageformat "^9.3.18"
+
+utf8-byte-length@^1.0.1:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/utf8-byte-length/-/utf8-byte-length-1.0.4.tgz#f45f150c4c66eee968186505ab93fcbb8ad6bf61"
+  integrity sha512-4+wkEYLBbWxqTahEsWrhxepcoVOJ+1z5PGIjPZxRkytcdSUaNjIjBM7Xn8E+pdSuV7SzvWovBFA54FO0JSoqhA==
 
 util-deprecate@^1.0.2:
   version "1.0.2"

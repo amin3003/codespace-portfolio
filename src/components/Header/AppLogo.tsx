@@ -1,16 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function AppLogo() {
+export default function AppLogo(props: any) {
 	return (
-		<Link href={'/'}>
-			{/* <Image
-				className="aspect-square m-1 h-10 w-10 self-center"
-				src="/logo.png"
-				width={64}
-				height={64}
-				alt="applogo"
-			/> */}
-		</Link>
+		<a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+			{/* <img
+            src=""
+            className="h-8"
+            alt="chiztech logo"
+          /> */}
+			{props.text && (
+				<div>
+					<span className="self-center text-2xl font-semibold whitespace-nowrap text-orange-400">
+						Chiz
+					</span>
+					<span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white ml-1 text-lg">
+						|Tech
+					</span>
+				</div>
+			)}
+		</a>
 	);
 }
