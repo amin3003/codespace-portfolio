@@ -1,8 +1,4 @@
 import React from 'react';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import '../globals.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import AppHeader from '@c/Header/AppHeader';
 import Footer from '@c/Footer/Footer';
 import { notFound } from 'next/navigation';
