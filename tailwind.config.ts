@@ -7,15 +7,7 @@ const config: Config = {
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	daisyui: {
-		themes: [
-			{
-				dracula: {
-					...require('daisyui/src/theming/themes')['dracula'],
-
-					primary: '#a991f7',
-				},
-			},
-		],
+		themes: ['light', 'dark', 'dracula'],
 	},
 	theme: {
 		screens: {
@@ -33,10 +25,6 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [
-		require('flowbite/plugin'),
-		require('@tailwindcss/typography'),
-		require('daisyui'),
-	],
+	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 };
 export default config;
