@@ -33,6 +33,10 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [require('@tailwindcss/typography'), require('daisyui')],
+	plugins: [
+		require('flowbite/plugin'),
+		require('@tailwindcss/typography'),
+		require('daisyui'),
+	],
 };
 export default config;
