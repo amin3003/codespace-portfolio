@@ -1,5 +1,11 @@
 {
-	"Home": {
+	"Index": {
 		"title": "HOŞGELDINIZ!"
+	},
+	"navbar": {
+		"home": "Ana Sayfa",
+		"about": "Hakkında",
+		"subjects": "Konular",
+		"portfolio": "Portfolio"
 	}
 }
