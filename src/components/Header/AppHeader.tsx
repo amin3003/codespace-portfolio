@@ -1,14 +1,14 @@
-import AppLogo from './AppLogo';
+import AppLogo from '@c/Header/AppLogo';
 import { gfilter } from '@azrico/global';
 import React, { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import Link from 'next/link';
+import Link from '@/navigation';
 import LangSwitcher from './LangSwitcher';
 
 const paths = [
 	{
 		name: 'home',
-		path: '/home',
+		path: '/',
 	},
 	{
 		name: 'about',
