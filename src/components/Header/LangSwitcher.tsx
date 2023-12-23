@@ -23,7 +23,7 @@ export default function LangSwitcher() {
 		if (FULL_RELOAD) {
 			setTimeout(() => {
 				location.reload();
-			}, 100);
+			}, 250);
 		}
 	}
 
