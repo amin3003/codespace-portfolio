@@ -18,7 +18,7 @@ export default function LangSwitcher() {
 	function switchLang(newLocale = 'en') {
 		router.push(pathname, { locale: newLocale }); //update the url to new url
 
-		//only pusing the new locale should be enough,
+		//only pushing the new locale should be enough,
 		//but to avoid very rare errors we fully reload the page
 		if (FULL_RELOAD) {
 			setTimeout(() => {
