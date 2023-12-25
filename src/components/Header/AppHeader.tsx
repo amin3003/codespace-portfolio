@@ -1,4 +1,5 @@
 import AppLogo from '@c/Header/AppLogo';
+import ScrollDetector from '@c/ScrollDetector/ScrollDetector';
 import { gfilter } from '@azrico/global';
 import React, { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
@@ -26,13 +27,23 @@ const paths = [
 
 export default function AppHeader() {
 	const t = useTranslations('navbar');
-	//TODO change background color to transparent when at top of page
 	//TODO better theme colors (bg-base-300)
 	return (
 		<header
+			id="header"
 			style={{ top: -1 }}
-			className="bg-base-200 sticky z-50 w-full flex-row shadow-md gap-1 p-3"
+			className={
+				//change background based on scroll
+				'bg-base-100 data-[is-top=true]:bg-transparent' +
+				//animated bg change
+				' transition-all duration-500' +
+				//header
+				' sticky z-50 w-full flex-row' +
+				//other classes
+				' data-[is-top=false]:shadow-md gap-1 p-3'
+			}
 		>
+			<ScrollDetector />
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
 				<AppLogo text={true} />
 
