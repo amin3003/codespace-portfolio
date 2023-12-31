@@ -19,10 +19,6 @@ const paths = [
 		name: 'contact',
 		path: '/contact',
 	},
-	{
-		name: 'portfolio',
-		path: '/portfolio',
-	},
 ];
 
 export default function AppHeader() {
@@ -34,34 +30,32 @@ export default function AppHeader() {
 			style={{ top: -1 }}
 			className={
 				//change background based on scroll
-				'bg-base-100 data-[is-top=true]:bg-transparent' +
+				'data-[is-top=false]:bg-base-100 bg-transparent' +
 				//animated bg change
 				' transition-all duration-500' +
 				//header
-				' sticky z-50 w-full flex-row' +
+				' navbar sticky' +
 				//other classes
-				' data-[is-top=false]:shadow-md gap-1 p-3'
+				' data-[is-top=false]:shadow-md'
 			}
 		>
 			<ScrollDetector />
-			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-				<AppLogo text={true} />
-
-				<div className="items-center justify-between hidden md:flex w-full md:w-auto">
-					{/*	https://daisyui.com/components/menu/ */}
-					<ul className="menu menu-vertical lg:menu-horizontal rounded-box">
-						{paths.map((v, i) => {
-							return (
-								<li key={i}>
-									<Link href={`${v.path}`}>{t(v.name)}</Link>
-								</li>
-							);
-						})}
-					</ul>
-				</div>
-
-				<LangSwitcher />
+			<AppLogo text={true} className="navbar-start" />
+			<div className="navbar-center items-center justify-between hidden md:flex w-full md:w-auto">
+				{/*	https://daisyui.com/components/menu/ */}
+				<ul className="menu menu-horizontal rounded-box">
+					{paths.map((v, i) => {
+						return (
+							<li key={i} className="text-lg">
+								<Link href={`${v.path}`}>
+									<b>{t(v.name)}</b>
+								</Link>
+							</li>
+						);
+					})}
+				</ul>
 			</div>
+			<LangSwitcher className="navbar-end" />
 		</header>
 	);
 }

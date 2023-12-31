@@ -5,7 +5,7 @@ import { localeNames, defaultLocale } from '@/i18nConfig';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname, redirect } from '@src/navigation';
 const FULL_RELOAD = true;
-export default function LangSwitcher() {
+export default function LangSwitcher(props: { className?: string }) {
 	const locale = useLocale();
 	const router = useRouter();
 	const pathname = usePathname();
@@ -23,14 +23,14 @@ export default function LangSwitcher() {
 		if (FULL_RELOAD) {
 			setTimeout(() => {
 				location.reload();
-			}, 250);
+			}, 300);
 		}
 	}
 
 	//TODO flags for each language
 	return (
-		<div className="dropdown">
-			<div tabIndex={0} role="button" className="btn m-1">
+		<div className={'dropdown justify-end flex ' + props.className}>
+			<div tabIndex={0} role="button" className="btn m-1 justify-end">
 				{currentLocaleName}
 			</div>
 			<ul
