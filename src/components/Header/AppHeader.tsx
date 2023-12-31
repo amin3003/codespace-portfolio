@@ -34,7 +34,7 @@ export default function AppHeader() {
 			style={{ top: -1 }}
 			className={
 				//change background based on scroll
-				'bg-base-100 data-[is-top=true]:bg-transparent' +
+				'data-[is-top=false]:bg-base-100 bg-transparent' +
 				//animated bg change
 				' transition-all duration-500' +
 				//header

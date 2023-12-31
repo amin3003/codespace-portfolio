@@ -20,6 +20,7 @@ export default function ScrollDetector() {
 	}, []);
 	React.useEffect(() => {
 		document.addEventListener('scroll', onScroll);
+		onScroll(); //initial state
 		return () => {
 			document.removeEventListener('scroll', onScroll);
 		};
