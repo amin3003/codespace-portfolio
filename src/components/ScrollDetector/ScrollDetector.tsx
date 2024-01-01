@@ -10,6 +10,7 @@ export default function ScrollDetector() {
 	const headerElement = React.useRef<HTMLElement>();
 	/* -------------------------- detect current scroll ------------------------- */
 	const onScroll = React.useCallback(() => {
+		console.log('onScroll');
 		//we can use isTop in css to update css based on scroll
 		if (!headerElement.current) {
 			headerElement.current = document.getElementById('header') || undefined;

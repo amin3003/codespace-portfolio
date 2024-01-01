@@ -77,28 +77,26 @@ function Content() {
 }
 
 export default function Index() {
-  const sectionsCount=5;
-  const scrollArea = React.useRef<any>();
-  const onScroll = (e:any) => (state.top.current = e.target.scrollTop);
-  useEffect(() => void onScroll({ target: scrollArea.current }), []);
-  return (
-    <>
-      <Canvas  
-        linear
-        dpr={window.devicePixelRatio}
-        orthographic  
-        camera={{ zoom: state.zoom,
-           position: [0, 0, 500] }}
-      >
-        <Suspense fallback={null}>
-          <Content /> 
-        </Suspense>
-      </Canvas>
-      <div className="absolute top-0 right-0 bottom-0 left-0" ref={scrollArea} onScroll={onScroll}>
-        {new Array(sectionsCount).fill(0).map((_, index) => (
-          <div key={index} id={"page" + index} style={{ height: `100vh` }} />
-        ))}
-      </div>
-    </>
-  );
+	const sectionsCount = 5;
+	//   const scrollArea = React.useRef<any>();
+	//   const onScroll = (e:any) => (state.top.current = e.target.scrollTop);
+	//   useEffect(() => void onScroll({ target: scrollArea.current }), []);
+	return (
+		<>
+			<Canvas
+				linear
+				dpr={window.devicePixelRatio}
+				orthographic
+				camera={{ zoom: state.zoom, position: [0, 0, 500] }}
+			>
+				<Suspense fallback={null}>
+					<Content />
+				</Suspense>
+			</Canvas>
+
+			{new Array(sectionsCount).fill(0).map((_, index) => (
+				<div key={index} id={'page' + index} style={{ height: `100vh` }} />
+			))}
+		</>
+	);
 }
