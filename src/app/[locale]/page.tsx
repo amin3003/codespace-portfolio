@@ -83,16 +83,18 @@ export default function Index() {
 	//   useEffect(() => void onScroll({ target: scrollArea.current }), []);
 	return (
 		<>
-			<Canvas
-				linear
-				dpr={window.devicePixelRatio}
-				orthographic
-				camera={{ zoom: state.zoom, position: [0, 0, 500] }}
-			>
-				<Suspense fallback={null}>
-					<Content />
-				</Suspense>
-			</Canvas>
+			<div className="h-screen w-screen">
+				<Canvas
+					linear
+					dpr={window.devicePixelRatio}
+					orthographic
+					camera={{ zoom: state.zoom, position: [0, 0, 500] }}
+				>
+					<Suspense fallback={null}>
+						<Content />
+					</Suspense>
+				</Canvas>
+			</div>
 
 			{new Array(sectionsCount).fill(0).map((_, index) => (
 				<div key={index} id={'page' + index} style={{ height: `100vh` }} />

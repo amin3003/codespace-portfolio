@@ -9,8 +9,8 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 	if (!locales.includes(locale as any)) notFound();
 	return (
 		<html lang={locale} data-theme="dracula">
-			<body className="overflow-hidden h-screen w-screen">
-				<main id="main" className="h-screen w-screen overflow-auto">
+			<body>
+				<main>
 					<AppHeader />
 					{children}
 					<Footer />
