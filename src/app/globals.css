@@ -7,8 +7,13 @@
   --background-end-rgb: 21,21,21;
 
 }
-
  
+.canvas > div {
+  z-index: 10000;
+}
+header {
+  z-index: 20000;
+}
 body {
    
   background: linear-gradient(

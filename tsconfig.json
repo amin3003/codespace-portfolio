@@ -24,6 +24,6 @@
 			"@src/*": ["./src/*"]
 		}
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/animations/Spotlight.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/animations/Spotlight.js", "src/components/shared/CustomMaterial.js"],
   "exclude": ["node_modules"]
 }

@@ -11,7 +11,8 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 		<html lang={locale} data-theme="dracula">
 			<body>
 				<AppHeader />
-				<main className="flex-1 overflow-y-auto min-h-screen">{children}</main>
+				<main 
+				className="flex-1 flexed overflow-y-auto h-screen">{children}</main>
 				<Footer />
 			</body>
 		</html>
