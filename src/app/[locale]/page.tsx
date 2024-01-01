@@ -3,30 +3,11 @@ import ReactDOM from "react-dom";
 import React, { Suspense, useEffect, useMemo } from "react";
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import { TextureLoader, LinearFilter } from "three";
-import { Text, MultilineText } from "@c/shared/Text";
-import { math_lerp } from "@azrico/math";
-// import Plane from "@c/shared/Plane";
+import { Text } from "@c/shared/Text";
+import { math_lerp } from "@azrico/math"; 
 import { Block, useBlock } from "@c/shared/Blocks";
 import state from "@c/shared/Store";
-// function Startup() {
-//   const ref = useRef();
-//   useFrame(
-//     () =>
-//       (ref.current.material.opacity = lerp(
-//         ref.current.material.opacity,
-//         0,
-//         0.025
-//       ))
-//   );
-//   return (
-//     <Plane
-//       ref={ref}
-//       color="#0e0e0f"
-//       position={[0, 0, 200]}
-//       scale={[100, 100, 1]}
-//     />
-//   );
-// }
+ 
 
 function Paragraph({ image, index, offset, factor, header, aspect, text }:any) {
   const { contentMaxWidth: w, canvasWidth, margin, mobile } = useBlock();
@@ -96,9 +77,10 @@ function Content() {
 }
 
 export default function Index() {
-  // const scrollArea = useRef();
-  // const onScroll = (e) => (state.top.current = e.target.scrollTop);
-  // useEffect(() => void onScroll({ target: scrollArea.current }), []);
+  const sectionsCount=5;
+  const scrollArea = React.useRef<any>();
+  const onScroll = (e:any) => (state.top.current = e.target.scrollTop);
+  useEffect(() => void onScroll({ target: scrollArea.current }), []);
   return (
     <>
       <Canvas  
@@ -112,7 +94,11 @@ export default function Index() {
           <Content /> 
         </Suspense>
       </Canvas>
-       
+      <div className="absolute top-0 right-0 bottom-0 left-0" ref={scrollArea} onScroll={onScroll}>
+        {new Array(sectionsCount).fill(0).map((_, index) => (
+          <div key={index} id={"page" + index} style={{ height: `100vh` }} />
+        ))}
+      </div>
     </>
   );
 }
