@@ -10,11 +10,9 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 	return (
 		<html lang={locale} data-theme="dracula">
 			<body>
-				<main>
-					<AppHeader />
-					{children}
-					<Footer />
-				</main>
+				<AppHeader />
+				<main>{children}</main>
+				<Footer />
 			</body>
 		</html>
 	);

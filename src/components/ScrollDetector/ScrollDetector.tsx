@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-
+import state from '@c/shared/Store';
 /**
  * only purpose of this element is to update scroll position into the document so CSS knows the scroll
  * we dont put this code in our header component directly because this code has to be 'use client'
@@ -10,12 +10,13 @@ export default function ScrollDetector() {
 	const headerElement = React.useRef<HTMLElement>();
 	/* -------------------------- detect current scroll ------------------------- */
 	const onScroll = React.useCallback(() => {
-		console.log('onScroll');
 		//we can use isTop in css to update css based on scroll
 		if (!headerElement.current) {
 			headerElement.current = document.getElementById('header') || undefined;
 		}
 		const isTop = String(window.scrollY <= 0);
+
+		state.top.current = window.scrollY;
 		if (headerElement.current) headerElement.current.dataset.isTop = isTop;
 		// document.documentElement.dataset.isTop = isTop;
 	}, []);
