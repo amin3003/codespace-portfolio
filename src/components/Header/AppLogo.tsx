@@ -3,7 +3,7 @@ import Link from '@/navigation';
 
 export default function AppLogo(props: { className?: string; text: boolean }) {
 	return (
-		<Link href="/" className={'flex items-center ' + props.className}>
+		<Link href="/" className={'flex justify-start items-center w-min ' + props.className}>
 			{/* <Image src="" alt="chiztech logo" /> */}
 			{props.text && (
 				<div>
