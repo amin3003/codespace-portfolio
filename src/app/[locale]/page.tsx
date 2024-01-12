@@ -7,26 +7,28 @@ import { Text } from "@c/shared/Text";
 import { math_lerp } from "@azrico/math"; 
 import { Block, useBlock } from "@c/shared/Blocks";
 import state from "@c/shared/Store";
- 
- 
-const pages = [
-	{ title: 'CHIZ TECH' },
-	{ title: 'TECH SOLUTIONS' },
-	{ title: 'FOR EVERYONE' },
-	{ title: 'CONTACT US' },
-	{ title: 'GOODBYE 1' },
-	{ title: 'GOODBYE 2' },
-	{ title: 'GOODBYE 3' },
-	{ title: 'GOODBYE 4' },
-];
+import { Html } from '@react-three/drei';
 
 function Content() {
+	const { wModifier, canvasWidth, canvasHeight } = useBlock();
+	const { sections } = state;
+
 	return (
 		<>
-			{pages.map((p, index) => {
+			{sections.map((p, index) => {
 				return (
 					<Block key={index} index={index} offset={index} factor={2}>
-						<Text color="#d40749">{p.title}</Text>
+						<Text color="#d40749" size={wModifier}>
+							{p.title}
+						</Text>
+						<Html
+							style={{ width: canvasWidth / 2 }}
+							position={[-canvasWidth / 2.5, canvasHeight * 2, 0]}
+						>
+							<div
+								tabIndex={index}
+							>{`It's a good idea to call the .sync() method after changing any properties that would affect the text's layout. If you don't, it will be called automatically on the next render frame, but calling it yourself can get the result sooner.`}</div>
+						</Html>
 					</Block>
 				);
 			})}
@@ -35,13 +37,14 @@ function Content() {
 }
 
 export default function Index() {
-	const sectionSize = (100 * pages.length) / (pages.length + 1);
+	const { sections, pages } = state;
+
 	return (
 		<>
 			<div className="fixed top-0 bottom-0 left-0 right-0 ">
 				<Canvas
 					linear
-					dpr={window.devicePixelRatio}
+					// dpr={window.devicePixelRatio}
 					orthographic
 					camera={{ zoom: state.zoom, position: [0, 0, 500] }}
 				>
@@ -50,15 +53,18 @@ export default function Index() {
 					</Suspense>
 				</Canvas>
 			</div>
-
-			{new Array(pages.length).fill(0).map((_, index) => (
-				<div
-					key={index}
-					id={'page' + index}
-					className={'border-red-200 border-2'}
-					style={{ height: `${sectionSize}vh` }}
-				/>
-			))}
+			{Array(pages)
+				.fill(0)
+				.map((r, index) => {
+					return (
+						<div
+							key={index}
+							id={'page' + index}
+							// className={'border-red-200 border-2'}
+							style={{ height: `100vh` }}
+						/>
+					);
+				})}
 		</>
 	);
 }

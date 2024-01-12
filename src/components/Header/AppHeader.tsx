@@ -1,8 +1,7 @@
 import AppLogo from '@c/Header/AppLogo';
 import ScrollDetector from '@c/ScrollDetector/ScrollDetector';
-import { gfilter } from '@azrico/global';
-import React, { useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
+import React from 'react';
+import { useTranslations } from 'next-intl';
 import Link from '@/navigation';
 import LangSwitcher from './LangSwitcher';
 
@@ -23,16 +22,21 @@ const paths = [
 
 export default function AppHeader() {
 	const t = useTranslations('navbar');
-	//TODO better theme colors (bg-base-300)
 	return (
 		<header
 			id="header"
-			style={{ top: -1 ,display:"flex" , justifyContent:"space-between"}}
 			className={
 				//animated bg change
-				'navbar'+
-				'transition-all duration-500'
-				
+				' transition-all duration-1000 delay-0' +
+				//change background based on scroll
+				' data-[is-top=false]:bg-base-100 bg-transparent' +
+				//header
+				' navbar sticky justify-between' +
+				//change sticky based on scroll
+				' data-[is-going-down=true]:top-[-100%]' +
+				' data-[is-going-down=false]:top-0' +
+				//other classes
+				' data-[is-top=false]:shadow-md'
 			}
 		>
 			<ScrollDetector />
