@@ -27,21 +27,17 @@ export default function AppHeader() {
 	return (
 		<header
 			id="header"
-			style={{ top: -1 }}
+			style={{ top: -1 ,display:"flex" , justifyContent:"space-between"}}
 			className={
-				//change background based on scroll
-				'data-[is-top=false]:bg-base-100 bg-transparent' +
 				//animated bg change
-				' transition-all duration-500' +
-				//header
-				' navbar sticky' +
-				//other classes
-				' data-[is-top=false]:shadow-md'
+				'navbar'+
+				'transition-all duration-500'
+				
 			}
 		>
 			<ScrollDetector />
 			<AppLogo text={true} className="navbar-start" />
-			<div className="navbar-center items-center justify-between hidden md:flex w-full md:w-auto">
+			<div className="navbar-center justify-between items-center  hidden md:flex w-full md:w-auto">
 				{/*	https://daisyui.com/components/menu/ */}
 				<ul className="menu menu-horizontal rounded-box">
 					{paths.map((v, i) => {
