@@ -9,25 +9,36 @@ import { Block, useBlock } from "@c/shared/Blocks";
 import state from "@c/shared/Store";
  
  
+const pages = [
+	{ title: 'CHIZ TECH' },
+	{ title: 'TECH SOLUTIONS' },
+	{ title: 'FOR EVERYONE' },
+	{ title: 'CONTACT US' },
+	{ title: 'GOODBYE 1' },
+	{ title: 'GOODBYE 2' },
+	{ title: 'GOODBYE 3' },
+	{ title: 'GOODBYE 4' },
+];
 
 function Content() {
 	return (
-		<group scale={[1, 1, 1]}>
-			<Text color="white" position={[0, -0.5, 0]}>
-				CHIZ
-			</Text>
-			<Text color="orange" position={[0, 0.5, 0]}>
-				TECH
-			</Text>
-		</group>
+		<>
+			{pages.map((p, index) => {
+				return (
+					<Block key={index} index={index} offset={index} factor={2}>
+						<Text color="#d40749">{p.title}</Text>
+					</Block>
+				);
+			})}
+		</>
 	);
 }
 
 export default function Index() {
-	const sectionsCount = 5;
+	const sectionSize = (100 * pages.length) / (pages.length + 1);
 	return (
 		<>
-			<div className="h-screen w-screen">
+			<div className="fixed top-0 bottom-0 left-0 right-0 ">
 				<Canvas
 					linear
 					dpr={window.devicePixelRatio}
@@ -40,8 +51,13 @@ export default function Index() {
 				</Canvas>
 			</div>
 
-			{new Array(sectionsCount).fill(0).map((_, index) => (
-				<div key={index} id={'page' + index} style={{ height: `100vh` }} />
+			{new Array(pages.length).fill(0).map((_, index) => (
+				<div
+					key={index}
+					id={'page' + index}
+					className={'border-red-200 border-2'}
+					style={{ height: `${sectionSize}vh` }}
+				/>
 			))}
 		</>
 	);

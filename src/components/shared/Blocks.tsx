@@ -11,10 +11,11 @@ function Block({ children, offset, factor, ...props }:any) {
   const ref = useRef<any>()
   offset = offset !== undefined ? offset : parentOffset
   useFrame(() => {
-    const curY = ref.current?.position.y
-    const curTop = state.top.current
-    ref.current.position.y = math_lerp(curY, (curTop / state.zoom) * factor, 0.1)
-  })
+		const curY = ref.current?.position.y;
+		const curTop = state.top.current;
+		//smooth movement of each section
+		ref.current.position.y = math_lerp(curY, (curTop / state.zoom) * factor, 0.1);
+	});
   return (
     <offsetContext.Provider value={offset}>
       <group {...props} position={[0, -sectionHeight * offset * factor, 0]}>
