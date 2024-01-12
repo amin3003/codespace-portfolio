@@ -14,6 +14,7 @@ extend({ Text: troikaText });
 
 function Text(props: any) {
 	const textRef = useRef<any>();
+	const materialRef = useRef<any>();
 
 	const font = useLoader(FontLoader, '/fonts/Philosopher.json');
 
@@ -21,22 +22,22 @@ function Text(props: any) {
 	/* -------------------------------------------------------------------------- */
 	let last = state.top.current;
 	useFrame(() => {
-		textRef.current.shift = math_lerp(
-			textRef.current.shift,
-			(state.top.current - last) / 1,
+		materialRef.current.shift = math_lerp(
+			materialRef.current.shift,
+			(state.top.current - last) / 30,
 			0.1
 		);
 		last = state.top.current;
 	});
-	// React.useEffect(() => {
-	// 	if (textRef.current) {
-	// 		textRef.current.sync();
-	// 	}
-	// }, [textRef.current]);
+	React.useEffect(() => {
+		if (textRef.current) {
+			textRef.current.sync();
+		}
+	}, [textRef.current]);
 
 	const opts = React.useMemo(() => {
 		return {
-			// font: font,
+			font: font,
 			fontSize: 1.3, //minimum of 0.1
 			maxWidth: 300,
 			lineHeight: 1,
@@ -57,7 +58,7 @@ function Text(props: any) {
 				anchorY="middle"
 			>
 				{/*@ts-ignore*/}
-				<customMaterial ref={textRef} color={props.color} transparent opacity={1} />
+				<customMaterial ref={materialRef} color={props.color} transparent opacity={1} />
 			</text>
 		</group>
 	);
