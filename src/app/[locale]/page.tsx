@@ -18,11 +18,7 @@ function Content() {
 	return (
 		<>
 			{sections.map((SectionRender, index) => {
-				return (
-					<Block key={index} index={index} offset={index} factor={1}>
-						<SectionRender block={block} />
-					</Block>
-				);
+				return <SectionRender key={index} index={index} block={block} />;
 			})}
 		</>
 	);

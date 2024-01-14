@@ -11,7 +11,9 @@ const offsetContext = createContext(0);
 function Block({ children, offset, factor, ...props }: any) {
 	const { offset: parentOffset, sectionHeight } = useBlock();
 	const ref = useRef<any>();
-	offset = offset !== undefined ? offset : parentOffset;
+
+	offset = props.offset ?? props.index ?? parentOffset;
+
 	useFrame(() => {
 		const curY = ref.current?.position.y;
 		const curTop = state.top.current;
@@ -53,7 +55,7 @@ function useBlock(): BlockProperties {
 
 	const mobile = size.width < 700;
 	const margin = canvasWidth * (mobile ? 0.2 : 0.1);
-	const wModifier = mobile ? canvasWidth * 2 : canvasWidth;
+	const wModifier = mobile ? canvasWidth * 1.5 : canvasWidth;
 
 	const contentMaxWidth = canvasWidth * (mobile ? 0.8 : 0.6);
 	const sectionHeight = canvasHeight * ((pages - 1) / (sections - 1));

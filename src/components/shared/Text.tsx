@@ -25,7 +25,7 @@ function Text(props: any) {
 	useFrame(() => {
 		materialRef.current.shift = math_lerp(
 			materialRef.current.shift,
-			(state.top.current - last) / 30,
+			(state.top.current - last) / 7,
 			0.1
 		);
 		last = state.top.current;
@@ -52,7 +52,6 @@ function Text(props: any) {
 		<group position={props.position || [0, 0, 0]} scale={[final_size, final_size, 0.1]}>
 			<text
 				ref={textRef}
-				position-z={-180}
 				{...opts}
 				text={props.children}
 				anchorX="center"
