@@ -9,6 +9,7 @@ import state from '@c/shared/Store';
 import './CustomMaterial';
 import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import { Text as troikaText } from 'troika-three-text';
+import { Sphere } from '@react-three/drei';
 // Register Text as a react-three-fiber element
 extend({ Text: troikaText });
 
@@ -33,7 +34,7 @@ function Text(props: any) {
 		if (textRef.current) {
 			textRef.current.sync();
 		}
-	}, [textRef.current]);
+	}, []);
 
 	const opts = React.useMemo(() => {
 		return {

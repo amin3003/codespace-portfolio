@@ -8,27 +8,19 @@ import { math_lerp } from "@azrico/math";
 import { Block, useBlock } from "@c/shared/Blocks";
 import state from "@c/shared/Store";
 import { Html } from '@react-three/drei';
-
+import SectionHome from '@c/sections/SectionHome';
+import SectionServices from '@c/sections/SectionServices';
+import SectionAbout from '@c/sections/SectionAbout';
+const sections = [SectionHome, SectionServices, SectionAbout];
 function Content() {
-	const { wModifier, canvasWidth, canvasHeight } = useBlock();
-	const { sections } = state;
+	const block = useBlock();
 
 	return (
 		<>
-			{sections.map((p, index) => {
+			{sections.map((SectionRender, index) => {
 				return (
-					<Block key={index} index={index} offset={index} factor={2}>
-						<Text color="#d40749" size={wModifier}>
-							{p.title}
-						</Text>
-						<Html
-							style={{ width: canvasWidth / 2 }}
-							position={[-canvasWidth / 2.5, canvasHeight * 2, 0]}
-						>
-							<div
-								tabIndex={index}
-							>{`It's a good idea to call the .sync() method after changing any properties that would affect the text's layout. If you don't, it will be called automatically on the next render frame, but calling it yourself can get the result sooner.`}</div>
-						</Html>
+					<Block key={index} index={index} offset={index} factor={1}>
+						<SectionRender block={block} />
 					</Block>
 				);
 			})}

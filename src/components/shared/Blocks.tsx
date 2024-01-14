@@ -3,8 +3,10 @@ import React, { createContext, useRef, useContext } from "react"
 import { useFrame, useThree } from "@react-three/fiber"
 import { math_lerp } from "@azrico/math";
 import state from "@c/shared/Store"
+import { Color } from 'three';
+import { Html, Plane, Sphere } from '@react-three/drei';
 
-const offsetContext = createContext(0)
+const offsetContext = createContext(0);
 
 function Block({ children, offset, factor, ...props }: any) {
 	const { offset: parentOffset, sectionHeight } = useBlock();
@@ -25,7 +27,22 @@ function Block({ children, offset, factor, ...props }: any) {
 	);
 }
 
-function useBlock() {
+export interface BlockProperties {
+	viewport: { width: number; height: number };
+	offset: number;
+	viewportWidth: number;
+	viewportHeight: number;
+	canvasWidth: number;
+	canvasHeight: number;
+	mobile: boolean;
+	margin: number;
+	contentMaxWidth: number;
+	sectionHeight: number;
+	offsetFactor: number;
+	wModifier: number;
+}
+
+function useBlock(): BlockProperties {
 	const { sections, pages, zoom } = state;
 	const { size, viewport } = useThree();
 	const offset = useContext(offsetContext);
@@ -39,9 +56,9 @@ function useBlock() {
 	const wModifier = mobile ? canvasWidth * 2 : canvasWidth;
 
 	const contentMaxWidth = canvasWidth * (mobile ? 0.8 : 0.6);
-	const sectionHeight = canvasHeight * ((pages - 1) / (sections.length - 1));
+	const sectionHeight = canvasHeight * ((pages - 1) / (sections - 1));
 
-	const offsetFactor = (offset + 1.0) / sections.length;
+	const offsetFactor = (offset + 1.0) / sections;
 	return {
 		viewport,
 		offset,
