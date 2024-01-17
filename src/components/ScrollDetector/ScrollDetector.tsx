@@ -36,7 +36,7 @@ export default function ScrollDetector() {
 				/* ------------------------------- going down ------------------------------- */
 				headerElement.current.dataset.isGoingDown = 'true';
 				lastScroll.current = currentScroll;
-			} else if (scrollDelta > 20) {
+			} else if (scrollDelta > 90) {
 				/* -------------------------------- going up -------------------------------- */
 				headerElement.current.dataset.isGoingDown = 'false';
 				lastScroll.current = currentScroll;
