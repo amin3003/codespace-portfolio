@@ -11,6 +11,7 @@ import { Html } from '@react-three/drei';
 import SectionHome from '@c/sections/SectionHome';
 import SectionServices from '@c/sections/SectionServices';
 import SectionAbout from '@c/sections/SectionAbout';
+import Plane from '@c/shared/Plane';
 const sections = [SectionHome, SectionServices, SectionAbout];
 function Content() {
 	const block = useBlock();
@@ -20,6 +21,9 @@ function Content() {
 			{sections.map((SectionRender, index) => {
 				return <SectionRender key={index} index={index} block={block} />;
 			})}
+			<Block index={1} offset={3} factor={0.5}>
+				<Plane />
+			</Block>
 		</>
 	);
 }

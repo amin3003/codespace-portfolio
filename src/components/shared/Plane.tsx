@@ -1,10 +1,41 @@
-// import React, { forwardRef, useRef } from 'react';
-// import { useFrame } from '@react-three/fiber';
-// import './CustomMaterial';
-// import { useBlock } from '@/components/shared/Blocks';
-// import { math_lerp } from '@azrico/math';
-// import state from '@c/shared/Store';
-// const Plane = forwardRef(
+import React, { createContext, useRef } from 'react';
+import { useFrame } from '@react-three/fiber';
+import './CustomMaterial';
+import { useBlock, Block } from '@/components/shared/Blocks';
+import Text from '@/components/shared/Text';
+import { math_lerp } from '@azrico/math';
+import state from '@c/shared/Store';
+import { Plane as PlaneDrei } from '@react-three/drei';
+
+function Plane(props: any) {
+	const block = useBlock();
+	const planeRef = useRef<any>();
+
+	let lastTop = state.top.current;
+	useFrame(() => {
+		planeRef.current.position.y = math_lerp(
+			planeRef.current.position.y,
+			lastTop / 1.1,
+			0.1
+		);
+		lastTop = state.top.current;
+	});
+
+	return (
+		<PlaneDrei
+			ref={planeRef}
+			rotation={[0, 0, 0.1]}
+			position={[0, 0, -1]}
+			scale={[block.viewportWidth * 2, block.viewportHeight * 1.5, 1]}
+		>
+			{/* @ts-ignore */}
+			<customMaterial color={'black'} transparent opacity={0.2} />
+		</PlaneDrei>
+	);
+}
+export default Plane;
+
+// const Plane2 = forwardRef(
 // 	({ color = 'white', shift = 1, opacity = 1, args, map, ...props }: any, ref) => {
 // 		const { viewportHeight, offsetFactor } = useBlock();
 // 		const material = useRef();

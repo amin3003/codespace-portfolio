@@ -4,15 +4,17 @@ import { useFrame, useThree } from "@react-three/fiber"
 import { math_lerp } from "@azrico/math";
 import state from "@c/shared/Store"
 import { Color } from 'three';
-import { Html, Plane, Sphere } from '@react-three/drei';
+import { Html, Sphere } from '@react-three/drei';
+import Plane from './Plane';
 
 const offsetContext = createContext(0);
 
-function Block({ children, offset, factor, ...props }: any) {
+function Block({ children, ...props }: any) {
 	const { offset: parentOffset, sectionHeight } = useBlock();
 	const ref = useRef<any>();
 
-	offset = props.offset ?? props.index ?? parentOffset;
+	const offset = props.offset ?? props.index ?? parentOffset;
+	const factor = props.factor || 1;
 
 	useFrame(() => {
 		const curY = ref.current?.position.y;

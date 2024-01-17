@@ -58,7 +58,7 @@ function Text(props: any) {
 				anchorY="middle"
 			>
 				{/*@ts-ignore*/}
-				<customMaterial ref={materialRef} color={props.color} transparent opacity={1} />
+				<customMaterial ref={materialRef} color={props.color} transparen t opacity={1} />
 			</text>
 		</group>
 	);
@@ -83,3 +83,4 @@ const MultilineText = ({
 	));
 
 export { Text, MultilineText };
+export default Text;
