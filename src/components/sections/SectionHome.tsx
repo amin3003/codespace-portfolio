@@ -22,7 +22,7 @@ export default function SectionHome(props: sectionProps) {
 			</Text>
 			<Text
 				color="white"
-				size={props.block.wModifier / 4}
+				size={props.block.wModifier / 3}
 				position={[0, props.block.canvasHeight / 5 - 100, 0]}
 			>
 				{'take your ideas to the spase !'}
@@ -35,12 +35,12 @@ export default function SectionHome(props: sectionProps) {
 				position={[-props.block.canvasWidth / 2, 0, 0]}
 			>
 				{/* Browser mockup */}
-				<div className="mockup-browser border border-base-300 h-[400px]">
+				<div className="mockup-browser border border-base-300 h-[400px] m-4">
 					<div className="mockup-browser-toolbar">
 						<div className="input border border-base-300">https://yourwebsite.com</div>
 					</div>
 					<div className="flex justify-center px-4 py-16 border-t border-base-300">
-						Hello!
+						Your bussiness
 					</div>
 				</div>
 

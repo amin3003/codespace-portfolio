@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--background-start-rgb: rgb(67, 0, 70);
-	--background-end-rgb: rgb(27, 1, 28);
-}
+ 
 
 .canvas > div {
 	z-index: 10000;
@@ -14,10 +11,11 @@ header {
 	z-index: 20000;
 }
 body {
-	background: linear-gradient(
-		to bottom,
-		transparent,
-		var(--background-end-rgb),
-		var(--background-start-rgb)
-	);
+ 
+background: linear-gradient(180deg,
+rgba(0,0,0,0)0%,
+ rgb(67, 0, 70) 60%, 
+ rgba(0,0,0,0) 100%);
+ 
+ 
 }

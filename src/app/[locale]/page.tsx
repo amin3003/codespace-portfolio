@@ -21,10 +21,7 @@ function Content() {
 			{sections.map((SectionRender, index) => {
 				return <SectionRender key={index} index={index} block={block} />;
 			})}
-			<Block index={1} offset={1.5} factor={2}>
-				<Plane rotation={[0, 0, 0.06]} position={[0, -10, -1]} />
-				<Plane rotation={[0, 0, -0.06]} position={[0, 300, -1]} />
-			</Block>
+		
 		 	</>
 	);
 }

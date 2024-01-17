@@ -43,7 +43,7 @@ export default function SectionAbout(props: sectionProps) {
   return (
 		<Block {...props} factor={1.8}>
 			<Text color="white" size={props.block.wModifier}>
-				{'About us'}
+				{'Spase Team'}
 			</Text>
 			<Html
 				zIndexRange={[0, 0]}
