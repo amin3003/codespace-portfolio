@@ -23,8 +23,9 @@ function Content() {
 			})}
 			<Block index={1} offset={1.5} factor={2}>
 				<Plane rotation={[0, 0, 0.06]} position={[0, 0, -1]} />
-				<Plane rotation={[0, 0, -0.06]} position={[0, 120, -1]} />
+				<Plane rotation={[0, 0, -0.06]} position={[0, 200, -1]} />
 			</Block>
+			{/* <Plane rotation={[0, 0, -0.06]} position={[0, -block.canvasHeight, -10]} /> */}
 		</>
 	);
 }
@@ -34,16 +35,14 @@ export default function Index() {
 
 	return (
 		<>
-			<div className="fixed top-0 bottom-0 left-0 right-0 ">
+			<div id="content-container" className="fixed top-0 bottom-0 left-0 right-0 ">
 				<Canvas
 					linear
-					// dpr={window.devicePixelRatio}
+					dpr={window.devicePixelRatio}
 					orthographic
-					camera={{ zoom: state.zoom, position: [0, 0, 500] }}
+					camera={{ zoom: state.zoom, position: [0, 0, 100] }}
 				>
-					<Suspense fallback={null}>
-						<Content />
-					</Suspense>
+					<Content />
 				</Canvas>
 			</div>
 			{Array(pages)

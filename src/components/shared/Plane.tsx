@@ -23,7 +23,6 @@ function Plane(props: any) {
 
 	return (
 		<PlaneDrei
-			frustumCulled
 			ref={planeRef}
 			rotation={props.rotation || [0, 0, 0]}
 			position={props.position || [0, 0, -1]}
