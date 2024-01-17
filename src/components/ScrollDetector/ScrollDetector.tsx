@@ -19,7 +19,7 @@ export default function ScrollDetector() {
 		const currentScroll = window.scrollY;
 		const isTop = String(currentScroll <= 0);
 		state.top.current = Number(currentScroll);
-		// console.log(headerElement.current?.clientHeight);
+		 
 		if (!headerElement.current) return;
 
 		/* ----------------------- detecting if we are at top ----------------------- */

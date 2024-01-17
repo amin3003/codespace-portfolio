@@ -1,33 +1,62 @@
-import { Text } from "@c/shared/Text";
-import { math_lerp } from "@azrico/math";
-import { Block, useBlock, BlockProperties } from "@c/shared/Blocks";
-import { Html } from "@react-three/drei";
-import { sectionProps } from "./types";
+import { Text } from '@c/shared/Text';
+import { math_lerp } from '@azrico/math';
+import { Block, useBlock, BlockProperties } from '@c/shared/Blocks';
+import { Html, Sphere } from '@react-three/drei';
+import { sectionProps } from './types';
+import THREE from 'three';
+import React from 'react';
+
+function StarsComponent(props: sectionProps & { count: number }) {
+	const particleCount = props.count || 10;
+
+	return new Array(particleCount).fill(0).map((r, i) => {
+		const xpos =
+			(Math.floor(Math.random() * props.block.viewportHeight) -
+				props.block.viewportHeight / 2) *
+			0.9;
+		const ypos =
+			(Math.floor(Math.random() * props.block.viewportWidth) -
+				props.block.viewportWidth / 2) *
+			0.9;
+
+		return (
+			<>
+				<Sphere key={i} position={[ypos, xpos, 0]} scale={[1, 3, 1]}></Sphere>
+				<Sphere key={i} position={[ypos, xpos, 0]} scale={[2, 1, 1]}></Sphere>
+			</>
+		);
+	});
+}
 
 export default function SectionHome(props: sectionProps) {
-  return (
+	return (
 		<Block {...props} factor={0.9}>
-			<Text color="white" size={props.block.wModifier} position={[0, 40, 0]}>
-				{'<Code/> Space'}
+			<StarsComponent {...props} count={16} />
+			<Text
+				color="white"
+				size={props.block.wModifier}
+				position={[0, props.block.canvasHeight / 5, 0]}
+			>
+				{'<Code/> Spase'}
+			</Text>
+			<Text
+				color="white"
+				size={props.block.wModifier / 4}
+				position={[0, props.block.canvasHeight / 5 - 100, 0]}
+			>
+				{'take your ideas to the spase !'}
 			</Text>
 
 			<Html
 				zIndexRange={[0, 0]}
 				className="flex content-center justify-center"
 				style={{ width: props.block.canvasWidth }}
-				position={[-props.block.canvasWidth / 2, -90, 0]}
+				position={[-props.block.canvasWidth / 2, 0, 0]}
 			>
-				{/* <div className="ml-[15%] mr-[15%] text-2xl">
-					<code>
-						HOME TEXT HOME TEXT HOME TEXT HOME TEXTHOME TEXTHOME TEXT HOME TEXTHOME TEXT
-					</code>
-				</div> */}
-
 				{/* Browser mockup */}
-
-				<div className="mockup-browser border border-base-300">
+				<div className="mockup-browser border border-base-300 h-[400px]">
 					<div className="mockup-browser-toolbar">
-						<div className="input border border-base-300">https://daisyui.com</div>
+						<div className="input border border-base-300">https://yourwebsite.com</div>
 					</div>
 					<div className="flex justify-center px-4 py-16 border-t border-base-300">
 						Hello!

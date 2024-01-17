@@ -7,11 +7,16 @@ export default function AppLogo(props: { className?: string; text: boolean }) {
 			{/* <Image src="" alt="chiztech logo" /> */}
 			{props.text && (
 				<div>
-					<span className="self-center text-2xl font-semibold whitespace-nowrap text-orange-400">
-						Chiz
+					<span
+						className={
+							'self-center text-2xl font-semibold' +
+							' whitespace-nowrap text-primary'
+						}
+					>
+						{`<Code/>`}
 					</span>
 					<span className="self-center text-2xl font-semibold whitespace-nowrap text-white ml-1">
-						|Tech
+						{`Spase`}
 					</span>
 				</div>
 			)}

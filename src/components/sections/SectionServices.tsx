@@ -32,8 +32,8 @@ export default function SectionServices(props: sectionProps) {
 
 	return (
 		<Block {...props} factor={1.35}>
-			<Text color="white" size={props.block.wModifier}>
-				{'Chiz ' + '<Services/>'}
+			<Text color="white" size={props.block.wModifier * 0.8}>
+				{'Spase Services'}
 			</Text>
 
 			<Html
