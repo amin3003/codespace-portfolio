@@ -7,8 +7,8 @@ import { sectionProps } from "./types";
 export default function SectionHome(props: sectionProps) {
   return (
 		<Block {...props} factor={0.9}>
-			<Text color="white" size={props.block.wModifier} position={[0, 0, 0]}>
-				{'Chiz ' + '<Tech/>'}
+			<Text color="white" size={props.block.wModifier} position={[0, 40, 0]}>
+				{'<Code/> Space'}
 			</Text>
 
 			<Html

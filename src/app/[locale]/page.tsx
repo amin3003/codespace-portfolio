@@ -22,11 +22,10 @@ function Content() {
 				return <SectionRender key={index} index={index} block={block} />;
 			})}
 			<Block index={1} offset={1.5} factor={2}>
-				<Plane rotation={[0, 0, 0.06]} position={[0, 0, -1]} />
-				<Plane rotation={[0, 0, -0.06]} position={[0, 200, -1]} />
+				<Plane rotation={[0, 0, 0.06]} position={[0, -10, -1]} />
+				<Plane rotation={[0, 0, -0.06]} position={[0, 300, -1]} />
 			</Block>
-			{/* <Plane rotation={[0, 0, -0.06]} position={[0, -block.canvasHeight, -10]} /> */}
-		</>
+		 	</>
 	);
 }
 
