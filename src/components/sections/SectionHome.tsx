@@ -6,8 +6,7 @@ import { sectionProps } from './types';
 import THREE from 'three';
 import React from 'react';
 import StarsComponent from '@c/StarsContainer/StarsContainer';
-
- 
+import Typewriter from 'typewriter-effect';
 
 export default function SectionHome(props: sectionProps) {
 	return (
@@ -20,27 +19,38 @@ export default function SectionHome(props: sectionProps) {
 			>
 				{'<Code/> Spase'}
 			</Text>
-			<Text
-				color="white"
-				size={props.block.wModifier / 3}
-				position={[0, props.block.canvasHeight / 5 - 100, 0]}
-			>
-				{'take your ideas to the spase !'}
-			</Text>
 
 			<Html
 				zIndexRange={[0, 0]}
-				className="flex content-center justify-center"
+				className="content-center justify-center align-center flex flex-col"
 				style={{ width: props.block.canvasWidth }}
 				position={[-props.block.canvasWidth / 2, 0, 0]}
 			>
-				{/* Browser mockup */}
-				<div className="mockup-browser border border-base-300 h-[400px] m-4">
-					<div className="mockup-browser-toolbar">
-						<div className="input border border-base-300">https://yourwebsite.com</div>
-					</div>
-					<div className="flex justify-center px-4 py-16 border-t border-base-300">
-						Your bussiness
+				<div className="m-auto justify-center">
+					<Typewriter
+						options={{
+							delay: 60,
+							deleteSpeed: 40,
+
+							strings: [
+								'Take your ideas to the spase',
+								'Your bussiness among the stars',
+								'We will fly you to the moon',
+							],
+							autoStart: true,
+							loop: true,
+						}}
+					/>
+				</div>
+				<div className="m-auto">
+					{/* Browser mockup */}
+					<div className="mockup-browser border border-base-300 h-[400px] m-4">
+						<div className="mockup-browser-toolbar">
+							<div className="input border border-base-300">https://yourwebsite.com</div>
+						</div>
+						<div className="flex justify-center px-4 py-16 border-t border-base-300">
+							Your bussiness
+						</div>
 					</div>
 				</div>
 

@@ -51,7 +51,6 @@ export default function SectionServices(props: sectionProps) {
 							return (
 								<div
 									key={i}
-									id={`serviceitem${i + 1}`}
 									className="carousel-item card w-[300px] h-[400px] bg-base-100 shadow-xl"
 								>
 									<div className="card-body">
@@ -62,15 +61,6 @@ export default function SectionServices(props: sectionProps) {
 										</div>
 									</div>
 								</div>
-							);
-						})}
-					</div>
-					<div className="flex justify-center w-full py-2 gap-2">
-						{Services.map((r, i) => {
-							return (
-								<a key={i} href={`#serviceitem${i + 1}`} className="btn btn-xs">
-									{i + 1}
-								</a>
 							);
 						})}
 					</div>
