@@ -8,7 +8,7 @@ export default function SectionHome(props: sectionProps) {
 	return (
 		<Block {...props} factor={1}>
 			<Text color="white" size={props.block.wModifier} position={[0, 0, 0]}>
-				{'Chiz ' + '<Tech/>'}
+				{'<Code/> ' + 'Spase'}
 			</Text>
 
 			<Html

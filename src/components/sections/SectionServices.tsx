@@ -18,7 +18,7 @@ export default function SectionServices(props: sectionProps) {
 			>
 				{[1, 2, 3].map((r, i) => {
 					return (
-						<div key={i} className="card w-96 bg-base-100 shadow-xl">
+						<div key={i} className="card glass w-96 bg-base-100 shadow-xl">
 							<div className="card-body">
 								<h2 className="card-title">Shoes!</h2>
 								<p>If a dog chews shoes whose shoes does he choose?</p>

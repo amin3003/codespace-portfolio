@@ -13,23 +13,24 @@ function Plane(props: any) {
 
 	let lastTop = state.top.current;
 	useFrame(() => {
-		planeRef.current.position.y = math_lerp(
-			planeRef.current.position.y,
-			lastTop / 1.1,
-			0.1
-		);
+		// planeRef.current.position.y = math_lerp(
+		// 	planeRef.current.position.y,
+		// 	lastTop / 1.1,
+		// 	0.1
+		// );
 		lastTop = state.top.current;
 	});
 
 	return (
 		<PlaneDrei
+			frustumCulled
 			ref={planeRef}
-			rotation={[0, 0, 0.1]}
-			position={[0, 0, -1]}
-			scale={[block.viewportWidth * 2, block.viewportHeight * 1.5, 1]}
+			rotation={props.rotation || [0, 0, 0]}
+			position={props.position || [0, 0, -1]}
+			scale={[block.viewportWidth * 2, block.viewportHeight * 1.1, 1]}
 		>
 			{/* @ts-ignore */}
-			<customMaterial color={'black'} transparent opacity={0.2} />
+			<customMaterial color={'black'} transparent opacity={1} />
 		</PlaneDrei>
 	);
 }
