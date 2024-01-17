@@ -1,16 +1,15 @@
-"use client"
-import React, { createContext, useRef, useContext } from "react"
-import { useFrame, useThree } from "@react-three/fiber"
-import { math_lerp } from "@azrico/math";
-import state from "@c/shared/Store"
+'use client';
+import React, { createContext, useRef, useContext } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
+import { math_lerp } from '@azrico/math';
+import state from '@c/shared/Store';
 import { Color } from 'three';
-import { Html, Sphere } from '@react-three/drei';
-import Plane from './Plane';
+import { Html, Plane, Sphere } from '@react-three/drei';
 
 const offsetContext = createContext(0);
 
 function Block({ children, ...props }: any) {
-	const { offset: parentOffset, sectionHeight } = useBlock();
+	const { offset: parentOffset, sectionHeight, fModifier } = useBlock();
 	const ref = useRef<any>();
 
 	const offset = props.offset ?? props.index ?? parentOffset;
@@ -24,7 +23,7 @@ function Block({ children, ...props }: any) {
 	});
 	return (
 		<offsetContext.Provider value={offset}>
-			<group {...props} position={[0, -sectionHeight * offset * factor, 0]}>
+			<group {...props} position={[0, -sectionHeight * offset * factor * fModifier, 0]}>
 				<group ref={ref}>{children}</group>
 			</group>
 		</offsetContext.Provider>
@@ -44,6 +43,7 @@ export interface BlockProperties {
 	sectionHeight: number;
 	offsetFactor: number;
 	wModifier: number;
+	fModifier: number;
 }
 
 function useBlock(): BlockProperties {
@@ -58,6 +58,7 @@ function useBlock(): BlockProperties {
 	const mobile = size.width < 700;
 	const margin = canvasWidth * (mobile ? 0.2 : 0.1);
 	const wModifier = mobile ? canvasWidth * 1.5 : canvasWidth;
+	const fModifier = mobile ? 1 : 0.9;
 
 	const contentMaxWidth = canvasWidth * (mobile ? 0.8 : 0.6);
 	const sectionHeight = canvasHeight * ((pages - 1) / (sections - 1));
@@ -76,7 +77,8 @@ function useBlock(): BlockProperties {
 		sectionHeight,
 		offsetFactor,
 		wModifier,
+		fModifier,
 	};
 }
 
-export { Block, useBlock }
+export { Block, useBlock };

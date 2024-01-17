@@ -1,35 +1,74 @@
-import { Text } from '@c/shared/Text';
-import { math_lerp } from '@azrico/math';
-import { Block, useBlock, BlockProperties } from '@c/shared/Blocks';
-import { Html } from '@react-three/drei';
-import { sectionProps } from './types';
+import { Text } from "@c/shared/Text";
+import { math_lerp } from "@azrico/math";
+import { Block, useBlock, BlockProperties } from "@c/shared/Blocks";
+import { Html } from "@react-three/drei";
+import { sectionProps } from "./types";
+import { useEffect } from "react";
 
 export default function SectionServices(props: sectionProps) {
-	return (
-		<Block {...props} factor={1}>
-			<Text color="white" size={props.block.wModifier}>
-				{'Chiz ' + '<Services/>'}
-			</Text>
+  const Services = [
+    {
+      name: "Gold Membership ",
+      desc: "Sit ullamco veniam mollit duis duis officia sint ad officia nostrud in ipsum. Adipisicing ad ipsum ea nostrud mollit eu laboris sint ad nulla.",
+    },
+    {
+      name: "Silver Membership ",
+      desc: "Sit ullamco veniam mollit duis duis officia sint ad officia nostrud in ipsum. Adipisicing ad ipsum ea nostrud mollit eu laboris sint ad nulla.",
+    },
+    {
+      name: "Pro Membership ",
+      desc: "Sit ullamco veniam mollit duis duis officia sint ad officia nostrud in ipsum. Adipisicing ad ipsum ea nostrud mollit eu laboris sint ad nulla.",
+    },
+    {
+      name: "Pro Super Membership ",
+      desc: "Sit ullamco veniam mollit duis duis officia sint ad officia nostrud in ipsum. Adipisicing ad ipsum ea nostrud mollit eu laboris sint ad nulla.",
+    },
+    {
+      name: "Gold Membership ",
+      desc: "Sit ullamco veniam mollit duis duis officia sint ad officia nostrud in ipsum. Adipisicing ad ipsum ea nostrud mollit eu laboris sint ad nulla.",
+    },
+  ];
 
-			<Html
-				className="flex flex-row gap-4 p-7 justify-between w-full"
-				style={{ width: props.block.canvasWidth }}
-				position={[-props.block.canvasWidth / 2, -50, 0]}
-			>
-				{[1, 2, 3].map((r, i) => {
-					return (
-						<div key={i} className="card glass w-96 bg-base-100 shadow-xl">
-							<div className="card-body">
-								<h2 className="card-title">Shoes!</h2>
-								<p>If a dog chews shoes whose shoes does he choose?</p>
-								<div className="card-actions justify-end">
-									<button className="btn btn-primary">Buy Now</button>
-								</div>
-							</div>
-						</div>
-					);
-				})}
-			</Html>
-		</Block>
-	);
+  return (
+    <Block {...props} factor={1.35}>
+      <Text color="white" size={props.block.wModifier}>
+        {"Chiz " + "<Services/>"}
+      </Text>
+
+      <Html
+        className="flex flex-col p-7"
+        style={{ width: props.block.canvasWidth }}
+        position={[-props.block.canvasWidth / 2, -50, 0]}
+      >
+        <div className="carousel gap-4 carousel-center justify-center">
+          {Services.map((r, i) => {
+            return (
+              <div
+                key={i}
+                id={`serviceitem${i + 1}`}
+                className="carousel-item card w-[300px] h-[500px] bg-base-100 shadow-xl"
+              >
+                <div className="card-body">
+                  <h2 className="card-title">{r.name}</h2>
+                  <p>{r.desc}</p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex justify-center w-full py-2 gap-2">
+          {Services.map((r, i) => {
+            return (
+              <a href={`#serviceitem${i + 1}`} className="btn btn-xs">
+                {i+1}
+              </a>
+            );
+          })}
+        </div>
+      </Html>
+    </Block>
+  );
 }
