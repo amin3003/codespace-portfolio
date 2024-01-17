@@ -5,28 +5,9 @@ import { Html, Sphere } from '@react-three/drei';
 import { sectionProps } from './types';
 import THREE from 'three';
 import React from 'react';
+import StarsComponent from '@c/StarsContainer/StarsContainer';
 
-function StarsComponent(props: sectionProps & { count: number }) {
-	const particleCount = props.count || 10;
-
-	return new Array(particleCount).fill(0).map((r, i) => {
-		const xpos =
-			(Math.floor(Math.random() * props.block.viewportHeight) -
-				props.block.viewportHeight / 2) *
-			0.9;
-		const ypos =
-			(Math.floor(Math.random() * props.block.viewportWidth) -
-				props.block.viewportWidth / 2) *
-			0.9;
-
-		return (
-			<>
-				<Sphere key={i} position={[ypos, xpos, 0]} scale={[1, 3, 1]}></Sphere>
-				<Sphere key={i} position={[ypos, xpos, 0]} scale={[2, 1, 1]}></Sphere>
-			</>
-		);
-	});
-}
+ 
 
 export default function SectionHome(props: sectionProps) {
 	return (
