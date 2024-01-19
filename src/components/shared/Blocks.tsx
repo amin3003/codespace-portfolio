@@ -2,7 +2,7 @@
 import React, { createContext, useRef, useContext } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { math_lerp } from '@azrico/math';
-import Plane from '@c/shared/Plane';
+import BackgroundPlane from '@/components/shared/BackgroundPlane';
 import state from '@c/shared/Store';
 import { Color } from 'three';
 import { Html, Sphere } from '@react-three/drei';

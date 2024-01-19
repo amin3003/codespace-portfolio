@@ -11,7 +11,7 @@ import { Html } from '@react-three/drei';
 import SectionHome from '@c/sections/SectionHome';
 import SectionServices from '@c/sections/SectionServices';
 import SectionAbout from '@c/sections/SectionAbout';
-import Plane from '@c/shared/Plane';
+import BackgroundPlane from '@/components/shared/BackgroundPlane';
 const sections = [SectionHome, SectionServices, SectionAbout];
 function Content() {
 	const block = useBlock();

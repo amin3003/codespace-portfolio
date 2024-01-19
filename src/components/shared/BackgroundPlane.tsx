@@ -7,7 +7,7 @@ import { math_lerp } from '@azrico/math';
 import state from '@c/shared/Store';
 import { Plane as PlaneDrei } from '@react-three/drei';
 
-function Plane(props: any) {
+function BackgroundPlane(props: any) {
 	const block = useBlock();
 	const planeRef = useRef<any>();
 
@@ -37,5 +37,5 @@ function Plane(props: any) {
 		</PlaneDrei>
 	);
 }
-export default Plane;
+export default BackgroundPlane;
  
