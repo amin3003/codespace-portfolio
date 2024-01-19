@@ -21,6 +21,7 @@
 		"next-intl": "^3.4.0",
 		"react": "^18",
 		"react-dom": "^18",
+		"swiper": "^11.0.5",
 		"three": "0.160.0",
 		"typewriter-effect": "^2.21.0",
 		"use-asset": "^1.0.4"
