@@ -44,13 +44,18 @@ export default function SectionHome(props: sectionProps) {
 				</div>
 				<div className="m-auto">
 					{/* Browser mockup */}
-					<div className="mockup-browser border border-base-300 h-[400px] m-4">
+
+					<div className="flex flex-col gap-4 w-52">
+						<div className="skeleton h-32 w-full"></div>
+						<div className="skeleton h-4 w-28"></div>
+						<div className="skeleton h-4 w-full"></div>
+						<div className="skeleton h-4 w-full"></div>
+					</div>
+					<div className="mockup-browser border border-base-300 h-[300px] m-4">
 						<div className="mockup-browser-toolbar">
 							<div className="input border border-base-300">https://yourwebsite.com</div>
 						</div>
-						<div className="flex justify-center px-4 py-16 border-t border-base-300">
-							Your bussiness
-						</div>
+						<div className="flex justify-center px-4 py-16 border-t border-base-300"></div>
 					</div>
 				</div>
 

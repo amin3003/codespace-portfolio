@@ -42,17 +42,17 @@ export default function SectionAbout(props: sectionProps) {
     },
   ];
   return (
-    <Block {...props} factor={1.8}>
-      <Text color="white" size={props.block.wModifier}>
-        {"Chiz " + "<About/>"}
-      </Text>
-      <Html
-        className="flex flex-col  p-4 "
-        style={{ width: props.block.canvasWidth }}
-        position={[-props.block.canvasWidth / 2, -90, 0]}
-      >
-        <AboutSlider data={team}/>
-      </Html>
-    </Block>
-  );
+		<Block {...props} factor={1.8}>
+			<Text color="white" size={props.block.wModifier * 0.5}>
+				{'Spase team'}
+			</Text>
+			<Html
+				className="flex flex-col  p-4 "
+				style={{ width: props.block.canvasWidth }}
+				position={[-props.block.canvasWidth / 2, -90, 0]}
+			>
+				<AboutSlider data={team} />
+			</Html>
+		</Block>
+	);
 }

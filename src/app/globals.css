@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
- 
-
 .canvas > div {
 	z-index: 10000;
 }
@@ -11,11 +9,10 @@ header {
 	z-index: 20000;
 }
 body {
- 
-background: linear-gradient(180deg,
-rgba(0,0,0,0)0%,
- rgb(67, 0, 70) 60%, 
- rgba(0,0,0,0) 100%);
- 
- 
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 0%,
+		rgb(67, 0, 70) 60%,
+		rgba(0, 0, 0, 0) 100%
+	);
 }
