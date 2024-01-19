@@ -34,6 +34,7 @@ export default function Index() {
 			<div id="content-container" className="fixed top-0 bottom-0 left-0 right-0 ">
 				<Canvas
 					linear
+					//@ts-ignore
 					dpr={window.devicePixelRatio}
 					orthographic
 					camera={{ zoom: state.zoom, position: [0, 0, 100] }}

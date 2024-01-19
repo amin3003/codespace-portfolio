@@ -1,15 +1,11 @@
  
-import Three from 'three';
-import React, { useCallback, useRef } from 'react';
+import React, { useRef } from 'react';
 import { extend, useFrame, useLoader } from '@react-three/fiber';
-import { Vector3 } from 'three';
-import { useAsset } from 'use-asset';
 import { math_lerp } from '@azrico/math';
 import state from '@c/shared/Store';
 import './CustomMaterial';
 import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import { Text as troikaText } from 'troika-three-text';
-import { Sphere } from '@react-three/drei';
 // Register Text as a react-three-fiber element
 extend({ Text: troikaText });
 

@@ -27,7 +27,7 @@ export default function ScrollDetector() {
 
 		/* ---------------------- detecting scroll up and down ---------------------- */
 
-		if (lastScroll.current == -1) {
+		if (!lastScroll.current || lastScroll.current == -1) {
 			headerElement.current.dataset.isGoingDown = 'false';
 			lastScroll.current = currentScroll;
 		} else {
