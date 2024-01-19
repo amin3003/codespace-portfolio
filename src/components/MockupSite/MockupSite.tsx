@@ -2,9 +2,9 @@ import Typewriter from 'typewriter-effect';
 export function MockupSite() {
 	return (
 		<>
-			<div className="mockup-browser border border-white h-[300px] m-4">
+			<div className="mockup-browser border border-white h-[300px] m-4 w-[330px]">
 				<div className="mockup-browser-toolbar">
-					<div className="input border border-inherit">
+					<div className="input border !flex items-center border-inherit !w-full text-xs md:text-md">
 						<Typewriter
 							options={{
 								delay: 60,

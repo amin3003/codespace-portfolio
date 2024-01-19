@@ -34,14 +34,16 @@ export default function SectionServices(props: sectionProps) {
 		<>
 			<Block {...props} factor={1.6}>
 				<BackgroundPlane
+					size={1.4}
 					opacity={0.5}
 					rotation={[0, 0, 0.06]}
-					position={[0, -props.block.canvasHeight / 2.7, -1]}
+					position={[0, -props.block.canvasHeight / 2.7 - 100, -1]}
 				/>
 				<BackgroundPlane
+					size={1.4}
 					opacity={0.5}
 					rotation={[0, 0, -0.06]}
-					position={[0, -props.block.canvasHeight / 2.7, -1]}
+					position={[0, -props.block.canvasHeight / 2.7 - 100, -1]}
 				/>
 			</Block>
 			<Block {...props} factor={1.35}>
@@ -53,7 +55,7 @@ export default function SectionServices(props: sectionProps) {
 					zIndexRange={[0, 0]}
 					className="flex flex-col justify-center p-7"
 					style={{ width: props.block.canvasWidth }}
-					position={[-props.block.canvasWidth / 2, -50, 0]}
+					position={[-props.block.canvasWidth / 2, -40, 0]}
 				>
 					<ServicesSlider data={Services} />
 				</Html>

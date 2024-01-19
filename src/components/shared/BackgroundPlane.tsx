@@ -11,12 +11,13 @@ function BackgroundPlane(props: any) {
 	const block = useBlock();
 	const planeRef = useRef<any>();
 
+	const sizeFactor = props.size || 1.2;
 	return (
 		<PlaneDrei
 			ref={planeRef}
 			rotation={props.rotation || [0, 0, 0]}
 			position={props.position || [0, 0, -1]}
-			scale={[block.viewportWidth * 2, block.viewportHeight * 1.2, 1]}
+			scale={[block.viewportWidth * 2, block.viewportHeight * sizeFactor, 1]}
 		>
 			{/* @ts-ignore */}
 			<customMaterial
