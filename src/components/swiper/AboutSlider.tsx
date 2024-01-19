@@ -13,6 +13,7 @@ export default function AboutSlider(props: any) {
   const swiperOptions = {
     effect: "coverflow",
     grabCursor: true,
+    slideToClickedSlide:true,
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
@@ -22,7 +23,9 @@ export default function AboutSlider(props: any) {
       modifier: 1,
       slideShadows: false,
     },
-    pagination: true,
+    pagination: {
+      clickable: true, // Enable navigation through pagination bullets
+    },
     modules: [EffectCoverflow, Pagination],
     style: { width: "100%", paddingTop: "50px", paddingBottom: "50px" },
     initialSlide: 1, // Set the default active slide to be the second slide
@@ -39,7 +42,7 @@ export default function AboutSlider(props: any) {
               style={{
                 backgroundPosition: "center",
                 backgroundSize: "cover",
-                background:"none",
+                background: "none",
                 borderRadius: "18px",
                 width: "300px",
                 height: "300px",
