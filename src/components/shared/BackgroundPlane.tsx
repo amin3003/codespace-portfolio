@@ -11,26 +11,16 @@ function BackgroundPlane(props: any) {
 	const block = useBlock();
 	const planeRef = useRef<any>();
 
-	//// let lastTop = state.top.current;
-	//// useFrame(() => {
-	//// 	planeRef.current.position.y = math_lerp(
-	//// 		planeRef.current.position.y,
-	//// 		lastTop / 1.1,
-	//// 		0.1
-	//// 	);
-	//// 	lastTop = state.top.current;
-	//// });
-
 	return (
 		<PlaneDrei
 			ref={planeRef}
 			rotation={props.rotation || [0, 0, 0]}
 			position={props.position || [0, 0, -1]}
-			scale={[block.viewportWidth * 2, block.viewportHeight * 1.1, 1]}
+			scale={[block.viewportWidth * 2, block.viewportHeight * 1.2, 1]}
 		>
 			{/* @ts-ignore */}
 			<customMaterial
-				color={props.color || '#1a1a1a'}
+				color={props.color || 'rgb(67, 0, 70)'}
 				opacity={props.opacity || 1}
 				transparent
 			/>
