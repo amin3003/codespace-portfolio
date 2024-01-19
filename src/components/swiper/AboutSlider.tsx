@@ -33,7 +33,7 @@ export default function AboutSlider(props: any) {
 
   return (
     <>
-      <Swiper {...swiperOptions}>
+      <Swiper {...swiperOptions as any}>
         {props.data.map((r: any, index: any) => {
           return (
             <SwiperSlide
