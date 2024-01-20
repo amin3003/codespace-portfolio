@@ -5,6 +5,8 @@ import { math_lerp } from '@azrico/math';
 import state from '@c/shared/Store';
 import './CustomMaterial';
 import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+
+//@ts-ignore
 import { Text as troikaText } from 'troika-three-text';
 // Register Text as a react-three-fiber element
 extend({ Text: troikaText });
@@ -49,6 +51,7 @@ function Text(props: any) {
 			<text
 				ref={textRef}
 				{...opts}
+				/*@ts-ignore*/
 				text={props.children}
 				anchorX="center"
 				anchorY="middle"
