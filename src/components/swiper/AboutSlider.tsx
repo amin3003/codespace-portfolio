@@ -52,12 +52,7 @@ export default function AboutSlider(props: any) {
 							<div className="flex card w-[300px] h-[350px] bg-base-100 ">
 								<div className="card-body content-center justify-center ">
 									<div className="avatar justify-center">
-										<div className="w-24 rounded-full ">
-											<Image
-												alt=""
-												src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-											/>
-										</div>
+										<div className="w-24 rounded-full "></div>
 									</div>
 									<h2 className="card-title justify-center">{r.name}</h2>
 									<h3 className="flex justify-center text-secondary">{r.position}</h3>
