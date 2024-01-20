@@ -44,7 +44,7 @@ export default function SectionAbout(props: sectionProps) {
   return (
 		<Block {...props} factor={1.8}>
 			<Text color="white" size={props.block.wModifier * 0.5}>
-				{'Spase team'}
+				{props.title}
 			</Text>
 			<Html
 				className="flex flex-col  p-4 "

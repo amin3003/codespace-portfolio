@@ -1,6 +1,7 @@
 {
-	"Index": {
-		"title": "HOŞGELDINIZ!"
+	"main": {
+		"spaseservices": "Spase Servisler",
+		"spaseteam": "Spase Takim"
 	},
 	"navbar": {
 		"home": "Ana Sayfa",

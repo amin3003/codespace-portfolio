@@ -1,3 +1,3 @@
 import { Block, useBlock, BlockProperties } from '@c/shared/Blocks';
 
-export type sectionProps = { block: BlockProperties; index: number };
+export type sectionProps = { block: BlockProperties; index: number; title: string };

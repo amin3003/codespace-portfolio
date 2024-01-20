@@ -1,6 +1,7 @@
 {
-	"Index": {
-		"title": "Hello world!"
+	"main": {
+		"spaseservices": "Spase Services",
+		"spaseteam": "Spase Team"
 	},
 	"navbar": {
 		"home": "Home",

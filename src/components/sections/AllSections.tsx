@@ -9,25 +9,34 @@ import { func } from 'three/examples/jsm/nodes/Nodes.js';
 const SectionHome = React.lazy(() => import('@c/sections/SectionHome'));
 const SectionServices = React.lazy(() => import('@c/sections/SectionServices'));
 const SectionAbout = React.lazy(() => import('@c/sections/SectionAbout'));
+type contentProps = { titles: string[] };
 
-function LocalSections() {
-	const block = useBlock();
-	const sections = [SectionHome, SectionServices, SectionAbout];
-
-	return sections.map((SectionRender, index) => {
-		return <SectionRender key={index} index={index} block={block} />;
-	});
-}
-export default function ThreeContent() {
+export default function AllSections(props: contentProps) {
 	return (
 		<>
-			<div id="content-container" className="fixed top-0 bottom-0 left-0 right-0">
+			<div id="content-container" className="fixed top-0 h-lvh w-lvw">
 				<Canvas linear orthographic camera={{ zoom: state.zoom, position: [0, 0, 100] }}>
 					<React.Suspense fallback={null}>
-						<LocalSections />
+						<LocalSections {...props} />
 					</React.Suspense>
 				</Canvas>
 			</div>
 		</>
 	);
+}
+
+function LocalSections(props: contentProps) {
+	const block = useBlock();
+	const sections = [SectionHome, SectionServices, SectionAbout];
+
+	return sections.map((SectionRender, index) => {
+		return (
+			<SectionRender
+				key={index}
+				index={index}
+				block={block}
+				title={props.titles[index]}
+			/>
+		);
+	});
 }
