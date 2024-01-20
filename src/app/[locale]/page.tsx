@@ -41,7 +41,7 @@ export default function Index() {
 							key={index}
 							id={'page' + index}
 							//use dvh to avoid resize when vh is changed on mobile
-							style={{ height: `100dvh` }}
+							style={{ height: `100lvh` }}
 						/>
 					);
 				})}
