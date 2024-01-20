@@ -5,7 +5,7 @@ import { localeNames, defaultLocale } from '@/i18nConfig';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname, redirect } from '@src/navigation';
 const FULL_RELOAD = true;
-export default function LangSwitcher(props: { className?: string }) {
+export default function LangSwitcher(props: { className?: string; openUp?: boolean }) {
 	const locale = useLocale();
 	const router = useRouter();
 	const pathname = usePathname();
@@ -31,7 +31,13 @@ export default function LangSwitcher(props: { className?: string }) {
 	return (
 		<div className="flex justify-end px-2 w-min">
 			<div className="flex items-stretch">
-				<div className={'dropdown dropdown-end dropdown-hover ' + props.className}>
+				<div
+					className={
+						'dropdown dropdown-hover ' +
+						props.className +
+						` ${props.openUp ? 'dropdown-top' : 'dropdown-bottom'}`
+					}
+				>
 					<div tabIndex={0} role="button" className="btn m-1 w-6rem">
 						{currentLocaleName}
 					</div>

@@ -44,7 +44,7 @@ export default function AppHeader() {
 				<ScrollDetector />
 				<React.Suspense fallback={null}>
 					<div>
-						<div className="flex-none lg:hidden">
+						<div className="flex-none md:hidden">
 							<label
 								htmlFor="my-drawer"
 								aria-label="open sidebar"
@@ -82,7 +82,7 @@ export default function AppHeader() {
 							})}
 						</ul>
 					</div>
-					<LangSwitcher className="navbar-end" />
+					<LangSwitcher className="navbar-end hidden md:block" />
 				</React.Suspense>
 			</header>
 		</>

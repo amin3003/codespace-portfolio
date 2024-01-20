@@ -27,7 +27,7 @@ export default function PageIndex() {
 						);
 					})}
 			</div>
-			<div className="drawer-side z-[40000]">
+			<div className="md:hidden drawer-side z-[40000]">
 				<label
 					htmlFor="my-drawer"
 					aria-label="close sidebar"
