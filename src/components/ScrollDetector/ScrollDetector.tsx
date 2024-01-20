@@ -10,6 +10,7 @@ import state from '@c/shared/Store';
 export default function ScrollDetector() {
 	const headerElement = React.useRef<HTMLElement>();
 	const lastScroll = React.useRef<number>();
+
 	/* -------------------------- detect current scroll ------------------------- */
 	const onScroll = React.useCallback((e: any) => {
 		//we can use isTop in css to update css based on scroll
@@ -19,7 +20,7 @@ export default function ScrollDetector() {
 		const currentScroll = window.scrollY;
 		const isTop = String(currentScroll <= 0);
 		state.top.current = Number(currentScroll);
-		 
+
 		if (!headerElement.current) return;
 
 		/* ----------------------- detecting if we are at top ----------------------- */
