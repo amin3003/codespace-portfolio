@@ -6,7 +6,7 @@ export default function SidebarContent() {
 	const t = useTranslations('navbar');
 
 	return (
-		<>
+		<ul className="menu p-4 w-80 min-h-full bg-base-200">
 			{header_paths.map((v, i) => {
 				return (
 					<li key={i} className="text-md">
@@ -16,6 +16,6 @@ export default function SidebarContent() {
 					</li>
 				);
 			})}
-		</>
+		</ul>
 	);
 }

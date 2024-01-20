@@ -35,8 +35,8 @@ export default function AppHeader() {
 					//header
 					' navbar sticky justify-between' +
 					//change sticky based on scroll
-					 ' data-[is-going-down=true]:top-[-100%]' +
-					 ' data-[is-going-down=false]:top-0' +
+					' data-[is-going-down=true]:top-[-100%]' +
+					' data-[is-going-down=false]:top-0' +
 					//other classes
 					' data-[is-top=false]:shadow-md'
 				}
@@ -46,7 +46,7 @@ export default function AppHeader() {
 					<div>
 						<div className="flex-none lg:hidden">
 							<label
-								htmlFor="my-drawer-3"
+								htmlFor="my-drawer"
 								aria-label="open sidebar"
 								className="btn btn-square btn-ghost"
 							>
