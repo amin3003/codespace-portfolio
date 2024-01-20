@@ -1,9 +1,9 @@
-import AppLogo from '@c/Header/AppLogo';
 import ScrollDetector from '@c/ScrollDetector/ScrollDetector';
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Link from '@/navigation';
-import LangSwitcher from './LangSwitcher';
+const AppLogo = React.lazy(() => import('./AppLogo'));
+const LangSwitcher = React.lazy(() => import('./LangSwitcher'));
 
 const paths = [
 	{
@@ -40,22 +40,24 @@ export default function AppHeader() {
 			}
 		>
 			<ScrollDetector />
-			<AppLogo text={true} className="navbar-start" />
-			<div className="navbar-center justify-between items-center  hidden md:flex w-full md:w-auto">
-				{/*	https://daisyui.com/components/menu/ */}
-				<ul className="menu menu-horizontal rounded-box">
-					{paths.map((v, i) => {
-						return (
-							<li key={i} className="text-md">
-								<Link href={`${v.path}`}>
-									<b>{t(v.name)}</b>
-								</Link>
-							</li>
-						);
-					})}
-				</ul>
-			</div>
-			<LangSwitcher className="navbar-end" />
+			<React.Suspense fallback={null}>
+				<AppLogo text={true} className="navbar-start" />
+				<div className="navbar-center justify-between items-center  hidden md:flex w-full md:w-auto">
+					{/*	https://daisyui.com/components/menu/ */}
+					<ul className="menu menu-horizontal rounded-box">
+						{paths.map((v, i) => {
+							return (
+								<li key={i} className="text-md">
+									<Link href={`${v.path}`}>
+										<b>{t(v.name)}</b>
+									</Link>
+								</li>
+							);
+						})}
+					</ul>
+				</div>
+				<LangSwitcher className="navbar-end" />
+			</React.Suspense>
 		</header>
 	);
 }

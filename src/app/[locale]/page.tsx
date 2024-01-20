@@ -3,9 +3,11 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useBlock } from '@c/shared/Blocks';
 import state from '@c/shared/Store';
-import SectionHome from '@c/sections/SectionHome';
-import SectionServices from '@c/sections/SectionServices';
-import SectionAbout from '@c/sections/SectionAbout';
+ 
+const SectionHome = React.lazy(() => import('@c/sections/SectionHome'));
+const SectionServices = React.lazy(() => import('@c/sections/SectionServices'));
+const SectionAbout = React.lazy(() => import('@c/sections/SectionAbout')); 
+
 function Content() {
 	const block = useBlock();
 	const sections = [SectionHome, SectionServices, SectionAbout];
