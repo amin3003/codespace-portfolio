@@ -40,8 +40,8 @@ export default function Index() {
 						<div
 							key={index}
 							id={'page' + index}
-							// className={'border-red-200 border-2'}
-							style={{ height: `100vh` }}
+							//use dvh to avoid resize when vh is changed on mobile
+							style={{ height: `100dvh` }}
 						/>
 					);
 				})}
