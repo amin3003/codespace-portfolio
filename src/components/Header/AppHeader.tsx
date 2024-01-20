@@ -46,7 +46,7 @@ export default function AppHeader() {
 				<ul className="menu menu-horizontal rounded-box">
 					{paths.map((v, i) => {
 						return (
-							<li key={i} className="text-lg">
+							<li key={i} className="text-md">
 								<Link href={`${v.path}`}>
 									<b>{t(v.name)}</b>
 								</Link>
