@@ -6,9 +6,9 @@ import state from '@c/shared/Store';
 import SectionHome from '@c/sections/SectionHome';
 import SectionServices from '@c/sections/SectionServices';
 import SectionAbout from '@c/sections/SectionAbout';
-const sections = [SectionHome, SectionServices, SectionAbout];
 function Content() {
 	const block = useBlock();
+	const sections = [SectionHome, SectionServices, SectionAbout];
 
 	return (
 		<>
@@ -24,14 +24,8 @@ export default function Index() {
 
 	return (
 		<>
-			<div id="content-container" className="fixed top-0 bottom-0 left-0 right-0 ">
-				<Canvas
-					linear
-					//@ts-ignore
-					dpr={window.devicePixelRatio}
-					orthographic
-					camera={{ zoom: state.zoom, position: [0, 0, 100] }}
-				>
+			<div id="content-container" className="fixed top-0 bottom-0 left-0 right-0">
+				<Canvas linear orthographic camera={{ zoom: state.zoom, position: [0, 0, 100] }}>
 					<React.Suspense fallback={null}>
 						<Content />
 					</React.Suspense>

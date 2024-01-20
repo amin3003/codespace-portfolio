@@ -10,6 +10,7 @@ import MockupSite from '@c/MockupSite/MockupSite';
 import Typewriter from 'typewriter-effect';
 
 export default function SectionHome(props: sectionProps) {
+	
 	return (
 		<Block {...props} factor={0.9}>
 			<StarsComponent {...props} count={16} />
@@ -27,12 +28,9 @@ export default function SectionHome(props: sectionProps) {
 				style={{ width: props.block.canvasWidth }}
 				position={[-props.block.canvasWidth / 2, props.block.canvasHeight / 15, 0]}
 			>
-				 
-				<div className="m-auto flex flex-row"> 
+				<div className="m-auto flex flex-row">
 					<MockupSite />
 				</div>
-
-			 
 			</Html>
 		</Block>
 	);
