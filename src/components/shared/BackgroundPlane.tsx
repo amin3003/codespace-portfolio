@@ -1,3 +1,4 @@
+'use client';
 import React, { createContext, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import './CustomMaterial';
@@ -6,7 +7,6 @@ import Text from '@/components/shared/Text';
 import { math_lerp } from '@azrico/math';
 import state from '@c/shared/Store';
 import { Plane as PlaneDrei } from '@react-three/drei';
-
 function BackgroundPlane(props: any) {
 	const block = useBlock();
 	const planeRef = useRef<any>();
@@ -29,4 +29,3 @@ function BackgroundPlane(props: any) {
 	);
 }
 export default BackgroundPlane;
- 

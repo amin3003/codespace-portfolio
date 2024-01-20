@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useBlock } from '@c/shared/Blocks';
@@ -15,8 +15,7 @@ function Content() {
 			{sections.map((SectionRender, index) => {
 				return <SectionRender key={index} index={index} block={block} />;
 			})}
-		
-		 	</>
+		</>
 	);
 }
 
@@ -33,7 +32,9 @@ export default function Index() {
 					orthographic
 					camera={{ zoom: state.zoom, position: [0, 0, 100] }}
 				>
-					<Content />
+					<React.Suspense fallback={null}>
+						<Content />
+					</React.Suspense>
 				</Canvas>
 			</div>
 			{Array(pages)
