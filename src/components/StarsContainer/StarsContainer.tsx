@@ -2,7 +2,7 @@ import React from 'react';
 import { Sphere } from '@react-three/drei';
 import { sectionProps } from '../sections/types';
 
-export default function StarsComponent(props: sectionProps & { count: number }) {
+export default function StarsContainer(props: sectionProps & { count: number }) {
 	const particleCount = props.count || 10;
 
 	/* ------------- a set of random numbers for each stars position ------------ */
@@ -27,10 +27,10 @@ export default function StarsComponent(props: sectionProps & { count: number }) 
 		() =>
 			starFinalPosList.map((r, i) => {
 				return (
-					<>
-						<Sphere key={'s0-' + i} position={r} scale={[1, 3, 1]}></Sphere>
-						<Sphere key={'s1-' + i} position={r} scale={[2, 1, 1]}></Sphere>
-					</>
+					<React.Fragment key={i}>
+						<Sphere key={'s1-' + i} position={r} scale={[1, 3, 1]}></Sphere>
+						<Sphere key={'s2-' + i} position={r} scale={[2, 1, 1]}></Sphere>
+					</React.Fragment>
 				);
 			}),
 		[starFinalPosList]

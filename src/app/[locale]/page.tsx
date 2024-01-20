@@ -1,17 +1,11 @@
 "use client"
-import ReactDOM from "react-dom";
-import React, { Suspense, useEffect, useMemo } from "react";
-import { Canvas, useLoader, useFrame } from "@react-three/fiber";
-import { TextureLoader, LinearFilter } from "three";
-import { Text } from "@c/shared/Text";
-import { math_lerp } from "@azrico/math"; 
-import { Block, useBlock } from "@c/shared/Blocks";
-import state from "@c/shared/Store";
-import { Html } from '@react-three/drei';
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import { useBlock } from '@c/shared/Blocks';
+import state from '@c/shared/Store';
 import SectionHome from '@c/sections/SectionHome';
 import SectionServices from '@c/sections/SectionServices';
 import SectionAbout from '@c/sections/SectionAbout';
-import BackgroundPlane from '@/components/shared/BackgroundPlane';
 const sections = [SectionHome, SectionServices, SectionAbout];
 function Content() {
 	const block = useBlock();
