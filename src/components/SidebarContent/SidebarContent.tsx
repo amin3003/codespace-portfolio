@@ -7,7 +7,7 @@ export default function SidebarContent() {
 	const t = useTranslations('navbar');
 
 	return (
-		<div className="p-4 w-80 min-h-full bg-base-200 flex flex-col">
+		<div className="p-4 min-h-full !w-[75%] bg-base-200 flex flex-col">
 			<ul className="menu flex-1">
 				{header_paths.map((v, i) => {
 					return (

@@ -3,8 +3,6 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useBlock } from '@c/shared/Blocks';
 import state from '@c/shared/Store';
-import SidebarContent from '@c/SidebarContent/SidebarContent';
-import { func } from 'three/examples/jsm/nodes/Nodes.js';
 
 const SectionHome = React.lazy(() => import('@c/sections/SectionHome'));
 const SectionServices = React.lazy(() => import('@c/sections/SectionServices'));
