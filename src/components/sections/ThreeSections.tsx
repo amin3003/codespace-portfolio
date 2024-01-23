@@ -7,15 +7,13 @@ import StarsComponent from '@c/StarsContainer/StarsContainer';
 
 export default function ThreeSections(props: any) {
 	return (
-		<>
-			<div id="content-container" className="fixed top-0 h-lvh w-lvw">
-				<Canvas linear orthographic camera={{ zoom: state.zoom, position: [0, 0, 100] }}>
-					<React.Suspense fallback={null}>
-						<LocalSections {...props} />
-					</React.Suspense>
-				</Canvas>
-			</div>
-		</>
+		<div id="three-container" className="fixed top-0 h-lvh w-lvw">
+			<Canvas linear orthographic camera={{ zoom: state.zoom, position: [0, 0, 100] }}>
+				<React.Suspense fallback={null}>
+					<LocalSections {...props} />
+				</React.Suspense>
+			</Canvas>
+		</div>
 	);
 }
 function LocalSections(props: any) {

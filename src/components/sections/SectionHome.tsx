@@ -11,8 +11,8 @@ import Typewriter from 'typewriter-effect';
 
 export default function SectionHome(props: sectionProps) {
 	return (
-		<div className="flex flex-col items-center justify-center">
-			<h3 className="">Code spase</h3>
+		<div className="flex flex-col items-center justify-center p-12">
+			<h3>Code spase</h3>
 			<div className="m-auto flex flex-row">
 				<MockupSite />
 			</div>

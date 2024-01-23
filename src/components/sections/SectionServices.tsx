@@ -26,8 +26,8 @@ export default function SectionServices(props: sectionProps) {
 		},
 	];
 	return (
-		<div>
-			<span>{'Services'}</span>
+		<div className="flex flex-col justify-center content-center text-center">
+			<h3 className="text-5xl">{'Services'}</h3>
 			<div className="flex flex-col justify-center p-7">
 				<ServicesSlider data={Services} />
 			</div>
