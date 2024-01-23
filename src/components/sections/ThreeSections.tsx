@@ -5,6 +5,7 @@ import { useBlock, Block } from '@c/shared/Blocks';
 import state from '@c/shared/Store';
 import PlanetOrbits from '@/components/Three/PlanetOrbits';
 import StarsComponent from '@/components/Three/StarsContainer';
+import { Sky, Stars } from '@react-three/drei';
 
 export default function ThreeSections(props: any) {
 	return (
@@ -19,36 +20,40 @@ export default function ThreeSections(props: any) {
 }
 function LocalSections(props: any) {
 	const block = useBlock();
-	const components = [StarsComponent, PlanetOrbits];
 
 	return (
-		<>  
-			<Block index={0}>
-				<StarsComponent block={block} count={16} />
+		<>
+			<ambientLight intensity={4} />
+			<Block index={0.2}>
+				<StarsComponent block={block} count={20} />
 			</Block>
-			<Block index={0.8}>
+			<Block index={1.2}>
+				<StarsComponent block={block} count={8} size={1.5} />
 				<PlanetOrbits
 					showOrbits
 					block={block}
 					planets={[
-						{ radius: 70, size: 25, factor: 0.1, color: 'orange' },
-						{ radius: 170, size: 8, factor: -0.3, color: '#ffaaff' },
-						{ radius: 290, size: 58, factor: 0.3, color: 'red' },
+						{ radius: 70, size: 25, factor: 0.05, color: '#b3053f' },
+						{ radius: 170, size: 8, factor: -0.15, color: '#f5b042' },
+						{ radius: 290, size: 58, factor: 0.15, color: '#4287f5' },
 					]}
 					side="left"
 				/>
 			</Block>
 			<Block index={2.5}>
+				<StarsComponent block={block} count={16} size={1.5} />
 				<PlanetOrbits
 					showOrbits
 					block={block}
 					planets={[
-						{ radius: 70, size: 25, factor: 0.1, color: 'orange' },
-						{ radius: 170, size: 8, factor: -0.3, color: '#ffaaff' },
-						{ radius: 290, size: 58, factor: 0.3, color: 'red' },
+						{ radius: 80, size: 25, factor: 0.2, color: '#b3053f' },
+						{ radius: 190, size: 8, factor: -0.1, color: '#ffaaff' },
 					]}
 					side="right"
 				/>
+			</Block>
+			<Block index={3}>
+				<StarsComponent block={block} count={16} size={1} />
 			</Block>
 		</>
 	);

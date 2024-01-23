@@ -1,14 +1,20 @@
 import React from 'react';
-import { Sphere } from '@react-three/drei';
+import { Sphere, Stars } from '@react-three/drei';
 import { BlockProperties } from '@c/shared/Blocks';
+import '@c/shared/CustomMaterial';
 
-export default function StarsContainer(props: { block: BlockProperties; count: number }) {
+export default function StarsContainer(props: {
+	block: BlockProperties;
+	count: number;
+	size?: number;
+}) {
+	const starSize = props.size || 1;
 	const particleCount = props.count || 10;
 
 	/* ------------- a set of random numbers for each stars position ------------ */
 	const starPosList = React.useMemo(() => {
 		return new Array(particleCount).fill(0).map((r) => {
-			return [Math.random(), Math.random(), 0] as any;
+			return [Math.random(), Math.random(), -10] as any;
 		});
 	}, [particleCount]);
 
@@ -28,11 +34,31 @@ export default function StarsContainer(props: { block: BlockProperties; count: n
 			starFinalPosList.map((r, i) => {
 				return (
 					<React.Fragment key={i}>
-						<Sphere key={'s1-' + i} position={r} scale={[1, 3, 1]}></Sphere>
-						<Sphere key={'s2-' + i} position={r} scale={[2, 1, 1]}></Sphere>
+						<mesh
+							position={r}
+							// scale={[starSize, starSize * 20, starSize]}
+						>
+							<Stars
+								radius={1}
+								depth={50}
+								count={4}
+								factor={3}
+								saturation={0}
+								fade
+								speed={1}
+							/>
+							{/* <meshStandardMaterial transparent opacity={0.1} color={'white'} /> */}
+						</mesh>
+						{/* <Sphere
+							key={'s2-' + i}
+							position={r}
+							scale={[starSize * 20, starSize, starSize]}
+						>
+							<meshStandardMaterial transparent opacity={0.1} color={'white'} />
+						</Sphere> */}
 					</React.Fragment>
 				);
 			}),
-		[starFinalPosList]
+		[starFinalPosList, starSize]
 	);
 }

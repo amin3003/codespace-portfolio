@@ -5,6 +5,7 @@ import state from '@c/shared/Store';
 import { useFrame } from '@react-three/fiber';
 import { math_lerp, math_roundTo } from '@azrico/math';
 import '@c/shared/CustomMaterial';
+import { AmbientLight } from 'three';
 type planetType = { radius: number; size: number; factor: number; color?: string };
 export default function PlanetOrbits(props: {
 	block: BlockProperties;
@@ -54,9 +55,8 @@ export default function PlanetOrbits(props: {
 				return (
 					<React.Fragment key={i}>
 						{props.showOrbits && (
-							<Ring args={[planet.radius, planet.radius + 1, 64]} position={[x0, y0, 0]}>
-								{/*@ts-ignore*/}
-								<customMaterial transparent opacity={0.2} color={'white'} />
+							<Ring args={[planet.radius, planet.radius + 1, 64]} position={[x0, y0, -1]}>
+								<meshStandardMaterial transparent opacity={0.1} color={'white'} />
 							</Ring>
 						)}
 
@@ -64,8 +64,7 @@ export default function PlanetOrbits(props: {
 							ref={(ref) => (planetRefList.current[i] = ref)}
 							scale={[planet.size, planet.size, 4]}
 						>
-							{/*@ts-ignore*/}
-							<customMaterial
+							<meshStandardMaterial
 								transparent
 								opacity={0.5}
 								color={planet.color || 'hotpink'}
