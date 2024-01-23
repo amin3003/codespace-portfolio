@@ -9,7 +9,7 @@ import SectionHome from './SectionHome';
 export default function HtmlSections(props: any) {
 	const sections = [SectionHome, SectionServices, SectionAbout];
 	return (
-		<div id='content-container' className="z-[20000]">
+		<div id="content-container" className="z-[10000]">
 			{sections.map((SectionRender, index) => {
 				return (
 					<section

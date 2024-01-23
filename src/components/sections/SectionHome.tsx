@@ -5,7 +5,7 @@ import { Html, Sphere } from '@react-three/drei';
 import { sectionProps } from './types';
 import THREE from 'three';
 import React from 'react';
-import StarsComponent from '@c/StarsContainer/StarsContainer';
+import StarsComponent from '@/components/Three/StarsContainer';
 import MockupSite from '@c/MockupSite/MockupSite';
 import Typewriter from 'typewriter-effect';
 
