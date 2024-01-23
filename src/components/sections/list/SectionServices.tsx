@@ -1,6 +1,6 @@
 'use client';
-import { sectionProps } from './types';
-import ServicesSlider from '../swiper/ServicesSlider';
+import { sectionProps } from '../types';
+import ServicesSlider from '../../swiper/ServicesSlider';
 
 export default function SectionServices(props: sectionProps) {
 	const Services = [

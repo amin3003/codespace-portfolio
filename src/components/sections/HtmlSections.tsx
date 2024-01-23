@@ -1,13 +1,10 @@
 import React from 'react';
-import SectionAbout from './SectionAbout';
-import SectionServices from './SectionServices';
-import SectionHome from './SectionHome';
-
-// const SectionHome = React.lazy(() => import('@c/sections/SectionHome'));
-// const SectionServices = React.lazy(() => import('@c/sections/SectionServices'));
-
+import SectionAbout from './list/SectionAbout';
+import SectionServices from './list/SectionServices';
+import SectionHome from './list/SectionHome';
+ 
 export default function HtmlSections(props: any) {
-	const sections = [SectionHome, SectionServices, SectionAbout];
+	const sections = [SectionHome, SectionServices, SectionAbout, null, null];
 	return (
 		<div id="content-container" className="z-[10000]">
 			{sections.map((SectionRender, index) => {
@@ -18,7 +15,7 @@ export default function HtmlSections(props: any) {
 						//use dvh to avoid resize when vh is changed on mobile
 						style={{ height: `100lvh` }}
 					>
-						<SectionRender key={index} index={index} />
+						{SectionRender != null && <SectionRender key={index} index={index} />}
 					</section>
 				);
 			})}
