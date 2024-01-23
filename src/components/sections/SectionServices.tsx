@@ -1,11 +1,6 @@
-import { Text } from "@c/shared/Text";
-import { math_lerp } from "@azrico/math";
-import { Block, useBlock, BlockProperties } from "@c/shared/Blocks";
-import { Html } from "@react-three/drei";
-import { sectionProps } from "./types";
-import { useEffect } from "react";
-import ServicesSlider from "../swiper/ServicesSlider";
-import BackgroundPlane from '@/components/shared/BackgroundPlane';
+'use client';
+import { sectionProps } from './types';
+import ServicesSlider from '../swiper/ServicesSlider';
 
 export default function SectionServices(props: sectionProps) {
 	const Services = [
@@ -31,35 +26,11 @@ export default function SectionServices(props: sectionProps) {
 		},
 	];
 	return (
-		<>
-			<Block {...props} factor={1.6}>
-				<BackgroundPlane
-					size={1.4}
-					opacity={0.5}
-					rotation={[0, 0, 0.06]}
-					position={[0, -props.block.canvasHeight / 2.7 - 100, -1]}
-				/>
-				<BackgroundPlane
-					size={1.4}
-					opacity={0.5}
-					rotation={[0, 0, -0.06]}
-					position={[0, -props.block.canvasHeight / 2.7 - 100, -1]}
-				/>
-			</Block>
-			<Block {...props} factor={1.35}>
-				<Text color="white" size={props.block.wModifier * 0.5}>
-					{props.title}
-				</Text>
-
-				<Html
-					zIndexRange={[0, 0]}
-					className="flex flex-col justify-center p-7"
-					style={{ width: props.block.canvasWidth }}
-					position={[-props.block.canvasWidth / 2, -40, 0]}
-				>
-					<ServicesSlider data={Services} />
-				</Html>
-			</Block>
-		</>
+		<div>
+			<span>{'Services'}</span>
+			<div className="flex flex-col justify-center p-7">
+				<ServicesSlider data={Services} />
+			</div>
+		</div>
 	);
 }

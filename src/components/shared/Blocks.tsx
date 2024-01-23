@@ -2,15 +2,12 @@
 import React, { createContext, useRef, useContext } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { math_lerp } from '@azrico/math';
-import BackgroundPlane from '@/components/shared/BackgroundPlane';
 import state from '@c/shared/Store';
-import { Color } from 'three';
-import { Html, Sphere } from '@react-three/drei';
 
 const offsetContext = createContext(0);
 
 function Block({ children, offset, ...props }: any) {
-	const { offset: parentOffset, sectionHeight, fModifier } = useBlock();
+	const { offset: parentOffset, sectionHeight, fModifier,mobile } = useBlock();
 	const ref = useRef<any>();
 
 	offset = offset ?? props.index ?? parentOffset;

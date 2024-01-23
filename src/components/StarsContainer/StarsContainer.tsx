@@ -1,8 +1,8 @@
 import React from 'react';
 import { Sphere } from '@react-three/drei';
-import { sectionProps } from '../sections/types';
+import { BlockProperties } from '@c/shared/Blocks';
 
-export default function StarsContainer(props: sectionProps & { count: number }) {
+export default function StarsContainer(props: { block: BlockProperties; count: number }) {
 	const particleCount = props.count || 10;
 
 	/* ------------- a set of random numbers for each stars position ------------ */
