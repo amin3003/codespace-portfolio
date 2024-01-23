@@ -39,7 +39,7 @@ export default function StarsContainer(props: {
 							// scale={[starSize, starSize * 20, starSize]}
 						>
 							<Stars
-								radius={1}
+								radius={starSize}
 								depth={50}
 								count={4}
 								factor={3}

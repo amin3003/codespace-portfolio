@@ -11,11 +11,24 @@ import Typewriter from 'typewriter-effect';
 
 export default function SectionHome(props: sectionProps) {
 	return (
-		<div className="flex flex-col items-center justify-center p-12">
-			<h3>Code spase</h3>
-			<div className="m-auto flex flex-row">
-				<MockupSite />
+		<div id="section-home" className="flex flex-col p-7">
+			<div className="flex flex-row items-center justify-center p-12 gap-12">
+				<div className="flex flex-col p-8">
+					<h1>Code spase</h1>
+					<span>Bussiness soultion. grow your bussiness to the moon</span>
+					<span> grow your bussiness to the moon</span>
+				</div>
+				<div>
+					<MockupSite />
+				</div>
 			</div>
+
+			<a className="btn btn-ghost mx-auto flex flex-row gap-6" href="#section-service">
+				<i className="bi bi-arrow-down"></i>
+
+				<p>Discover more</p>
+				<i className="bi bi-arrow-down"></i>
+			</a>
 		</div>
 	);
 }

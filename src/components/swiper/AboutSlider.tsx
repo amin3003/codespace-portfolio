@@ -54,8 +54,10 @@ export default function AboutSlider(props: any) {
 									<div className="avatar justify-center">
 										<div className="w-24 rounded-full "></div>
 									</div>
-									<h2 className="card-title justify-center">{r.name}</h2>
-									<h3 className="flex justify-center text-secondary">{r.position}</h3>
+									<h3 className="card-title justify-center">{r.name}</h3>
+
+									<p className="flex justify-center text-secondary">{r.position}</p>
+
 									<p className="flex text-justify text-sm">{r.desc}</p>
 									<div className="card-actions justify-center"></div>
 								</div>
