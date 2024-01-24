@@ -1,13 +1,6 @@
-import { Text } from '@c/shared/Text';
-import { math_lerp } from '@azrico/math';
-import { Block, useBlock, BlockProperties } from '@c/shared/Blocks';
-import { Html, Sphere } from '@react-three/drei';
-import { sectionProps } from '../types';
-import THREE from 'three';
+import { sectionProps } from './types';
 import React from 'react';
-import StarsComponent from '@/components/Three/StarsContainer';
 import MockupSite from '@c/MockupSite/MockupSite';
-import Typewriter from 'typewriter-effect';
 
 export default function SectionHome(props: sectionProps) {
 	return (
@@ -23,7 +16,7 @@ export default function SectionHome(props: sectionProps) {
 				</div>
 			</div>
 
-			<a className="btn btn-ghost mx-auto flex flex-row gap-6" href="#section-service">
+			<a className="btn btn-ghost mx-auto flex flex-row gap-6" href="#steps">
 				<i className="bi bi-arrow-down"></i>
 			</a>
 		</div>

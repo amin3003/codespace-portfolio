@@ -5,7 +5,6 @@ import { useBlock, Block } from '@c/shared/Blocks';
 import state from '@c/shared/Store';
 import PlanetOrbits from '@/components/Three/PlanetOrbits';
 import StarsComponent from '@/components/Three/StarsContainer';
-import { Sky, Stars } from '@react-three/drei';
 import { Vector3 } from 'three';
 import useRef from 'react';
 
@@ -22,38 +21,14 @@ export default function ThreeSections(props: any) {
 		</div>
 	);
 }
+
 function LocalSections(props: any) {
 	const block = useBlock();
-	const sizeFactor = 60;
+
 	return (
 		<>
 			<Block index={2.5}>
-				<PlanetOrbits
-					showOrbits
-					block={block}
-					planets={[
-						{
-							orbitRadius: 170,
-							size: sizeFactor * 0.382, //venus
-							factor: 0.05,
-							color: '#b3053f',
-						},
-						{
-							orbitRadius: 470,
-							size: sizeFactor * 0.93, //mercury
-							factor: -0.15,
-							color: 'gray',
-						},
-						{
-							orbitRadius: 990,
-							size: sizeFactor * 1, //earth
-							factor: 0.11,
-							offset: -Math.PI / 2,
-							color: '#4287f5',
-						},
-					]}
-					side="left"
-				/>
+				<SolarSystem block={block} />
 			</Block>
 			<Block index={4}>
 				<PlanetOrbits
@@ -95,5 +70,37 @@ function LocalSections(props: any) {
 				<StarsComponent block={block} count={16} size={1} />
 			</Block>
 		</>
+	);
+}
+function SolarSystem(props: any) {
+	const sizeFactor = 60;
+	const distanceFactor = 900;
+	return (
+		<PlanetOrbits
+			showOrbits
+			block={props.block}
+			planets={[
+				{
+					orbitRadius: distanceFactor * 0.4,
+					size: sizeFactor * 0.382, //venus
+					factor: 0.05,
+					color: '#b3053f',
+				},
+				{
+					orbitRadius: distanceFactor * 0.7,
+					size: sizeFactor * 0.93, //mercury
+					factor: -0.15,
+					color: 'gray',
+				},
+				{
+					orbitRadius: distanceFactor * 1,
+					size: sizeFactor * 1, //earth
+					factor: 0.11,
+					offset: -Math.PI / 2,
+					color: '#4287f5',
+				},
+			]}
+			side="left"
+		/>
 	);
 }

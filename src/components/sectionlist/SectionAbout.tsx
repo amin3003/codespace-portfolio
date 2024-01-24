@@ -1,11 +1,7 @@
 'use client';
-import { Text } from '@c/shared/Text';
-import { math_lerp } from '@azrico/math';
-import { Block, useBlock, BlockProperties } from '@c/shared/Blocks';
-import { Html } from '@react-three/drei';
-import { sectionProps } from '../types';
+import { sectionProps } from './types';
 import React from 'react';
-import AboutSlider from '../../swiper/AboutSlider';
+import AboutSlider from '../swiper/AboutSlider';
 export default function SectionAbout(props: sectionProps) {
  
 	const team = [
