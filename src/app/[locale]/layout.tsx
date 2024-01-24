@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18nConfig';
 import SidebarContent from '@c/SidebarContent/SidebarContent';
+import ThreeSections from '@/components/sectionlist/ThreeSections';
 
 const Footer = React.lazy(() => import('@c/Footer/Footer'));
 const AppHeader = React.lazy(() => import('@c/Header/AppHeader'));
@@ -14,6 +15,7 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 		<html lang={locale} data-theme="dracula">
 			<body className="overflow-x-clip">
 				<AppHeader />
+				<ThreeSections />
 				<main className="drawer">
 					<input id="my-drawer" type="checkbox" className="drawer-toggle" />
 
