@@ -8,7 +8,7 @@ import OrbitPage from '@/components/Three/OrbitPage';
 import StarPage from '@/components/Three/StarPage';
 export default function PageService() {
 	return (
-		<>
+		<div className="px-[10%]">
 			<ThreeCanvas>
 				<StarPage />
 			</ThreeCanvas>
@@ -21,6 +21,6 @@ export default function PageService() {
 				<div>a</div>
 				<div>a</div>
 			</SectionArea>
-		</>
+		</div>
 	);
 }
