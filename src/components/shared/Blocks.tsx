@@ -35,13 +35,15 @@ export interface BlockProperties {
 	viewportHeight: number;
 	canvasWidth: number;
 	canvasHeight: number;
-	mobile: boolean;
 	margin: number;
 	contentMaxWidth: number;
 	sectionHeight: number;
 	offsetFactor: number;
 	wModifier: number;
 	fModifier: number;
+	/* -------------------------------------------------------------------------- */
+	mobile: boolean;
+	tablet: boolean;
 }
 
 function useBlock(): BlockProperties {
@@ -53,7 +55,9 @@ function useBlock(): BlockProperties {
 	const canvasWidth = viewportWidth / zoom;
 	const canvasHeight = viewportHeight / zoom;
 
-	const mobile = size.width < 700;
+	const mobile = size.width <= 640;
+	const tablet = size.width <= 768;
+
 	const margin = canvasWidth * (mobile ? 0.2 : 0.1);
 	const wModifier = mobile ? canvasWidth * 1.5 : canvasWidth;
 	const fModifier = mobile ? 1 : 0.9;
@@ -70,6 +74,7 @@ function useBlock(): BlockProperties {
 		canvasWidth,
 		canvasHeight,
 		mobile,
+		tablet,
 		margin,
 		contentMaxWidth,
 		sectionHeight,

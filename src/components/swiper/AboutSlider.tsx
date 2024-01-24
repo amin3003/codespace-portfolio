@@ -28,7 +28,7 @@ export default function AboutSlider(props: any) {
 			clickable: true, // Enable navigation through pagination bullets
 		},
 		modules: [EffectCoverflow, Pagination],
-		style: { width: '100%', paddingTop: '50px', paddingBottom: '50px' },
+		style: { width: '100%', height: '100%' },
 		initialSlide: 1, // Set the default active slide to be the second slide
 	};
 

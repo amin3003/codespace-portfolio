@@ -15,11 +15,11 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 		<html lang={locale} data-theme="dracula">
 			<body className="overflow-x-clip">
 				<AppHeader />
-				<ThreeSections />
+				
 				<main className="drawer">
 					<input id="my-drawer" type="checkbox" className="drawer-toggle" />
 
-					<div className="drawer-content flex flex-col">{children}</div>
+					<div className="drawer-content flex flex-col overflow-y-hidden">{children}</div>
 
 					<div className="md:hidden drawer-side z-[40000]">
 						<label

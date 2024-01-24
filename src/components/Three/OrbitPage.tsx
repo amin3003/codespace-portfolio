@@ -1,28 +1,15 @@
 'use client';
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { useBlock, Block } from '@c/shared/Blocks';
+import { useBlock, Block, BlockProperties } from '@c/shared/Blocks';
 import state from '@c/shared/Store';
 import PlanetOrbits from '@/components/Three/PlanetOrbits';
-import StarsComponent from '@/components/Three/StarsContainer';
+import StarsComponent from '@/components/Three/StarSection';
 import { Vector3 } from 'three';
 import useRef from 'react';
+import ThreeCanvas from '@c/Three/ThreeCanvas';
 
-const camPos = new Vector3(0, 0, 100);
-export default function ThreeSections(props: any) {
-	return (
-		<div id="three-container" className="fixed top-0 h-lvh w-lvw">
-			<Canvas orthographic shadows camera={{ zoom: state.zoom, position: camPos }}>
-				<ambientLight />
-				<React.Suspense fallback={null}>
-					<LocalSections {...props} />
-				</React.Suspense>
-			</Canvas>
-		</div>
-	);
-}
-
-function LocalSections(props: any) {
+export default function OrbitPage(props: any) {
 	const block = useBlock();
 
 	return (
@@ -30,7 +17,7 @@ function LocalSections(props: any) {
 			<Block index={2.5}>
 				<SolarSystem block={block} />
 			</Block>
-			<Block index={4}>
+			<Block index={4.5}>
 				<PlanetOrbits
 					showOrbits
 					block={block}
@@ -53,28 +40,13 @@ function LocalSections(props: any) {
 					side="right"
 				/>
 			</Block>
-
-			<Block index={0}>
-				<StarsComponent block={block} count={20} />
-			</Block>
-			<Block index={1}>
-				<StarsComponent block={block} count={8} size={1.5} />
-			</Block>
-			<Block index={2}>
-				<StarsComponent block={block} count={16} size={1.5} />
-			</Block>
-			<Block index={3}>
-				<StarsComponent block={block} count={16} size={1} />
-			</Block>
-			<Block index={4}>
-				<StarsComponent block={block} count={16} size={1} />
-			</Block>
 		</>
 	);
 }
-function SolarSystem(props: any) {
+function SolarSystem(props: { block: BlockProperties }) {
+	const b = props.block;
 	const sizeFactor = 60;
-	const distanceFactor = 900;
+	const distanceFactor = b.mobile ? 500 : b.tablet ? 700 : 900;
 	return (
 		<PlanetOrbits
 			showOrbits

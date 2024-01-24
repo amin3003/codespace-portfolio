@@ -2,8 +2,8 @@
 import { sectionProps } from './types';
 import React from 'react';
 import AboutSlider from '../swiper/AboutSlider';
+import SectionArea from '@/components/Section/SectionArea';
 export default function SectionAbout(props: sectionProps) {
- 
 	const team = [
 		{
 			img: '',
@@ -40,11 +40,14 @@ export default function SectionAbout(props: sectionProps) {
 		},
 	];
 	return (
-		<div id="section-about" className="flex flex-col items-center justify-center h-lvh">
-			<h1>About</h1>
-			<div className="flex flex-col px-12">
-				<AboutSlider data={team} />
-			</div>
-		</div>
+		<SectionArea
+			id="section-about"
+			title="About"
+			center
+			orientation="vertical"
+			className="min-h-[100lvh]"
+		>
+			<AboutSlider data={team} />
+		</SectionArea>
 	);
 }

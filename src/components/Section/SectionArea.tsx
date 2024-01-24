@@ -1,10 +1,36 @@
-export default function SectionArea(props: { children: any; title?: string | number }) {
+export default function SectionArea(props: {
+	id?: string;
+	children: any;
+	orientation?: 'vertical' | 'horizontal';
+	title?: string | number;
+	className?: string;
+	center?: boolean;
+}) {
 	return (
-		<section className="relative h-[80lvh]">
-			<h1 className="absolute top-0 left-0 m-0 opacity-40 text-[200px] select-none">
-				{props.title || 1}
-			</h1>
-			<div className="py-12 px-32"> {props.children}</div>
+		<section
+			id={props.id || undefined}
+			className={
+				'min-h-[90lvh] flex ' +
+				(props.className || '') +
+				(props.center ? ' text-center' : '') +
+				/* -------------------------- class for orientation ------------------------- */
+				(props.orientation == undefined
+					? //large
+					  ' md:flex-row md:text-start' +
+					  //mobile
+					  ' flex-col text-center'
+					: props.orientation === 'vertical'
+					? ' flex-col'
+					: ' flex-row') +
+				/* --------------------------- class for text size -------------------------- */
+				//large
+				(' md:text-[30px]' +
+					//mobile
+					' text-[20px]')
+			}
+		>
+			<h1 className={'!m-0 opacity-40 select-none'}>{props.title || 1}</h1>
+			<div className="px-[2%] h-[100lvh]"> {props.children}</div>
 		</section>
 	);
 }

@@ -3,7 +3,7 @@ import { Sphere, Stars } from '@react-three/drei';
 import { BlockProperties } from '@c/shared/Blocks';
 import '@c/shared/CustomMaterial';
 
-export default function StarsContainer(props: {
+export default function StarSection(props: {
 	block: BlockProperties;
 	count: number;
 	size?: number;
