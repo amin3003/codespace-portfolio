@@ -11,8 +11,8 @@ export const header_paths = [
 		path: '/',
 	},
 	{
-		name: 'about',
-		path: '/about',
+		name: 'Services',
+		path: '/services',
 	},
 	{
 		name: 'contact',
@@ -31,7 +31,7 @@ export default function AppHeader() {
 					//animated bg change
 					' transition-all duration-1000 delay-0' +
 					//change background based on scroll
-					' data-[is-top=false]:bg-base-100 bg-transparent' +
+					' data-[is-top=false]:bg-[#aaaaaa11] bg-transparent' +
 					//header
 					' navbar sticky justify-between' +
 					//change sticky based on scroll
@@ -75,7 +75,7 @@ export default function AppHeader() {
 								return (
 									<li key={i} className="text-md">
 										<Link href={`${v.path}`}>
-											<b>{t(v.name)}</b>
+											<b>{t(String(v.name).toLocaleLowerCase())}</b>
 										</Link>
 									</li>
 								);
