@@ -11,7 +11,7 @@ import Typewriter from 'typewriter-effect';
 
 export default function SectionHome(props: sectionProps) {
 	return (
-		<div id="section-home" className="flex flex-col p-4">
+		<div id="section-home" className="flex flex-col p-4 h-lvh">
 			<div className="flex flex-row items-center justify-center p-4 gap-12">
 				<div className="flex flex-col p-8">
 					<h1>Code spase</h1>
@@ -24,9 +24,6 @@ export default function SectionHome(props: sectionProps) {
 			</div>
 
 			<a className="btn btn-ghost mx-auto flex flex-row gap-6" href="#section-service">
-				<i className="bi bi-arrow-down"></i>
-
-				<p>Discover more</p>
 				<i className="bi bi-arrow-down"></i>
 			</a>
 		</div>

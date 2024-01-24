@@ -44,7 +44,7 @@ export default function SectionAbout(props: sectionProps) {
 		},
 	];
 	return (
-		<div id="section-about" className="flex flex-col items-center justify-center">
+		<div id="section-about" className="flex flex-col items-center justify-center h-lvh">
 			<h1>About</h1>
 			<div className="flex flex-col px-12">
 				<AboutSlider data={team} />

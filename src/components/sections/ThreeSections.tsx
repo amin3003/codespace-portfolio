@@ -60,7 +60,13 @@ function LocalSections(props: any) {
 					showOrbits
 					block={block}
 					planets={[
-						{ orbitRadius: 180, size: 24, factor: 0.2, color: '#b3053f' },
+						{
+							orbitRadius: 180,
+							size: 24,
+							offset: Math.PI / 2,
+							factor: 0.2,
+							color: '#b3053f',
+						},
 						{
 							orbitRadius: 490,
 							size: 34,
@@ -73,16 +79,19 @@ function LocalSections(props: any) {
 				/>
 			</Block>
 
-			<Block index={0.2}>
+			<Block index={0}>
 				<StarsComponent block={block} count={20} />
 			</Block>
-			<Block index={2.5}>
+			<Block index={1}>
 				<StarsComponent block={block} count={8} size={1.5} />
 			</Block>
-			<Block index={2.5}>
+			<Block index={2}>
 				<StarsComponent block={block} count={16} size={1.5} />
 			</Block>
 			<Block index={3}>
+				<StarsComponent block={block} count={16} size={1} />
+			</Block>
+			<Block index={4}>
 				<StarsComponent block={block} count={16} size={1} />
 			</Block>
 		</>

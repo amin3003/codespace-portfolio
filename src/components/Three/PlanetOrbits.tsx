@@ -90,7 +90,7 @@ export default function PlanetOrbits(props: {
 						>
 							<meshLambertMaterial
 								transparent
-								opacity={0.28}
+								opacity={0.3}
 								color={planet.color || 'hotpink'}
 							/>
 						</Sphere>
