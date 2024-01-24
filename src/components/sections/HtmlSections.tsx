@@ -15,7 +15,7 @@ export default function HtmlSections(props: any) {
 						//use dvh to avoid resize when vh is changed on mobile
 						style={{ height: `100lvh` }}
 					>
-						{SectionRender != null && <SectionRender key={index} index={index} />}
+						{/* {SectionRender != null && <SectionRender key={index} index={index} />} */}
 					</section>
 				);
 			})}

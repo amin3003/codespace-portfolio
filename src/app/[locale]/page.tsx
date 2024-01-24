@@ -8,7 +8,7 @@ export default function PageIndex() {
 
 	return (
 		<>
-			<ThreeSections /> 
+			<ThreeSections />
 			<HtmlSections />
 		</>
 	);
