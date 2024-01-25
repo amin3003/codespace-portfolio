@@ -2,13 +2,14 @@ import React from 'react';
 import state from '@c/shared/Store';
 import SectionAbout from '@/components/sectionlist/SectionAbout';
 import SectionSteps from '@/components/sectionlist/SectionSteps';
+import SectionSkills from '@/components/sectionlist/SectionSkills';
 import SectionHome from '@/components/sectionlist/SectionHome';
 import ThreeCanvas from '@c/Three/ThreeCanvas';
 import StarPage from '@c/Three/StarPage';
 import OrbitPage from '@c/Three/OrbitPage';
 export default function PageIndex() {
 	const { sections, pages } = state;
-	const list_sections = [SectionHome, SectionSteps, SectionAbout];
+	const list_sections = [SectionHome, SectionSkills, SectionSteps, SectionAbout];
 	return (
 		<>
 			<ThreeCanvas>
@@ -20,7 +21,7 @@ export default function PageIndex() {
 					return (
 						//use dvh to avoid resize when vh is changed on mobile
 						<section
-							className="min-h-100lvh overflow-x-hidden"
+							className="min-h-100lvh overflow-hidden"
 							key={index}
 							id={'page' + index}
 						>

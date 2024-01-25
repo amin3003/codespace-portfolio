@@ -42,11 +42,12 @@ export default function SectionAbout(props: sectionProps) {
 	return (
 		<SectionArea
 			id="section-about"
-			title="About"
+			title=""
 			center
 			orientation="vertical"
 			className="min-h-[100lvh]"
 		>
+			<h2>About</h2>
 			<AboutSlider data={team} />
 		</SectionArea>
 	);

@@ -1,27 +1,35 @@
 'use client';
 import SectionArea from '../Section/SectionArea';
 import { sectionProps } from './types';
-
+import Image from 'next/image';
 export default function SectionSteps(props: sectionProps) {
 	return (
-		<div id="steps" className="flex flex-col px-[10%]">
-			<SectionArea title={1}>
-				<h3>Use our services</h3>
-				<p>Fly your bussiness to the moon</p>
+		<div id="steps" className="flex flex-col px-[5%]">
+			<SectionArea title={1} className="h-[90lvh]">
+				<h2>We design and create the ideal website for your business</h2>
+				<p>
+					For any business. big or small. having a website helps you reach out to more
+					customers
+				</p>
 			</SectionArea>
-			<SectionArea title={2}>
-				<h3>Website design and developement</h3>
-				<p>we design your ideal website</p>
+			<SectionArea title={2} image={'seo'} mirror className="h-[90lvh]">
+				<h2>
+					{`Enhance your website's search visibility by using best`}
+					<span className="text-primary">{` SEO `}</span>
+					{`practices`}
+				</h2>
+				<p>
+					we help your business to reach first page of google by using best SEO practices
+				</p>
 			</SectionArea>
-			<SectionArea title={3}>
-				<h3>Social Media management</h3>
-				<p>Grow your bussiness in multiple platforms</p>
-				<p>This helps your bussiness in many ways</p>
-			</SectionArea>
-			<SectionArea title={4}>
-				<h3>Support</h3>
-				<p>Fly your bussiness to the moon</p>
+			<SectionArea title={3} image={'phone'} className="h-[90lvh]">
+				<h2>
+					{`We manage your`}
+					<span className="text-primary">{` social media `}</span>
+				</h2>
+				<p>{`Enhance your website's social media presence to reach out to more users`}</p>
 			</SectionArea>
 		</div>
 	);
 }
+ 
