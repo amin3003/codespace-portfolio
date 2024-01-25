@@ -48,7 +48,23 @@ export default function SectionAbout(props: sectionProps) {
 			className="min-h-[100lvh]"
 		>
 			<h2>About</h2>
-			<AboutSlider data={team} />
+			<div className="flex flex-col md:flex-row gap-4 justify-center align-center pb-48 md:pb-4">
+				{team.map((r, i) => {
+					return (
+						<div key={i} className="flex glass card w-[300px] bg-base-100 ">
+							<div className="card-body content-center justify-center ">
+								<div className="avatar justify-center">
+									<div className="w-24 rounded-full "></div>
+								</div>
+								<b className="card-title justify-center">{r.name}</b>
+								<b className="flex justify-center text-primary">{r.position}</b>
+
+								<p className="text-justify text-sm hidden md:flex">{r.desc}</p>
+							</div>
+						</div>
+					);
+				})}
+			</div>
 		</SectionArea>
 	);
 }
