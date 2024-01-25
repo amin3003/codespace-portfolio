@@ -21,8 +21,10 @@ export default function SectionSkills(props: sectionProps) {
 		<div id="section-skills" className="flex flex-col p-4 min-h-lvh">
 			<div className="flex flex-row items-center justify-center p-4 gap-12">
 				<div className="flex flex-col p-8 text-center">
-					<h2>Your powerhouse.</h2>
-					<h4>all the skills you need. in one place</h4>
+					<h2>Your spase station</h2>
+					<h4>
+						all the skills you need to take your business to spase. in one spase station
+					</h4>
 				</div>
 			</div>
 			<div className={`flex flex-wrap justify-center gap-9`}>

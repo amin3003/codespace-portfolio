@@ -11,12 +11,10 @@ import useRef from 'react';
 const camPos = new Vector3(0, 0, 100);
 export default function ThreeSections(props: any) {
 	return (
-		<div id="three-container" className="fixed top-0 h-lvh w-lvw">
+		<div className="fixed top-0 h-lvh w-lvw">
 			<Canvas orthographic shadows camera={{ zoom: state.zoom, position: camPos }}>
 				<ambientLight />
-				<React.Suspense fallback={null}>
-					{props.children}
-				</React.Suspense>
+				<React.Suspense fallback={null}>{props.children}</React.Suspense>
 			</Canvas>
 		</div>
 	);

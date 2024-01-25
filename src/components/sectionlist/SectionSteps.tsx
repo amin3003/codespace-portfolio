@@ -6,7 +6,7 @@ export default function SectionSteps(props: sectionProps) {
 	return (
 		<div id="steps" className="flex flex-col px-[5%]">
 			<SectionArea title={1} className="h-[90lvh]">
-				<h2>We design and create the ideal website for your business</h2>
+				<h2>We design and develop the ideal website for your business</h2>
 				<p>
 					For any business. big or small. having a website helps you reach out to more
 					customers
