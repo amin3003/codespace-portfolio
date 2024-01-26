@@ -7,6 +7,7 @@ export default function SectionArea(props: {
 	orientation?: 'vertical' | 'horizontal';
 	title?: string | number;
 	className?: string;
+	bigtitle?: boolean;
 	center?: boolean;
 	mirror?: boolean;
 }) {
@@ -36,7 +37,7 @@ export default function SectionArea(props: {
 					'flex flex-[3] md:gap-6 ' + (forcedFlexClass || 'flex-col md:flex-row')
 				}
 			>
-				<h1 className={'opacity-40 select-none my-0 md:my-6 text-center md:text'}>
+				<h1 className={'opacity-40 select-none my-0 md:my-6 text-center md:text '}>
 					{props.title}
 				</h1>
 				<div>{props.children}</div>

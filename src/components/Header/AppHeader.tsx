@@ -24,7 +24,6 @@ export default function AppHeader() {
 	const t = useTranslations('navbar');
 	return (
 		<>
-			{/* <div id="header-fake" className="navbar bg-red-200"></div> */}
 			<header
 				id="header"
 				className={
@@ -70,10 +69,10 @@ export default function AppHeader() {
 
 					<div className="navbar-center justify-between items-center hidden md:flex w-full md:w-auto">
 						{/*	https://daisyui.com/components/menu/ */}
-						<ul className="menu menu-horizontal rounded-box">
+						<ul className="flex flex-row rounded-box">
 							{header_paths.map((v, i) => {
 								return (
-									<li key={i} className="text-md">
+									<li key={i} className="btn btn-sm btn-ghost">
 										<Link href={`${v.path}`}>
 											<b>{t(String(v.name).toLocaleLowerCase())}</b>
 										</Link>

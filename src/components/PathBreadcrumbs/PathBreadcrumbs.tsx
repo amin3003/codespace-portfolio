@@ -1,12 +1,11 @@
 'use server';
-import { Link, getServersideUrl } from '@src/navigation';
+import { Link, getServerPathname } from '@src/navigation';
 import { capitalize } from '@azrico/string';
 import { useTranslations } from 'next-intl';
 type PathBreadcrumbsProps = { absolute?: boolean };
 export default async function PathBreadcrumbs(props: PathBreadcrumbsProps) {
-	const pathname = getServersideUrl();
+	const pathname = getServerPathname();
 	const path_parts = pathname.split('/').filter((s) => s);
-
 	return <PathBreadcrumbsInner {...props} path_parts={path_parts} />;
 }
 /**
@@ -26,7 +25,7 @@ function PathBreadcrumbsInner(props: PathBreadcrumbsProps & { path_parts: string
 		const path_until_now = `/` + props.path_parts.slice(0, i + 1).join('/');
 		return (
 			<li key={i}>
-				<Link href={path_until_now}>{capitalize(t(String(r).toLowerCase(), 'a'))}</Link>
+				<Link href={path_until_now}>{capitalize(t(String(r).toLowerCase() ))}</Link>
 			</li>
 		);
 	});

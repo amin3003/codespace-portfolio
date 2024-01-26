@@ -3,6 +3,7 @@ import SectionArea from '@/components/Section/SectionArea';
 import ThreeCanvas from '@/components/Three/ThreeCanvas'; 
 import StarPage from '@/components/Three/StarPage';
 import ServiceList from '@/components/Service/ServiceList'; 
+import PathBreadcrumbs from '@/components/PathBreadcrumbs/PathBreadcrumbs';
 
 const services = [
 	{
@@ -37,7 +38,7 @@ export default function PageServices() {
 			<ThreeCanvas>
 				<StarPage />
 			</ThreeCanvas>
-			<SectionArea
+			<SectionArea bigtitle
 				title="Services"
 				orientation="vertical"
 				className="flex h-[130lvh] justify-between gap-2 flex-col"
