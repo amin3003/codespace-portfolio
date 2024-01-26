@@ -1,10 +1,21 @@
-import createMiddleware from 'next-intl/middleware';
+import createIntlMiddleware from 'next-intl/middleware';
 import { defaultLocale, locales } from './i18nConfig';
+import { NextRequest } from 'next/server';
 
-export default createMiddleware({
-	defaultLocale: defaultLocale,
-	locales: locales,
-});
+export default async function middleware(request: NextRequest) {
+	// Step 2: Create and call the next-intl middleware (example)
+	const handleI18nRouting = createIntlMiddleware({
+		locales: locales,
+		defaultLocale: defaultLocale,
+	});
+	const response = handleI18nRouting(request);
+
+	/* ----------------------------- custom headers ----------------------------- */
+	response.headers.set('x-url', request.url);
+	response.headers.set('x-path', request.nextUrl.pathname);
+
+	return response;
+}
 
 export const config = {
 	matcher: [

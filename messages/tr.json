@@ -1,4 +1,11 @@
 {
+	"path": {
+		"services": "Services",
+		"webdev": "Web developement",
+		"webdesign": "Web design",
+		"startup": "Startup",
+		"media": "Media"
+	},
 	"main": {
 		"spaseservices": "Spase Servisler",
 		"spaseteam": "Spase Takim"

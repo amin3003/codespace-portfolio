@@ -13,7 +13,7 @@ export default function SidebarContent() {
 					return (
 						<li key={i} className="text-md">
 							<Link href={`${v.path}`}>
-								<b>{t(v.name)}</b>
+								<b>{t(String(v.name).toLowerCase())}</b>
 							</Link>
 						</li>
 					);
