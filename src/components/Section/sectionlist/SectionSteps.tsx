@@ -1,5 +1,5 @@
 'use client';
-import SectionArea from '../Section/SectionArea';
+import SectionArea from '../SectionArea';
 import { sectionProps } from './types';
 import Image from 'next/image';
 export default function SectionSteps(props: sectionProps) {

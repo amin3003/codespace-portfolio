@@ -1,7 +1,7 @@
 'use client';
 import { sectionProps } from './types';
 import React from 'react';
-import AboutSlider from '../swiper/AboutSlider';
+import AboutSlider from '../../swiper/AboutSlider';
 import SectionArea from '@/components/Section/SectionArea';
 export default function SectionAbout(props: sectionProps) {
 	const team = [

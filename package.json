@@ -13,6 +13,7 @@
 		"@azrico/math": "^1.0.5",
 		"@azrico/object": "^1.4.91",
 		"@azrico/string": "^1.2.91",
+		"@azrico/webobject": "^1.4.120",
 		"@react-three/drei": "^9.92.7",
 		"@react-three/fiber": "^8.15.12",
 		"@react-three/postprocessing": "^2.15.12",

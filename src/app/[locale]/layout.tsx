@@ -15,7 +15,7 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 		<html lang={locale} data-theme="dracula">
 			<body className="overflow-x-clip">
 				<AppHeader />
-				
+
 				<main className="drawer">
 					<input id="my-drawer" type="checkbox" className="drawer-toggle" />
 

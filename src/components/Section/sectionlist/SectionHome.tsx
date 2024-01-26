@@ -4,7 +4,7 @@ import MockupSite from '@c/MockupSite/MockupSite';
 
 export default function SectionHome(props: sectionProps) {
 	return (
-		<div id="section-home" className="flex flex-col p-4 h-lvh">
+		<div id="section-home" className="flex flex-col p-4 min-h-lvh">
 			<div className="flex flex-row items-center justify-center p-1 gap-12">
 				<div className="flex flex-col p-1 text-center">
 					<h2 className="my-0 leading-tight md:leading-snug lg:leading-relaxed md:my-12">
