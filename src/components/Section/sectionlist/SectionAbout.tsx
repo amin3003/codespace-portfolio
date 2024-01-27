@@ -45,7 +45,7 @@ export default function SectionAbout(props: sectionProps) {
 			title=""
 			center
 			orientation="vertical"
-			className="min-h-[100lvh]"
+			className="items-center min-h-[100lvh]"
 		>
 			<h2>About</h2>
 			<div className="flex flex-col md:flex-row gap-4 justify-center items-center pb-48 md:pb-4">
