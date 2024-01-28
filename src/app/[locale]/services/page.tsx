@@ -15,10 +15,9 @@ export default function PageServices() {
 			</ThreeCanvas>
 			<div className="px-[10%]">
 				<SectionArea
-					bigtitle
 					title="Services"
 					orientation="vertical"
-					className="flex h-[130lvh] justify-between gap-2 flex-col"
+					className="flex h-[150lvh] justify-between gap-2 flex-col"
 				>
 					<div className="flex flex-col md:flex-row gap-4 justify-center">
 						{services.map((r, i) => {

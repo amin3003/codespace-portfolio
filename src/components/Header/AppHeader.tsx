@@ -30,7 +30,7 @@ export default function AppHeader() {
 					//animated bg change
 					' transition-all duration-1000 delay-0' +
 					//change background based on scroll
-					' data-[is-top=false]:bg-[#aaaaaa11] bg-transparent' +
+					' data-[is-top=false]:bg-[#aaaaaa22] bg-transparent' +
 					//header
 					' navbar sticky justify-between' +
 					//change sticky based on scroll
