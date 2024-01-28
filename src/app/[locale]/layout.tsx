@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18nConfig';
 import SidebarContent from '@c/SidebarContent/SidebarContent';
+import clsx from 'clsx';
 
 const Footer = React.lazy(() => import('@c/Footer/Footer'));
 const AppHeader = React.lazy(() => import('@c/Header/AppHeader'));
@@ -18,7 +19,14 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 				<main className="drawer">
 					<input id="my-drawer" type="checkbox" className="drawer-toggle" />
 
-					<div className="drawer-content flex flex-col overflow-hidden">{children}</div>
+					<div
+						className={clsx(
+							'drawer-content flex flex-col overflow-hidde',
+							'w-full md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1536px] mx-auto'
+						)}
+					>
+						{children}
+					</div>
 
 					<div className="md:hidden drawer-side z-[40000]">
 						<label

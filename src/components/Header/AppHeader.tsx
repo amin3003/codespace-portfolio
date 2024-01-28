@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Link from '@/navigation';
 import AppLogo from './AppLogo';
 import LangSwitcher from './LangSwitcher';
+import LoginButton from '@c/Login/LoginButton';
 
 export const header_paths = [
 	{
@@ -81,7 +82,10 @@ export default function AppHeader() {
 							})}
 						</ul>
 					</div>
-					<LangSwitcher className="navbar-end hidden md:block" />
+					<div className="navbar-end flex flex-row">
+						<LoginButton />
+						<LangSwitcher className="hidden md:block" />
+					</div>
 				</React.Suspense>
 			</header>
 		</>

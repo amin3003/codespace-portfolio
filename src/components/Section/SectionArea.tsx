@@ -15,13 +15,12 @@ export default function SectionArea(props: {
 	height?: number;
 	imageClass?: any;
 }) {
-	const flexColClass = 'flex-col';
-	const flexRowClass = 'flex-row';
+ 
 	const isAuto = props.orientation == null;
 	const isVertical = props.orientation === 'vertical';
 
 	const forcedFlexClass =
-		props.orientation == null ? '' : isVertical ? ` ${flexColClass}` : ` ${flexRowClass}`;
+		props.orientation == null ? '' : isVertical ? ` flex-col` : ` flex-row`;
 	return (
 		<section
 			id={props.id || undefined}
@@ -29,14 +28,14 @@ export default function SectionArea(props: {
 				'flex gap-8 ' +
 				(props.className || '') +
 				/* -------------------------- class for orientation ------------------------- */
-				(forcedFlexClass || ` ${flexColClass}  md:${flexRowClass} text md:text-start`) +
+				(forcedFlexClass || ` flex-col md:flex-row text md:text-start`) +
 				/* --------------------------- class for text size -------------------------- */
 				''
 			}
 		>
 			<div
 				className={clsx(
-					'flex-[3] flex flex-col w-full lg:w-auto',
+					'flex-[3] flex flex-col',
 					`${props.mirror ? 'order-last' : 'order-first'}`
 				)}
 			>
@@ -68,7 +67,7 @@ export default function SectionArea(props: {
 			</div>
 			<div
 				className={clsx(
-					'flex-[2] m-auto justify-center hidden lg:flex',
+					'flex-[2] m-auto justify-center hidden md:flex',
 					props.imageClass
 				)}
 			>
