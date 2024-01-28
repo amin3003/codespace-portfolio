@@ -6,15 +6,21 @@ import Service from '@/data/Service';
 import ServiceBlock from '@/components/Service/ServiceBlock';
 export default function PageServices() {
 	const services = Service.get_list();
-	const title = <p className="text-[19vw] text-center">Services</p>;
+	const title = <p className="text-[19vw]">Services</p>;
 	return (
 		<>
 			<ThreeCanvas>
 				<StarPage />
 			</ThreeCanvas>
 			<div className="px-[3%]">
-				<SectionArea title={title} orientation="vertical" className="min-h-lvh">
-					<div className="flex flex-wrap justify-center gap-6">
+				<SectionArea
+					center
+					title={title}
+					dynamicMargin
+					orientation="vertical"
+					className="min-h-lvh"
+				>
+					<div className="flex flex-wrap justify-center gap-5 py-12">
 						{services.map((r, i) => {
 							return <ServiceBlock service={r} key={i} />;
 						})}

@@ -29,7 +29,7 @@ export default function PageService(props: any) {
 				<OrbitPage />
 			</ThreeCanvas>
 			<div className="px-[4%]">
-				<SectionArea orientation="vertical" className="min-h-lvh">
+				<SectionArea orientation="vertical" center className="min-h-lvh">
 					<div className="flex flex-col">
 						<h2>{capitalize(translate_path(String(currentService.url)))}</h2>
 						<h3>Marketing software</h3>

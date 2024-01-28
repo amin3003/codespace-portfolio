@@ -9,6 +9,7 @@ export default function SectionArea(props: {
 	title?: any;
 	className?: string;
 	center?: boolean;
+	dynamicMargin?: boolean;
 	mirror?: boolean;
 	width?: number;
 	height?: number;
@@ -27,7 +28,6 @@ export default function SectionArea(props: {
 			className={
 				'flex gap-8 ' +
 				(props.className || '') +
-				(props.center ? ' text-center' : '') +
 				/* -------------------------- class for orientation ------------------------- */
 				(forcedFlexClass || ` ${flexColClass}  md:${flexRowClass} text md:text-start`) +
 				/* --------------------------- class for text size -------------------------- */
@@ -43,14 +43,26 @@ export default function SectionArea(props: {
 				{props.title != null && (
 					<h1
 						className={clsx(
-							'opacity-20 select-none !leading-none !m-0 !p-0 text-[260px]'
+							'opacity-20 select-none !leading-none !m-0 !p-0 text-[260px]',
+							props.center && 'text-center'
 						)}
 					>
 						{props.title}
 					</h1>
 				)}
 
-				<div className={props.title != null ? clsx('mt-[-180px] pl-[50px]') : ''}>
+				<div
+					className={
+						props.title != null
+							? clsx(
+									props.dynamicMargin
+										? 'mt-[-5vw] md:mt-[-100px] lg:mt-[-160px]'
+										: 'mt-[-160px]',
+									'md:pl-[50px]'
+							  )
+							: ''
+					}
+				>
 					{props.children}
 				</div>
 			</div>
