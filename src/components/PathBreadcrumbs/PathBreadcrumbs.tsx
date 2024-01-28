@@ -23,10 +23,17 @@ function PathBreadcrumbsInner(props: PathBreadcrumbsProps & { path_parts: string
 		 so we need to know the path before the current part
 		*/
 		const path_until_now = `/` + props.path_parts.slice(0, i + 1).join('/');
+
+		//translate the text
+		const translated_text = capitalize(t(String(r).toLowerCase()));
+
+		//the last index of url path is bold
+		const isLastIndex = i == props.path_parts.length - 1;
+
 		return (
 			<li key={i}>
 				<Link scroll={false} href={path_until_now}>
-					{capitalize(t(String(r).toLowerCase()))}
+					{isLastIndex ? <b>{translated_text}</b> : translated_text}
 				</Link>
 			</li>
 		);
