@@ -15,7 +15,9 @@ export default function ServicePackagesArea(props: { currentService: Service }) 
 			<h2 className="text-center">Packages</h2>
 			<div className={`flex flex-wrap justify-center gap-8`}>
 				{currentService.subservices.map((r, i) => {
-					return <SubServiceBlock index={i} key={i} subservice={r} />;
+					return (
+						<SubServiceBlock index={i} key={i} service={currentService} subservice={r} />
+					);
 				})}
 			</div>
 			<div className="flex flex-col gap-7 max-w-fit mx-auto py-7">

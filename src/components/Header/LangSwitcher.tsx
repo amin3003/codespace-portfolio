@@ -4,7 +4,7 @@ import React from 'react';
 import { localeNames, defaultLocale } from '@/i18nConfig';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname, redirect } from '@src/navigation';
-const FULL_RELOAD = true;
+const FULL_RELOAD = false;
 export default function LangSwitcher(props: { className?: string; openUp?: boolean }) {
 	const locale = useLocale();
 	const router = useRouter();

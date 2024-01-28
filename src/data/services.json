@@ -22,35 +22,45 @@
 			{
 				"title": "AdobeXD File",
 				"text": "Sint incididunt eiusmod elit aliquip exercitation elit laborum."
-			},
-			{
-				"title": "Responsive design",
-				"text": "Sint incididunt eiusmod elit aliquip exercitation elit laborum."
-			},
-			{
-				"title": "Multiple themes",
-				"text": "Sint incididunt eiusmod elit aliquip exercitation elit laborum."
 			}
 		],
+		"subservice_shared_features": [
+			"Adobe XD",
+			"Responsive design",
+			"SVG File",
+			"PNG/JPEG File"
+		],
 		"subservices": [
-			{ "title": "Free", "color": "#9FA8DA", "price": "0$", "features": ["basic"] },
+			{
+				"title": "Basic",
+				"color": "#81D4FA",
+				"price": { "tr": "999", "en": 49 },
+				"features": [
+					["pages", "1-7 Pages"],
+					["Logo", "1x Logo Design"]
+				]
+			},
 			{
 				"title": "Standard",
-				"color": "#81D4FA",
-				"price": "100$",
-				"features": ["basic", "standrad"]
-			},
-			{
-				"title": "Pro",
 				"color": "#E6EE9C",
-				"price": "300$",
-				"features": ["basic", "standrad", "pro"]
+				"price": { "tr": "1499", "en": 69 },
+				"features": [
+					["pages", "1-10 Pages"],
+					["Logo", "2x Logo Design"],
+					"Motion",
+					"Media kit"
+				]
 			},
 			{
-				"title": "Advanced",
+				"title": "Premium",
 				"color": "#FF8A65",
-				"price": "400$",
-				"features": ["basic", "standrad", "pro", "advanced"]
+				"price": { "tr": "1999", "en": 99 },
+				"features": [
+					["pages", "+10 Pages"],
+					["Logo", "3x Logo Design"],
+					"Vector File",
+					"Dark/Light Theme"
+				]
 			}
 		]
 	},
@@ -60,7 +70,48 @@
 		"title": "Web developement",
 		"features": ["SEO Standard"],
 		"desc": "we develop a responsive website for your bussiness",
-		"subservices": []
+
+		"subservice_shared_features": [
+			"Default Design",
+			"Responsive design",
+			"SEO Standard",
+			"1 Year Free Hosting",
+			"1 Year Domain"
+		],
+		"subservices": [
+			{
+				"title": "Basic",
+				"color": "#81D4FA",
+				"price": { "tr": "5499", "en": 69 },
+				"features": [
+					["pages", "1-7 Pages"],
+					["support", "Free 1 Month Support"],
+					"Static Pages"
+				]
+			},
+			{
+				"title": "Standard",
+				"color": "#E6EE9C",
+				"price": { "tr": "7499", "en": 99 },
+				"features": [
+					["pages", "1-10 Pages"],
+					["support", "Free 1 Month Support + 3 Month Extra Support"],
+					"Dynamic Pages (CMS)",
+					"Rest-Api",
+					"Admin Page"
+				]
+			},
+			{
+				"title": "E-Commerce",
+				"color": "#FF8A65",
+				"price": { "tr": "9499", "en": 129 },
+				"features": [
+					["pages", "+10 Pages"],
+					["support", "Free 1 Month Support + 6 Month Extra Support"],
+					"Online Shop"
+				]
+			}
+		]
 	},
 	{
 		"color": "#FFEB3B",
@@ -69,12 +120,57 @@
 		"title": "Startup Package",
 		"features": ["AdobeXD Design", "Dark and light theme", "4 Pages static website"],
 		"desc": "All in one package. let us handle all your needs",
-		"subservices": []
+
+		"subservice_shared_features": [
+			"Personalized Design",
+			"Logo Design",
+			"Web developement",
+			"Media Management (Instagram)",
+			"SEO Standard",
+			"1 Year Free Hosting",
+			"1 Year Domain",
+			"SSL/HTTPS"
+		],
+		"subservices": [
+			{
+				"title": "Basic",
+				"color": "#81D4FA",
+				"price": { "tr": "5499", "en": 149 },
+				"features": [
+					["pages", "1-7 Pages"],
+					["support", "Free 1 Month Support"]
+				]
+			},
+			{
+				"title": "Standard",
+				"color": "#E6EE9C",
+				"price": { "tr": "8499", "en": 249 },
+				"features": [
+					["pages", "1-10 Pages"],
+					["support", "Free 1 Month Support + 3 Month Extra Support"],
+					"Google Search Console",
+					"Content Management",
+					"CMS Support",
+					"Admin Page",
+					"Multi Language Support"
+				]
+			},
+			{
+				"title": "Premium",
+				"color": "#FF8A65",
+				"price": { "tr": "11499", "en": 349 },
+				"features": [
+					["pages", "+10 Pages"],
+					["support", "Free 1 Month Support + 6 Month Extra Support"],
+					"Speed Optimization"
+				]
+			}
+		]
 	},
 	{
 		"color": "#F06292",
 		"url": "media",
-		"title": "Media management",
+		"title": "Marketing",
 		"features": ["Instagram", "Facebook", "Discord"],
 		"desc": "we manage your social networks to increase your visibility",
 		"subservices": []

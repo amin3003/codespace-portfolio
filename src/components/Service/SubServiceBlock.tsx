@@ -1,20 +1,26 @@
-import Service, { Feature, SubService } from '@/data/Service';
+import Service, { SubService } from '@/data/Service';
+import Feature from '@/data/Feature';
 import { capitalize } from '@azrico/string';
 import Link from '@src/navigation';
 import clsx from 'clsx';
 import { useLocale, useTranslations } from 'next-intl';
 export default function SubServiceBlock(props: {
 	index: number;
+	service: Service;
 	subservice: SubService;
 }) {
 	const locale = useLocale();
 
 	const translate_service = useTranslations('service');
 
+	const service = props.service;
 	const subservice = props.subservice;
+	/* -------------------------------------------------------------------------- */
 	const subservice_style = {
 		'--subservicecolor': subservice.color,
 	} as React.CSSProperties;
+
+	const allFeatures = subservice.all_features;
 
 	return (
 		<div className="indicator" style={subservice_style}>
@@ -31,16 +37,19 @@ export default function SubServiceBlock(props: {
 							<p className="flex flex-1 flex-col gap-1 text-center py-3">
 								<span>{capitalize(translate_service('starting from'))}</span>
 
-								<b className="text-3xl">{
-									Service.getPrice(subservice.price, locale)}</b>
+								<b className="text-3xl">{Service.getPrice(subservice.price, locale)}</b>
 							</p>
 							<div className="divider"></div>
 						</div>
 						<ul className="gap-2 flex-col flex flex-1">
-							{subservice.features.map((feature: Feature, i: number) => {
+							{allFeatures.map((feature: Feature, i: number) => {
 								return (
-									<li key={i}>
-										<i className="bi bi-check pr-2"></i>
+									<li key={i} className="flex flex-row gap-2">
+										{feature.isAvailable ? (
+											<i className="bi bi-check text-green-400" />
+										) : (
+											<i className="bi bi-x text-red-500" />
+										)}
 										<b>{feature.title}</b>
 									</li>
 								);
