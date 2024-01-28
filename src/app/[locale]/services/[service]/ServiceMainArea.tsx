@@ -8,6 +8,8 @@ import StarPage from '@/components/Three/StarPage';
 import OrbitPage from '@/components/Three/OrbitPage';
 import SubServiceBlock from '@/components/Service/SubServiceBlock';
 import { array_first, wrap_array } from '@azrico/object';
+import { useLocale } from 'next-intl';
+
 export default function ServiceMainArea(props: { currentService: Service }) {
 	const currentService = props.currentService;
 	const translate_path = useTranslations('path');
@@ -23,9 +25,10 @@ export default function ServiceMainArea(props: { currentService: Service }) {
 }
 function AccodionArea(props: { currentService: Service }) {
 	const currentService = props.currentService;
+	const locale = useLocale();
 	return (
 		<>
-			<div className="collapse collapse-plus bg-base-200 glass">
+			<div className="collapse bg-base-200 glass">
 				<input type="radio" name="service-accodion" defaultChecked />
 				<div className="collapse-title text-xl font-medium">Description</div>
 				<div className="collapse-content">
@@ -36,7 +39,7 @@ function AccodionArea(props: { currentService: Service }) {
 					))}
 				</div>
 			</div>
-			<div className="collapse collapse-plus bg-base-200 glass">
+			<div className="collapse bg-base-200 glass">
 				<input type="radio" name="service-accodion" />
 				<div className="collapse-title text-xl font-medium">Pricing overview</div>
 				<div className="collapse-content">
@@ -46,7 +49,7 @@ function AccodionArea(props: { currentService: Service }) {
 								<li key={i}>
 									<div className="flex-row flex">
 										<b className="w-32">{r.title}</b>
-										<p>{r.price}</p>
+										<p>{Service.getPrice(r.price, locale)}</p>
 									</div>
 								</li>
 							);
@@ -60,7 +63,7 @@ function AccodionArea(props: { currentService: Service }) {
 					</a>
 				</div>
 			</div>
-			<div className="collapse collapse-plus bg-base-200 glass">
+			<div className="collapse bg-base-200 glass">
 				<input type="radio" name="service-accodion" />
 				<div className="collapse-title text-xl font-medium">Features</div>
 				<div className="collapse-content">

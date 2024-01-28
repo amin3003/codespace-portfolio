@@ -2,22 +2,21 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useBlock, Block, BlockProperties } from '@c/shared/Blocks';
-import state from '@c/shared/Store';
 import PlanetOrbits from '@/components/Three/PlanetOrbits';
 import StarsComponent from '@/components/Three/StarSection';
 import { Vector3 } from 'three';
 import useRef from 'react';
 import ThreeCanvas from '@c/Three/ThreeCanvas';
 
-export default function OrbitPage(props: any) {
+export default function OrbitPage(props: { start?: number }) {
 	const block = useBlock();
-
+	const startingIndex = props.start ?? 2.5;
 	return (
 		<>
-			<Block index={2.5}>
+			<Block index={startingIndex}>
 				<SolarSystem block={block} />
 			</Block>
-			<Block index={4.5}>
+			<Block index={startingIndex + 2}>
 				<PlanetOrbits
 					showOrbits
 					block={block}

@@ -1,6 +1,7 @@
 import { wrap_array } from '@azrico/object';
 import { SimpleObject } from '@azrico/webobject';
 import servicesJson from './services.json';
+import { localeCurrencies } from '@/i18nConfig';
 export class SubService extends SimpleObject {
 	title: string = '';
 	color: string = '';
@@ -49,5 +50,9 @@ export default class Service extends SimpleObject {
 	}
 	static get_list(): Service[] {
 		return servicesJson.map((r) => new Service(r));
+	}
+	static getPrice(obj: any, locale: string, currency = true) {
+		if (typeof obj === 'string') return obj + ` ${localeCurrencies[locale]}`;
+		return (obj[locale] || obj['en']) + ` ${localeCurrencies[locale]}`;
 	}
 }

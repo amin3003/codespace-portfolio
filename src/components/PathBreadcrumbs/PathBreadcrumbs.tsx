@@ -40,7 +40,7 @@ function PathBreadcrumbsInner(props: PathBreadcrumbsProps & { path_parts: string
 	});
 
 	return (
-		<div className={props.absolute ? 'absolute top-5 left-5' : ''}>
+		<div className={props.absolute ? 'absolute top-4 left-8' : ''}>
 			<div className="breadcrumbs">
 				<ul>{PathPartsElement}</ul>
 			</div>

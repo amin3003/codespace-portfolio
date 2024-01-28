@@ -31,7 +31,7 @@ export default function PageService(props: any) {
 		<>
 			<ThreeCanvas>
 				<StarPage />
-				<OrbitPage />
+				<OrbitPage start={1} />
 			</ThreeCanvas>
 			<PathBreadcrumbs absolute />
 			<div className="px-[5%]" style={service_style}>
