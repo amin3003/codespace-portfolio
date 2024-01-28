@@ -16,7 +16,6 @@ export default function ServiceMainArea(props: { currentService: Service }) {
 		<SectionArea center className="min-h-lvh pt-12">
 			<div className="flex flex-col gap-2">
 				<h3 className="m-0">{capitalize(translate_path(String(currentService.url)))}</h3>
-
 				<AccodionArea currentService={currentService} />
 			</div>
 		</SectionArea>

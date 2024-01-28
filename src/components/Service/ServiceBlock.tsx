@@ -25,10 +25,14 @@ export default function ServiceBlock(props: { service: Service }) {
 						})}
 					</ul>
 
-					<Link scroll={false} href={`services/${r.url}`}>
-						<div className="card-actions justify-center">
-							<button className="btn btn-ghost text-secondary">Learn more</button>
-						</div>
+					<Link
+						className="flex align-middle justify-center"
+						scroll={false}
+						href={`services/${r.url}`}
+					>
+						<button className="btn btn-ghost text-secondary self-center">
+							Learn more
+						</button>
 					</Link>
 				</div>
 			</div>

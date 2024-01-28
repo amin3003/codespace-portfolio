@@ -19,7 +19,6 @@ export default function ServicePackagesArea(props: { currentService: Service }) 
 				})}
 			</div>
 			<div className="flex flex-col gap-7 max-w-fit mx-auto py-7">
-				<button className="btn btn-primary">Contact us</button>
 				<Link href={'/services'} className="link link-hover">
 					View other services
 				</Link>

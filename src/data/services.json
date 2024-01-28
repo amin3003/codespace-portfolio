@@ -33,7 +33,7 @@
 			}
 		],
 		"subservices": [
-			{ "title": "Free", "color": "#9FA8DA", "price": 0, "features": ["basic"] },
+			{ "title": "Free", "color": "#9FA8DA", "price": "0$", "features": ["basic"] },
 			{
 				"title": "Standard",
 				"color": "#81D4FA",

@@ -19,24 +19,20 @@ export default function SubServiceBlock(props: {
 			<div
 				className={clsx(
 					`card card-compact rounded-none bg-base-200 `,
-					`border-t-2 w-[230px] min-h-[330px] border-[--subservicecolor]`
+					`border-t-2 w-[220px] min-h-[430px] border-[--subservicecolor]`
 				)}
 			>
 				<div className="card-body content-center flex">
-					<div className="flex-1">
-						<b className="card-title text-center justify-center">{subservice.title}</b>
-
-						{subservice.price ? (
-							<p className="flex flex-row gap-1 self-center justify-center">
+					<div className="flex-1 flex flex-col gap-6">
+						<div className="h-[150px] flex flex-col">
+							<b className="card-title text-center justify-center">{subservice.title}</b>
+							<p className="flex flex-1 flex-col gap-1 text-center py-3">
 								<span>{capitalize(translate_service('starting from'))}</span>
-								<b>{subservice.price}</b>
+								<b className="text-3xl">{subservice.price}</b>
 							</p>
-						) : (
-							<p className="self-center text-center">Free</p>
-						)}
-
-						<div className="divider"></div>
-						<ul className="pt-2 gap-2">
+							<div className="divider"></div>
+						</div>
+						<ul className="gap-2 flex-1">
 							{subservice.features.map((feature: Feature, i: number) => {
 								return (
 									<li key={i}>
@@ -46,6 +42,12 @@ export default function SubServiceBlock(props: {
 								);
 							})}
 						</ul>
+						<Link
+							href={'/services'}
+							className="link link-hover text-center justify-center text-primary"
+						>
+							Contact us
+						</Link>
 					</div>
 				</div>
 			</div>
