@@ -33,11 +33,10 @@ export default class Service extends SimpleObject {
 	readonly long_desc: string[] = [];
 	readonly isBest: boolean = false;
 	readonly subservices: SubService[] = [];
-	readonly features: Feature[] = [];
 	readonly articles: Feature[] = [];
 
 	//features that are shared between all subservices
-	readonly subservice_shared_features: Feature[] = [];
+	readonly features: Feature[] = [];
 
 	//list of all features in all subservices
 	subservice_all_features: Feature[] = [];
@@ -52,27 +51,22 @@ export default class Service extends SimpleObject {
 		super();
 		this.loadValues(inputdata);
 		this.features = Feature.convert(this.features);
-		this.subservice_shared_features = Feature.convert(this.subservice_shared_features);
 		this.articles = Feature.convert(this.articles);
 		this.subservices = SubService.mapto(SubService, this.subservices);
 
 		const mapped_features = array_makeMap(
-			array_merge(
-				this.subservice_shared_features,
-				...this.subservices.flatMap((r) => r.features)
-			),
+			array_merge(this.features, ...this.subservices.flatMap((r) => r.features)),
 			'id'
 		);
 		this.subservice_all_features = Feature.convert(mapped_features);
-		
-		
+
 		this.init();
 	}
 
 	init() {
 		const available_features: { [key: string]: boolean } = {};
 		//shared feats are available for all packages
-		this.subservice_shared_features.forEach((shared_feat) => {
+		this.features.forEach((shared_feat) => {
 			available_features[shared_feat.id] = true;
 		});
 

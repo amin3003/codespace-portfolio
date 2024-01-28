@@ -20,7 +20,7 @@ export default function PageServices() {
 					orientation="vertical"
 					className="min-h-lvh"
 				>
-					<div className="flex flex-wrap justify-center gap-5 py-12">
+					<div className="flex flex-wrap justify-center gap-5 py-6">
 						{services.map((r, i) => {
 							return <ServiceBlock service={r} key={i} />;
 						})}

@@ -3,6 +3,7 @@ import Link from '@src/navigation';
 export default function ServiceBlock(props: { service: Service }) {
 	const r = props.service;
 
+	const topFeatures = r.features.slice(0, 5);
 	return (
 		<div className="indicator">
 			{r.isBest && (
@@ -14,17 +15,13 @@ export default function ServiceBlock(props: { service: Service }) {
 			<div className="flex glass card w-[270px] bg-base-100 ">
 				<div className="card-body content-center flex">
 					<b className="card-title text-center justify-center text-nowrap">{r.title}</b>
-					<div className="divider"></div>
-					<ul className="py-2 flex-1">
-						{r.features.map((feature, i: number) => {
-							return (
-								<li key={i}>
-									<i className="bi bi-check">{feature.title}</i>
-								</li>
-							);
+					<div className="divider p-0 m-0"></div>
+					<ul className="py-1 px-4 flex-1 list-disc">
+						{topFeatures.map((feature, i: number) => {
+							return <li key={i}>{feature.title}</li>;
 						})}
+						<li>...</li>
 					</ul>
-
 					<Link
 						className="flex align-middle justify-center"
 						scroll={false}

@@ -2,8 +2,7 @@
 	{
 		"color": "#4CAF50",
 		"url": "webdesign",
-		"title": "Web design",
-		"features": ["AdobeXD File", "Responsive design"],
+		"title": "Web design", 
 		"desc": "we design your responsive website",
 		"long_desc": [
 			"we design your responsive website. suitable for mobile and pc",
@@ -24,7 +23,7 @@
 				"text": "Sint incididunt eiusmod elit aliquip exercitation elit laborum."
 			}
 		],
-		"subservice_shared_features": [
+		"features": [
 			"Adobe XD",
 			"Responsive design",
 			"SVG File",
@@ -67,11 +66,10 @@
 	{
 		"color": "#5C6BC0",
 		"url": "webdev",
-		"title": "Web developement",
-		"features": ["SEO Standard"],
+		"title": "Web developement", 
 		"desc": "we develop a responsive website for your bussiness",
 
-		"subservice_shared_features": [
+		"features": [
 			"Default Design",
 			"Responsive design",
 			"SEO Standard",
@@ -117,11 +115,10 @@
 		"color": "#FFEB3B",
 		"url": "startup",
 		"isBest": true,
-		"title": "Startup Package",
-		"features": ["AdobeXD Design", "Dark and light theme", "4 Pages static website"],
+		"title": "Startup Package", 
 		"desc": "All in one package. let us handle all your needs",
 
-		"subservice_shared_features": [
+		"features": [
 			"Personalized Design",
 			"Logo Design",
 			"Web developement",

@@ -15,7 +15,7 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 			<body className="overflow-x-clip">
 				<AppHeader />
 
-				<main className="drawer py-8">
+				<main className="drawer">
 					<input id="my-drawer" type="checkbox" className="drawer-toggle" />
 
 					<div className="drawer-content flex flex-col overflow-hidden">{children}</div>
