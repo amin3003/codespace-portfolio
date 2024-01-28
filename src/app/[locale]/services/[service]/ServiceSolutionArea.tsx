@@ -17,7 +17,7 @@ export default function ServiceSolutionArea(props: { currentService: Service }) 
 					))}
 				</div>
 			</SectionArea>
-			{/* related posts */}
+			{/* related posts
 			<h3 className="m-0 text-center">Related Articles</h3>
 			<div className="flex flex-row justify-center gap-4 p-4">
 				{currentService.articles.map((r, i) => {
@@ -30,7 +30,7 @@ export default function ServiceSolutionArea(props: { currentService: Service }) 
 						</div>
 					);
 				})}
-			</div>
+			</div> */}
 		</div>
 	);
 }

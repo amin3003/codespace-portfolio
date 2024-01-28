@@ -36,7 +36,7 @@ export default function SectionArea(props: {
 		>
 			<div
 				className={clsx(
-					'flex-[3] flex flex-col',
+					'flex-[3] flex flex-col w-full lg:w-auto',
 					`${props.mirror ? 'order-last' : 'order-first'}`
 				)}
 			>

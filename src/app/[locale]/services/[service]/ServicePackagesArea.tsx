@@ -2,6 +2,7 @@ import SectionArea from '@/components/Section/SectionArea';
 import Service from '@/data/Service';
 import SubServiceBlock from '@/components/Service/SubServiceBlock';
 import Link from '@/navigation';
+import SwiperLayout from '@/components/Sliders/SwiperLayout';
 export default function ServicePackagesArea(props: { currentService: Service }) {
 	const currentService = props.currentService;
 
@@ -14,11 +15,18 @@ export default function ServicePackagesArea(props: { currentService: Service }) 
 		>
 			<h2 className="text-center">Packages</h2>
 			<div className={`flex flex-wrap justify-center gap-8`}>
-				{currentService.subservices.map((r, i) => {
-					return (
-						<SubServiceBlock index={i} key={i} service={currentService} subservice={r} />
-					);
-				})}
+				<SwiperLayout
+					content={currentService.subservices.map((r, i) => {
+						return (
+							<SubServiceBlock
+								index={i}
+								key={i}
+								service={currentService}
+								subservice={r}
+							/>
+						);
+					})}
+				/>
 			</div>
 			<div className="flex flex-col gap-7 max-w-fit mx-auto py-7">
 				<Link href={'/services'} className="link link-hover">

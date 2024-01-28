@@ -1,4 +1,3 @@
-'use client';
 import { sectionProps } from './types';
 import React from 'react';
 import AboutSlider from '../../Sliders/AboutSlider';
@@ -48,24 +47,7 @@ export default function SectionAbout(props: sectionProps) {
 			className="items-center min-h-[100lvh]"
 		>
 			<h2 className="text-center">About</h2>
-			<AboutSlider data={team}></AboutSlider>
-			{/* <div className="flex flex-col md:flex-row gap-4 justify-center items-center pb-48 md:pb-4">
-				{team.map((r, i) => {
-					return (
-						<div key={i} className="flex glass card w-[300px] bg-base-100 ">
-							<div className="card-body content-center justify-center ">
-								<div className="avatar justify-center">
-									<div className="w-24 rounded-full "></div>
-								</div>
-								<b className="card-title justify-center">{r.name}</b>
-								<b className="flex justify-center text-primary">{r.position}</b>
-
-								<p className="text-justify text-sm hidden md:flex">{r.desc}</p>
-							</div>
-						</div>
-					);
-				})}
-			</div> */}
+			<AboutSlider data={team}/>
 		</SectionArea>
 	);
 }

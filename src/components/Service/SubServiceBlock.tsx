@@ -23,11 +23,11 @@ export default function SubServiceBlock(props: {
 	const allFeatures = subservice.all_features;
 
 	return (
-		<div className="indicator" style={subservice_style}>
+		<div className="indicator w-full h-full" style={subservice_style}>
 			<div
 				className={clsx(
 					`card card-compact rounded-none bg-base-200 `,
-					`border-t-2 w-[260px] min-h-[430px] border-[--subservicecolor]`
+					`border-t-2 w-full h-full border-[--subservicecolor]`
 				)}
 			>
 				<div className="card-body content-center flex">
