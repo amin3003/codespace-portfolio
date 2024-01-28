@@ -1,6 +1,6 @@
 import { wrap_array } from '@azrico/object';
 import { SimpleObject } from '@azrico/webobject';
-
+import servicesJson from './services.json';
 export class SubService extends SimpleObject {
 	name: string = '';
 	color: string = '';
@@ -25,7 +25,7 @@ export default class Service extends SimpleObject {
 	url: string = '';
 	title: string = '';
 	desc: string = '';
-	long_desc: string = '';
+	long_desc: string[] = [];
 	isBest: boolean = false;
 	subservices: SubService[] = [];
 	features: Feature[] = [];
@@ -48,83 +48,6 @@ export default class Service extends SimpleObject {
 		return this.get_list().find((s) => s.url === search || s.title === search);
 	}
 	static get_list(): Service[] {
-		return [
-			{
-				color: '#4CAF50',
-				url: 'webdesign',
-				title: 'Web design',
-				features: ['AdobeXD File', 'Responsive design'],
-				desc: 'we design your responsive website',
-				long_desc: 'we design your responsive website. suitable for mobile and pc',
-				solution_header: 'Solution to your top marketing challenges',
-				solution_title: 'Get paid faster',
-				solution_texts: [
-					'Adipisicing aliqua laborum quis proident adipisicing velit mollit.',
-					'Veniam commodo consequat eu id Lorem fugiat qui do proident culpa aliqua anim Lorem.',
-					'Veniam commodo consequat eu id Lorem fugiat qui do proident culpa aliqua anim Lorem.',
-					'Veniam commodo consequat eu id Lorem fugiat qui do proident culpa aliqua anim Lorem.',
-				],
-				popular_features: [
-					{
-						title: 'AdobeXD File',
-						text: 'Sint incididunt eiusmod elit aliquip exercitation elit laborum.',
-					},
-					{
-						title: 'Responsive design',
-						text: 'Sint incididunt eiusmod elit aliquip exercitation elit laborum.',
-					},
-					{
-						title: 'Multiple themes',
-						text: 'Sint incididunt eiusmod elit aliquip exercitation elit laborum.',
-					},
-				],
-				subservices: [
-					{ name: 'Free', color: 'white', price: 0, features: ['basic'] },
-					{
-						name: 'Standard',
-						color: 'white',
-						price: '100$',
-						features: ['basic', 'standrad'],
-					},
-					{
-						name: 'Pro',
-						color: 'white',
-						price: '300$',
-						features: ['basic', 'standrad', 'pro'],
-					},
-					{
-						name: 'Advanced',
-						color: 'white',
-						price: '400$',
-						features: ['basic', 'standrad', 'pro', 'advanced'],
-					},
-				],
-			},
-			{
-				color: '#5C6BC0',
-				url: 'webdev',
-				title: 'Web developement',
-				features: ['SEO Standard'],
-				desc: 'we develop a responsive website for your bussiness',
-				subservices: [],
-			},
-			{
-				color: '#FFEB3B',
-				url: 'startup',
-				isBest: true,
-				title: 'Startup Package',
-				features: ['AdobeXD Design', 'Dark and light theme', '4 Pages static website'],
-				desc: 'All in one package. let us handle all your needs',
-				subservices: [],
-			},
-			{
-				color: '#F06292',
-				url: 'media',
-				title: 'Media management',
-				features: ['Instagram', 'Facebook', 'Discord'],
-				desc: 'we manage your social networks to increase your visibility',
-				subservices: [],
-			},
-		].map((r) => new Service(r));
+		return servicesJson.map((r) => new Service(r));
 	}
 }

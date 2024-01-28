@@ -8,7 +8,7 @@ import ThreeCanvas from '@/components/Three/ThreeCanvas';
 import StarPage from '@/components/Three/StarPage';
 import OrbitPage from '@/components/Three/OrbitPage';
 import SubServiceBlock from '@/components/Service/SubServiceBlock';
-import { array_first } from '@azrico/object';
+import { array_first, wrap_array } from '@azrico/object';
 
 /**
  * Page for each service
@@ -40,15 +40,17 @@ export default function PageService(props: any) {
 							{capitalize(translate_path(String(currentService.url)))}
 						</h3>
 						<h3 className="m-0">Marketing software</h3>
-						<p>{currentService.long_desc}</p>
+						{wrap_array(currentService.long_desc).map((r, i) => (
+							<p key={i}>{r}</p>
+						))}
 					</div>
 				</SectionArea>
 				<div className="min-h-lvh">
 					{/* solution page */}
-					<h3 className="m-0 text-center">{currentService.solution_header}</h3>
-					<SectionArea mirror className="py-24" image={<div>test</div>}>
+					<h2 className="m-0 text-center">{currentService.solution_header}</h2>
+					<SectionArea mirror className="py-24" width={512} image={'browser'}>
 						<div className="flex flex-col">
-							<h4 className="">{currentService.solution_title}</h4>
+							<h3 className="">{currentService.solution_title}</h3>
 							{currentService.solution_texts.map((r, i) => (
 								<p className="opacity-90" key={i}>
 									{r}
@@ -80,7 +82,6 @@ export default function PageService(props: any) {
 					<h2 className="text-center">Packages</h2>
 					<div className={`flex flex-wrap justify-center gap-2`}>
 						{currentService.subservices.map((r, i) => {
-							
 							return <SubServiceBlock index={i} key={i} subservice={r} />;
 						})}
 					</div>
