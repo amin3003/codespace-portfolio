@@ -18,9 +18,9 @@ export default function AboutSlider(props: any) {
 		centeredSlides: true,
 		slidesPerView: 'auto',
 		coverflowEffect: {
-			rotate: 50,
-			stretch: 0,
-			depth: 100,
+			rotate: 25,
+			stretch: 1,
+			depth: 200,
 			modifier: 1,
 			slideShadows: false,
 		},
@@ -28,7 +28,7 @@ export default function AboutSlider(props: any) {
 			clickable: true, // Enable navigation through pagination bullets
 		},
 		modules: [EffectCoverflow, Pagination],
-		style: { width: '100%', height: '100%' },
+		style: { width: '100%', height: '400px' },
 		initialSlide: 1, // Set the default active slide to be the second slide
 	};
 
@@ -38,7 +38,6 @@ export default function AboutSlider(props: any) {
 				{props.data.map((r: any, index: any) => {
 					return (
 						<SwiperSlide
-							className="bg-base-100"
 							key={index}
 							style={{
 								backgroundPosition: 'center',
@@ -46,10 +45,10 @@ export default function AboutSlider(props: any) {
 								background: 'none',
 								borderRadius: '18px',
 								width: '300px',
-								height: '300px',
+								height: 'auto',
 							}}
 						>
-							<div className="flex card w-[300px] h-[350px] bg-base-100 ">
+							<div className="flex card cad-compact border-2 w-[300px] h-full bg-base-100 ">
 								<div className="card-body content-center justify-center ">
 									<div className="avatar justify-center">
 										<div className="w-24 rounded-full "></div>

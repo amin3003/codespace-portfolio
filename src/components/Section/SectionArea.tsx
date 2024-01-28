@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import clsx from 'clsx';
 
 export default function SectionArea(props: {
 	id?: string;
 	children: any;
 	image?: any;
 	orientation?: 'vertical' | 'horizontal';
-	title?: string | number;
+	title?: any;
 	className?: string;
 	center?: boolean;
 	mirror?: boolean;
@@ -15,7 +16,9 @@ export default function SectionArea(props: {
 }) {
 	const flexColClass = 'flex-col';
 	const flexRowClass = 'flex-row';
-	const isVertical = props.orientation === 'vertical'; 
+	const isAuto = props.orientation == null;
+	const isVertical = props.orientation === 'vertical';
+
 	const forcedFlexClass =
 		props.orientation == null ? '' : isVertical ? ` ${flexColClass}` : ` ${flexRowClass}`;
 	return (
@@ -32,22 +35,30 @@ export default function SectionArea(props: {
 			}
 		>
 			<div
-				data-forcedFlexClass={forcedFlexClass}
-				className={
-					'flex  flex-[3] md:gap-6 ' +
-					(forcedFlexClass || 'flex-col md:flex-row') +
-					` ${props.mirror ? 'order-last' : 'order-first'}`
-				}
+				className={clsx(
+					'flex-[3] flex flex-col',
+					`${props.mirror ? 'order-last' : 'order-first'}`
+				)}
 			>
-				<h1 className={'opacity-20 select-none my-0 md:my-0 md:text-center text-[300px]'}>
-					{props.title}
-				</h1>
-				<div className={!isVertical ? 'md:ml-[-100px] md:mt-[150px]' : ''}>
+				{props.title != null && (
+					<h1
+						className={clsx(
+							'opacity-20 select-none !leading-none !m-0 !p-0 text-[260px]'
+						)}
+					>
+						{props.title}
+					</h1>
+				)}
+
+				<div className={props.title != null ? clsx('mt-[-180px] pl-[50px]') : ''}>
 					{props.children}
 				</div>
 			</div>
 			<div
-				className={`m-2 flex-[2] content-center justify-center hidden lg:flex ${props.imageClass} `}
+				className={clsx(
+					'flex-[2] m-auto justify-center hidden lg:flex',
+					props.imageClass
+				)}
 			>
 				{typeof props.image === 'string' ? (
 					<figure>

@@ -7,7 +7,11 @@ export default function AppLogo(props: {
 	small?: boolean;
 }) {
 	return (
-		<Link href="/" className={'flex justify-start items-center w-min ' + props.className}>
+		<Link
+			href="/"
+			scroll={false}
+			className={'flex justify-start items-center w-min ' + props.className}
+		>
 			{/* <Image src="" alt="chiztech logo" /> */}
 			{props.text && (
 				<div className={props.small ? 'text-md' : 'text-2xl'}>

@@ -6,12 +6,7 @@ import Image from 'next/image';
 export default function SectionSteps(props: sectionProps) {
 	return (
 		<div id="steps" className="flex flex-col px-[5%]">
-			<SectionArea
-				title={1}
-				className="min-h-[90lvh]"
-				image={<MockupSite />}
-				imageClass={'md:mt-[250px]'}
-			>
+			<SectionArea title={1} className="min-h-[90lvh]" image={<MockupSite />}>
 				<h2>We design and create the ideal website for your business</h2>
 				<p>
 					Sit ipsum ea ea non aute velit occaecat culpa ipsum culpa labore adipisicing
@@ -28,7 +23,6 @@ export default function SectionSteps(props: sectionProps) {
 				height={400}
 				mirror
 				className="min-h-[90lvh]"
-				imageClass={'md:mt-[280px]'}
 			>
 				<h2>
 					{`Enhance your website's search visibility by using best`}
@@ -49,7 +43,6 @@ export default function SectionSteps(props: sectionProps) {
 				width={350}
 				height={300}
 				className="min-h-[90lvh]"
-				imageClass={'md:mt-[200px]'}
 			>
 				<h2>
 					{`We manage your`}

@@ -29,12 +29,9 @@ export default function PageService(props: any) {
 				<OrbitPage />
 			</ThreeCanvas>
 			<div className="px-[4%]">
-				<SectionArea
-					title={capitalize(translate_path(String(currentService.url)))}
-					orientation="vertical"
-					className="flex min-h-lvh justify-between gap-2 flex-col"
-				>
+				<SectionArea orientation="vertical" className="min-h-lvh">
 					<div className="flex flex-col">
+						<h2>{capitalize(translate_path(String(currentService.url)))}</h2>
 						<h3>Marketing software</h3>
 						<p>{currentService.long_desc}</p>
 					</div>
@@ -42,7 +39,7 @@ export default function PageService(props: any) {
 				<SectionArea
 					title={'Packages'}
 					orientation="vertical"
-					className="flex min-h-lvh justify-between flex-col"
+					className="flex flex-wrap min-h-lvh justify-between"
 				>
 					<div className={`flex flex-wrap justify-center gap-2`}>
 						{currentService.subservices.map((r, i) => {

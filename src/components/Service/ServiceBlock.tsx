@@ -10,7 +10,7 @@ export default function ServiceBlock(props: { service: any }) {
 				</span>
 			)}
 
-			<div className="flex glass card w-[300px] bg-base-100 ">
+			<div className="flex glass card w-[270px] bg-base-100 ">
 				<div className="card-body content-center flex">
 					<b className="card-title text-center justify-center">{r.title}</b>
 					<ul className="py-2">
@@ -29,7 +29,7 @@ export default function ServiceBlock(props: { service: any }) {
 							<p className="flex-1">{r.desc}</p>
 						</>
 					)}
-					<Link href={`services/${r.url}`}>
+					<Link scroll={false} href={`services/${r.url}`}>
 						<div className="card-actions justify-center">
 							<button className="btn btn-ghost text-secondary">Learn more</button>
 						</div>

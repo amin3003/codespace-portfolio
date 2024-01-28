@@ -12,7 +12,7 @@ export default function SidebarContent() {
 				{header_paths.map((v, i) => {
 					return (
 						<li key={i} className="text-md">
-							<Link href={`${v.path}`}>
+							<Link scroll={false} href={`${v.path}`}>
 								<b>{t(String(v.name).toLowerCase())}</b>
 							</Link>
 						</li>

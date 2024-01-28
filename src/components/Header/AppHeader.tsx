@@ -73,7 +73,7 @@ export default function AppHeader() {
 							{header_paths.map((v, i) => {
 								return (
 									<li key={i} className="btn btn-sm btn-ghost">
-										<Link href={`${v.path}`}>
+										<Link href={`${v.path}`} scroll={false}>
 											<b>{t(String(v.name).toLocaleLowerCase())}</b>
 										</Link>
 									</li>

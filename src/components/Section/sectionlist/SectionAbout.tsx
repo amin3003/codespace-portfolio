@@ -1,14 +1,14 @@
 'use client';
 import { sectionProps } from './types';
 import React from 'react';
-import AboutSlider from '../../swiper/AboutSlider';
+import AboutSlider from '../../Sliders/AboutSlider';
 import SectionArea from '@/components/Section/SectionArea';
 export default function SectionAbout(props: sectionProps) {
 	const team = [
 		{
 			img: '',
 			name: 'Ayhan',
-			position: 'Back-end Developer',
+			position: 'Full-stack Developer',
 			desc: 'It by the readable at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',
 			social: {
 				gitHub: '',
@@ -42,13 +42,13 @@ export default function SectionAbout(props: sectionProps) {
 	return (
 		<SectionArea
 			id="section-about"
-			title=""
 			center
 			orientation="vertical"
 			className="items-center min-h-[100lvh]"
 		>
 			<h2>About</h2>
-			<div className="flex flex-col md:flex-row gap-4 justify-center items-center pb-48 md:pb-4">
+			<AboutSlider data={team}></AboutSlider>
+			{/* <div className="flex flex-col md:flex-row gap-4 justify-center items-center pb-48 md:pb-4">
 				{team.map((r, i) => {
 					return (
 						<div key={i} className="flex glass card w-[300px] bg-base-100 ">
@@ -64,7 +64,7 @@ export default function SectionAbout(props: sectionProps) {
 						</div>
 					);
 				})}
-			</div>
+			</div> */}
 		</SectionArea>
 	);
 }

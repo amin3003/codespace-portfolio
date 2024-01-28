@@ -25,7 +25,9 @@ function PathBreadcrumbsInner(props: PathBreadcrumbsProps & { path_parts: string
 		const path_until_now = `/` + props.path_parts.slice(0, i + 1).join('/');
 		return (
 			<li key={i}>
-				<Link href={path_until_now}>{capitalize(t(String(r).toLowerCase() ))}</Link>
+				<Link scroll={false} href={path_until_now}>
+					{capitalize(t(String(r).toLowerCase()))}
+				</Link>
 			</li>
 		);
 	});
