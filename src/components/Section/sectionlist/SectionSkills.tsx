@@ -3,6 +3,7 @@ import React from "react";
 import MockupSite from "@c/MockupSite/MockupSite";
 import { div } from "three/examples/jsm/nodes/Nodes.js";
 import clsx from 'clsx';
+import Link from '@/navigation';
 
 const skillsList = [
 	{ text: ['Website', 'Design'], icon: 'bi bi-code-slash', color: '#db2777' },
@@ -43,10 +44,10 @@ export default function SectionSkills(props: sectionProps) {
 					);
 				})}
 			</div>
-			<a className="mx-auto flex flex-row gap-2 mt-5 " href="#section-steps">
-				DISCOVER
+			<Link className="mx-auto flex flex-row gap-2 mt-5 align-middle" href="/services">
+				View services
 				<i className="bi bi-arrow-right-circle-fill" />
-			</a>
+			</Link>
 		</div>
 	);
 }

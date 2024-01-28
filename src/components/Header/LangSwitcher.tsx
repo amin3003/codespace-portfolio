@@ -38,7 +38,7 @@ export default function LangSwitcher(props: { className?: string; openUp?: boole
 						` ${props.openUp ? 'dropdown-top' : 'dropdown-bottom'}`
 					}
 				>
-					<div tabIndex={0} role="button" className="btn m-1 w-6rem">
+					<div tabIndex={0} role="button" className="btn btn-ghost m-1 w-6rem">
 						{currentLocaleName}
 					</div>
 					<ul

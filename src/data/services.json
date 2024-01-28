@@ -18,7 +18,7 @@
 			"Veniam commodo consequat eu id Lorem fugiat qui do proident culpa aliqua anim Lorem.",
 			"Veniam commodo consequat eu id Lorem fugiat qui do proident culpa aliqua anim Lorem."
 		],
-		"popular_features": [
+		"articles": [
 			{
 				"title": "AdobeXD File",
 				"text": "Sint incididunt eiusmod elit aliquip exercitation elit laborum."
@@ -33,22 +33,22 @@
 			}
 		],
 		"subservices": [
-			{ "name": "Free", "color": "white", "price": 0, "features": ["basic"] },
+			{ "title": "Free", "color": "#9FA8DA", "price": 0, "features": ["basic"] },
 			{
-				"name": "Standard",
-				"color": "white",
+				"title": "Standard",
+				"color": "#81D4FA",
 				"price": "100$",
 				"features": ["basic", "standrad"]
 			},
 			{
-				"name": "Pro",
-				"color": "white",
+				"title": "Pro",
+				"color": "#E6EE9C",
 				"price": "300$",
 				"features": ["basic", "standrad", "pro"]
 			},
 			{
-				"name": "Advanced",
-				"color": "white",
+				"title": "Advanced",
+				"color": "#FF8A65",
 				"price": "400$",
 				"features": ["basic", "standrad", "pro", "advanced"]
 			}

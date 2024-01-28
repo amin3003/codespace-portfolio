@@ -16,7 +16,7 @@ export default function PageIndex() {
 				<OrbitPage />
 				<StarPage />
 			</ThreeCanvas>
-			<div id="content-container" className="z-[10000]">
+			<div id="content-container" className="z-[10000] px-[5%]">
 				{list_sections.map((SectionRender, index) => {
 					return (
 						//use dvh to avoid resize when vh is changed on mobile

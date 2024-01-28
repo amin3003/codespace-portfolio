@@ -5,7 +5,7 @@ import { sectionProps } from './types';
 import Image from 'next/image';
 export default function SectionSteps(props: sectionProps) {
 	return (
-		<div id="section-steps" className="flex flex-col px-[5%] gap-3">
+		<div id="section-steps" className="flex flex-col gap-3">
 			<SectionArea title={1} className="min-h-[80lvh]" image={<MockupSite />}>
 				<h2>We design and create the ideal website for your business</h2>
 				<p>

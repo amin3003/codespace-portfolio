@@ -12,7 +12,7 @@ export default function PageServices() {
 			<ThreeCanvas>
 				<StarPage />
 			</ThreeCanvas>
-			<div className="px-[3%]">
+			<div className="px-[5%]">
 				<SectionArea
 					center
 					title={title}

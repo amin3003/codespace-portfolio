@@ -2,8 +2,8 @@ import ScrollDetector from '@c/ScrollDetector/ScrollDetector';
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Link from '@/navigation';
-const AppLogo = React.lazy(() => import('./AppLogo'));
-const LangSwitcher = React.lazy(() => import('./LangSwitcher'));
+import AppLogo from './AppLogo';
+import LangSwitcher from './LangSwitcher';
 
 export const header_paths = [
 	{
@@ -72,11 +72,11 @@ export default function AppHeader() {
 						<ul className="flex flex-row rounded-box">
 							{header_paths.map((v, i) => {
 								return (
-									<li key={i} className="btn btn-sm btn-ghost">
-										<Link href={`${v.path}`} scroll={false}>
+									<Link key={i} href={`${v.path}`} scroll={false}>
+										<li className="btn btn-sm btn-ghost">
 											<b>{t(String(v.name).toLocaleLowerCase())}</b>
-										</Link>
-									</li>
+										</li>
+									</Link>
 								);
 							})}
 						</ul>

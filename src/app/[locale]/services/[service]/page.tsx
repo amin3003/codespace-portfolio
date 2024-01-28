@@ -1,4 +1,3 @@
-import 'swiper/css';
 import SectionArea from '@/components/Section/SectionArea';
 import PathBreadcrumbs from '@/components/PathBreadcrumbs/PathBreadcrumbs';
 import { capitalize } from '@azrico/string';
@@ -9,6 +8,9 @@ import StarPage from '@/components/Three/StarPage';
 import OrbitPage from '@/components/Three/OrbitPage';
 import SubServiceBlock from '@/components/Service/SubServiceBlock';
 import { array_first, wrap_array } from '@azrico/object';
+import ServiceSolutionArea from './ServiceSolutionArea';
+import ServicePackagesArea from './ServicePackagesArea';
+import ServiceMainArea from './ServiceMainArea';
 
 /**
  * Page for each service
@@ -32,60 +34,10 @@ export default function PageService(props: any) {
 				<OrbitPage />
 			</ThreeCanvas>
 			<PathBreadcrumbs absolute />
-			<div className="px-[4%]" style={service_style}>
-				{/* main page */}
-				<SectionArea center className="min-h-lvh pt-24">
-					<div className="flex flex-col">
-						<h3 className="m-0">
-							{capitalize(translate_path(String(currentService.url)))}
-						</h3>
-						<h3 className="m-0">Marketing software</h3>
-						{wrap_array(currentService.long_desc).map((r, i) => (
-							<p key={i}>{r}</p>
-						))}
-					</div>
-				</SectionArea>
-				<div className="min-h-lvh">
-					{/* solution page */}
-					<h2 className="m-0 text-center">{currentService.solution_header}</h2>
-					<SectionArea mirror className="py-24" width={512} image={'browser'}>
-						<div className="flex flex-col">
-							<h3 className="">{currentService.solution_title}</h3>
-							{currentService.solution_texts.map((r, i) => (
-								<p className="opacity-90" key={i}>
-									{r}
-								</p>
-							))}
-						</div>
-					</SectionArea>
-					{/* popular features */}
-					<h3 className="m-0 text-center">Popular Features</h3>
-					<div className="flex flex-row justify-center gap-4 p-4">
-						{currentService.popular_features.map((r, i) => {
-							return (
-								<div key={i} className="card glass flex-1 max-w-[400px]">
-									<div className="card-body flex">
-										<b className="card-title">{r.title}</b>
-										<p className="">{r.text}</p>
-									</div>
-								</div>
-							);
-						})}
-					</div>
-				</div>
-				{/* packages */}
-				<SectionArea
-					center
-					orientation="vertical"
-					className="flex flex-wrap min-h-lvh justify-between"
-				>
-					<h2 className="text-center">Packages</h2>
-					<div className={`flex flex-wrap justify-center gap-2`}>
-						{currentService.subservices.map((r, i) => {
-							return <SubServiceBlock index={i} key={i} subservice={r} />;
-						})}
-					</div>
-				</SectionArea>
+			<div className="px-[5%]" style={service_style}>
+				<ServiceMainArea currentService={currentService} />
+				<ServiceSolutionArea currentService={currentService} />
+				<ServicePackagesArea currentService={currentService} />
 			</div>
 		</>
 	);

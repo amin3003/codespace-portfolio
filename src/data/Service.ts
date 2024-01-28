@@ -2,7 +2,7 @@ import { wrap_array } from '@azrico/object';
 import { SimpleObject } from '@azrico/webobject';
 import servicesJson from './services.json';
 export class SubService extends SimpleObject {
-	name: string = '';
+	title: string = '';
 	color: string = '';
 	features: Feature[] = [];
 	price: number | string = 0;
@@ -29,7 +29,7 @@ export default class Service extends SimpleObject {
 	isBest: boolean = false;
 	subservices: SubService[] = [];
 	features: Feature[] = [];
-	popular_features: Feature[] = [];
+	articles: Feature[] = [];
 
 	solution_header: string = '';
 	solution_title: string = '';
@@ -41,7 +41,7 @@ export default class Service extends SimpleObject {
 		super();
 		this.loadValues(inputdata);
 		this.features = Feature.mapto(Feature, this.features);
-		this.popular_features = Feature.mapto(Feature, this.popular_features);
+		this.articles = Feature.mapto(Feature, this.articles);
 		this.subservices = SubService.mapto(SubService, this.subservices);
 	}
 	static get_single(search: string): Service | undefined {

@@ -1,4 +1,7 @@
 {
+	"service": {
+		"starting from": "Starting from"
+	},
 	"path": {
 		"services": "Services",
 		"webdev": "Web developement",

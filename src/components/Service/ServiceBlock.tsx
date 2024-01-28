@@ -13,10 +13,9 @@ export default function ServiceBlock(props: { service: Service }) {
 
 			<div className="flex glass card w-[270px] bg-base-100 ">
 				<div className="card-body content-center flex">
-					<b className="card-title text-center justify-center">
-						{r.title}
-					</b>
-					<ul className="py-2">
+					<b className="card-title text-center justify-center text-nowrap">{r.title}</b>
+					<div className="divider"></div>
+					<ul className="py-2 flex-1">
 						{r.features.map((feature, i: number) => {
 							return (
 								<li key={i}>
@@ -25,12 +24,7 @@ export default function ServiceBlock(props: { service: Service }) {
 							);
 						})}
 					</ul>
-					{r.desc != null && (
-						<>
-							<div className="divider"></div>
-							<p className="flex-1">{r.desc}</p>
-						</>
-					)}
+
 					<Link scroll={false} href={`services/${r.url}`}>
 						<div className="card-actions justify-center">
 							<button className="btn btn-ghost text-secondary">Learn more</button>
