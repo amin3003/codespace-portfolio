@@ -43,7 +43,7 @@ export default function SectionSkills(props: sectionProps) {
 					);
 				})}
 			</div>
-			<a className="mx-auto flex flex-row gap-2 mt-5 " href="#">
+			<a className="mx-auto flex flex-row gap-2 mt-5 " href="#section-steps">
 				DISCOVER
 				<i className="bi bi-arrow-right-circle-fill" />
 			</a>

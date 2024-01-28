@@ -3,42 +3,43 @@ import { sectionProps } from './types';
 import React from 'react';
 import AboutSlider from '../../Sliders/AboutSlider';
 import SectionArea from '@/components/Section/SectionArea';
+const team = [
+	{
+		img: '',
+		name: 'Ayhan',
+		position: 'Full-stack Developer',
+		desc: 'It by the readable at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',
+		social: {
+			gitHub: '',
+			instagram: '',
+			telegram: '',
+		},
+	},
+	{
+		img: '',
+		name: 'Emin',
+		position: 'Front-end Developer',
+		desc: 'It by the readable at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',
+		social: {
+			gitHub: '',
+			instagram: '',
+			telegram: '',
+		},
+	},
+	{
+		img: '',
+		name: 'Reza',
+		position: 'UI/UX Designer ',
+		desc: 'It by the readable at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',
+		social: {
+			gitHub: '',
+			instagram: '',
+			telegram: '',
+		},
+	},
+];
+
 export default function SectionAbout(props: sectionProps) {
-	const team = [
-		{
-			img: '',
-			name: 'Ayhan',
-			position: 'Full-stack Developer',
-			desc: 'It by the readable at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',
-			social: {
-				gitHub: '',
-				instagram: '',
-				telegram: '',
-			},
-		},
-		{
-			img: '',
-			name: 'Emin',
-			position: 'Front-end Developer',
-			desc: 'It by the readable at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',
-			social: {
-				gitHub: '',
-				instagram: '',
-				telegram: '',
-			},
-		},
-		{
-			img: '',
-			name: 'Reza',
-			position: 'UI/UX Designer ',
-			desc: 'It by the readable at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',
-			social: {
-				gitHub: '',
-				instagram: '',
-				telegram: '',
-			},
-		},
-	];
 	return (
 		<SectionArea
 			id="section-about"
@@ -46,7 +47,7 @@ export default function SectionAbout(props: sectionProps) {
 			orientation="vertical"
 			className="items-center min-h-[100lvh]"
 		>
-			<h2>About</h2>
+			<h2 className="text-center">About</h2>
 			<AboutSlider data={team}></AboutSlider>
 			{/* <div className="flex flex-col md:flex-row gap-4 justify-center items-center pb-48 md:pb-4">
 				{team.map((r, i) => {
