@@ -80,7 +80,7 @@ export default function PlanetOrbits(props: {
 								args={[planet.orbitRadius, planet.orbitRadius + 1, 64]}
 								position={[x0, y0, z0 - 1]}
 							>
-								<meshStandardMaterial transparent opacity={0.1} color={'white'} />
+								<meshStandardMaterial transparent opacity={0.4} color={'white'} />
 							</Ring>
 						)}
 						<Sphere
@@ -90,7 +90,7 @@ export default function PlanetOrbits(props: {
 						>
 							<meshLambertMaterial
 								transparent
-								opacity={0.3}
+								opacity={0.8}
 								color={planet.color || 'hotpink'}
 							/>
 						</Sphere>

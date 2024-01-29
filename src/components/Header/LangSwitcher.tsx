@@ -33,15 +33,19 @@ export default function LangSwitcher(props: { className?: string; openUp?: boole
 		<div className={clsx('flex items-stretch px-2 w-min', props.className)}>
 			<div
 				className={clsx(
-					'dropdown dropdown-hover',
+					'dropdown',
 					`${props.openUp ? 'dropdown-top' : 'dropdown-bottom'}`
 				)}
 			>
-				<div tabIndex={0} role="button" className="btn btn-ghost m-1 w-6rem">
-					{currentLocaleName}
-				</div>
+				<button tabIndex={0} className="btn btn-sm btn-ghost">
+					<div className="flex flex-row gap-2">
+						<i className="bi bi-translate"></i>
+						<p> {currentLocaleName}</p>
+					</div>
+				</button>
+
 				<ul
-					style={{ right: 'auto', left: 'auto', width: '6rem' }}
+					style={{ right: 'auto', left: 'auto', width: '100%' }}
 					tabIndex={0}
 					className="dropdown-content z-[1] menu p-2 shadow bg-base-200 rounded-box items-center"
 				>

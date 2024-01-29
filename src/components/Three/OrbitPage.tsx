@@ -67,7 +67,7 @@ function SolarSystem(props: { block: BlockProperties }) {
 					orbitRadius: distanceFactor * 1,
 					size: sizeFactor * 1, //earth
 					factor: 0.11,
-					offset: -Math.PI / 1.5,
+					offset: -Math.PI / 2,
 					color: '#4287f5',
 				},
 			]}

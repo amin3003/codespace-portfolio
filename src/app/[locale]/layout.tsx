@@ -13,7 +13,7 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 
 	return (
 		<html lang={locale} data-theme="dracula">
-			<body className="overflow-x-clip">
+			<body id='doc-body' className="overflow-x-clip">
 				<AppHeader />
 
 				<main className="drawer">

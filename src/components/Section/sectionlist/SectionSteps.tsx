@@ -7,7 +7,9 @@ export default function SectionSteps(props: sectionProps) {
 	return (
 		<div id="section-steps" className="flex flex-col gap-3">
 			<SectionArea title={1} className="min-h-[80lvh]" image={<MockupSite />}>
-				<h2>We design and create the ideal website for your business</h2>
+				<h2 className="leading-tight md:leading-normal">
+					We design and create the ideal website for your business
+				</h2>
 				<p>
 					Sit ipsum ea ea non aute velit occaecat culpa ipsum culpa labore adipisicing
 					duis. Incididunt ea officia id proident aliquip eiusmod incididunt ad quis
@@ -24,7 +26,7 @@ export default function SectionSteps(props: sectionProps) {
 				mirror
 				className="min-h-[80lvh]"
 			>
-				<h2>
+				<h2 className="leading-tight md:leading-normal">
 					{`Enhance your website's search visibility by using best`}
 					<span className="text-primary">{` SEO `}</span>
 					{`practices`}
@@ -44,7 +46,7 @@ export default function SectionSteps(props: sectionProps) {
 				height={300}
 				className="min-h-[80lvh]"
 			>
-				<h2>
+				<h2 className="leading-tight md:leading-normal">
 					{`We manage your`}
 					<span className="text-primary">{` social media `}</span>
 				</h2>

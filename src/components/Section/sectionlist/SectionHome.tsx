@@ -9,7 +9,7 @@ export default function SectionHome(props: sectionProps) {
 		<div id="section-home" className="flex flex-col p-2 min-h-lvh">
 			<div className="flex flex-col lg:flex-row items-center justify-center lg:px-10  lg:pt-5">
 				<div className="flex flex-1 flex-col p-5 text-center">
-					<h3 className="my-0">
+					<h3 className="leading-tight md:leading-normal my-0">
 						Crafting standout <span className="text-primary">Websites</span> and
 						<br /> mastering <span className="text-primary">Social media </span>
 						for businesses

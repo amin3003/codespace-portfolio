@@ -82,7 +82,7 @@ export default function AppHeader() {
 							})}
 						</ul>
 					</div>
-					<div className="navbar-end flex flex-row">
+					<div className="flex flex-row">
 						<LoginButton />
 						<LangSwitcher className="hidden md:block" />
 					</div>
