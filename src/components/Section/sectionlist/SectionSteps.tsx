@@ -20,7 +20,7 @@ export default function SectionSteps(props: sectionProps) {
 			</SectionArea>
 			<SectionArea
 				title={2}
-				image={'seo'}
+				image={'makbook'}
 				width={400}
 				height={400}
 				mirror
