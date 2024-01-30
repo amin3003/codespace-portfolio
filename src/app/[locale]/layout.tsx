@@ -12,7 +12,7 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 	if (!locales.includes(locale as any)) notFound();
 
 	return (
-		<html lang={locale} data-theme="dracula">
+		<html lang={locale} data-theme="dracula" className=''>
 			<body id='doc-body' className="overflow-x-clip">
 				<AppHeader />
 

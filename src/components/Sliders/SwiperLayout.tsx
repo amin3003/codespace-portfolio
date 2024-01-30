@@ -38,7 +38,7 @@ export default function SwiperLayout(props: { content: any }) {
 
 	return (
 		<>
-			<div className="hidden md:flex flex-row">
+			<div className="hidden md:flex flex-row w-full">
 				{wrap_array(props.content).map((r: any, i: any) => {
 					return (
 						<div key={i} className="w-[300px] h-full p-2">
@@ -47,7 +47,7 @@ export default function SwiperLayout(props: { content: any }) {
 					);
 				})}
 			</div>
-			<div className="md:hidden">
+			<div className="md:hidden w-full">
 				<Swiper {...(swiperOptions as any)}>
 					{wrap_array(props.content).map((r: any, i: any) => {
 						return (

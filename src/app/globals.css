@@ -10,6 +10,7 @@ header {
 }
 html {
 	scroll-behavior: smooth;
+	 
 }
 body {
 	background: linear-gradient(
@@ -23,8 +24,8 @@ body {
 html:has(dialog[open]) {
 	padding-right: 17px;
 	overflow: hidden;
-	--canvaspadding:17px;
+	--canvaspadding: 17px;
 }
 #three-canvas-container {
-	right:var(--canvaspadding,0)!important;
+	right: var(--canvaspadding, 0) !important;
 }
