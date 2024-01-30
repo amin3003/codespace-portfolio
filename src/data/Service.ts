@@ -9,7 +9,9 @@ import { SimpleObject } from '@azrico/webobject';
 import servicesJson from './services.json';
 import { localeCurrencies } from '@/i18nConfig';
 import { Feature } from './Feature';
+import { convert_to_simple_string } from '@azrico/string';
 export class SubService extends SimpleObject {
+	readonly id: string = '';
 	readonly title: string = '';
 	readonly color: string = '';
 	readonly features: Feature[] = [];
@@ -52,7 +54,19 @@ export default class Service extends SimpleObject {
 		this.loadValues(inputdata);
 		this.features = Feature.convert(this.features);
 		this.articles = Feature.convert(this.articles);
-		this.subservices = SubService.mapto(SubService, this.subservices);
+
+		//id of subservice = Serice.Title+SubService.Title
+		this.subservices = SubService.mapto(
+			SubService,
+			this.subservices.map((r) => {
+				return {
+					...r,
+					id: `${convert_to_simple_string(this.title)}-${convert_to_simple_string(
+						r.title
+					)}`,
+				};
+			})
+		);
 
 		const mapped_features = array_makeMap(
 			array_merge(this.features, ...this.subservices.flatMap((r) => r.features)),

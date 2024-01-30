@@ -34,7 +34,7 @@ export default function PageService(props: any) {
 				<OrbitPage start={1} />
 			</ThreeCanvas>
 			<PathBreadcrumbs absolute />
-			<div className="px-[5%]" style={service_style}>
+			<div className="px-[5%] pt-12" style={service_style}>
 				<ServiceMainArea currentService={currentService} />
 				<ServiceSolutionArea currentService={currentService} />
 				<ServicePackagesArea currentService={currentService} />
