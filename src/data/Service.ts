@@ -31,6 +31,7 @@ export class SubService extends SimpleObject {
 export default class Service extends SimpleObject {
 	readonly url: string = '';
 	readonly title: string = '';
+	readonly icon: string = '';
 	readonly desc: string = '';
 	readonly long_desc: string[] = [];
 	readonly isBest: boolean = false;

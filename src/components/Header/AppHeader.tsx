@@ -5,20 +5,19 @@ import Link from '@/navigation';
 import AppLogo from './AppLogo';
 import LangSwitcher from './LangSwitcher';
 import LoginButton from '@c/Login/LoginButton';
+import Service from '@/data/Service';
 
 export const header_paths = [
 	{
 		name: 'home',
 		path: '/',
 	},
-	{
-		name: 'Services',
-		path: '/services',
-	},
-	{
-		name: 'contact',
-		path: '/contact',
-	},
+	...Service.get_list().map((r) => {
+		return {
+			name: r.url,
+			path: '/' + r.url,
+		};
+	}),
 ];
 
 export default function AppHeader() {
@@ -70,7 +69,7 @@ export default function AppHeader() {
 
 					<div className="navbar-center justify-between items-center hidden md:flex w-full md:w-auto">
 						{/*	https://daisyui.com/components/menu/ */}
-						<ul className="flex flex-row rounded-box">
+						<ul className="flex flex-row rounded-box gap-3">
 							{header_paths.map((v, i) => {
 								return (
 									<Link key={i} href={`${v.path}`}>

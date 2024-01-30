@@ -1,8 +1,9 @@
 [
 	{
-		"color": "#4CAF50",
+		"color": "#db2777",
 		"url": "webdesign",
-		"title": "Web design", 
+		"icon": "bi-code-slash",
+		"title": "Web design",
 		"desc": "we design your responsive website",
 		"long_desc": [
 			"we design your responsive website. suitable for mobile and pc",
@@ -23,12 +24,7 @@
 				"text": "Sint incididunt eiusmod elit aliquip exercitation elit laborum."
 			}
 		],
-		"features": [
-			"Adobe XD",
-			"Responsive design",
-			"SVG File",
-			"PNG/JPEG File"
-		],
+		"features": ["Adobe XD", "Responsive design", "SVG File", "PNG/JPEG File"],
 		"subservices": [
 			{
 				"title": "Basic",
@@ -64,9 +60,11 @@
 		]
 	},
 	{
-		"color": "#5C6BC0",
+		"color": "#ea580c",
 		"url": "webdev",
-		"title": "Web developement", 
+		"icon": "bi-window-stack",
+
+		"title": "Web developement",
 		"desc": "we develop a responsive website for your bussiness",
 
 		"features": [
@@ -112,10 +110,12 @@
 		]
 	},
 	{
-		"color": "#FFEB3B",
+		"color": "#0d9488",
 		"url": "startup",
+		"icon": "bi-code-slash",
+
 		"isBest": true,
-		"title": "Startup Package", 
+		"title": "Startup Package",
 		"desc": "All in one package. let us handle all your needs",
 
 		"features": [
@@ -165,8 +165,10 @@
 		]
 	},
 	{
-		"color": "#F06292",
-		"url": "media",
+		"color": "#7e22ce",
+		"url": "marketing",
+		"icon": "bi-kanban",
+
 		"title": "Marketing",
 		"features": ["Instagram", "Facebook", "Discord"],
 		"desc": "we manage your social networks to increase your visibility",

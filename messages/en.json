@@ -19,6 +19,10 @@
 		"contact": "Contact",
 		"services": "Services",
 		"subjects": "Subjects",
-		"portfolio": "Portfolio"
+		"portfolio": "Portfolio",
+		"webdev": "Web Developement",
+		"webdesign": "Web design",
+		"startup": "Startup",
+		"marketing": "Marketing"
 	}
 }
