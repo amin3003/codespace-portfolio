@@ -8,10 +8,7 @@
 header {
 	z-index: 20000;
 }
-html {
-	scroll-behavior: smooth;
-	 
-}
+
 body {
 	background: linear-gradient(
 		180deg,
@@ -21,11 +18,11 @@ body {
 	);
 }
 
-html:has(dialog[open]) {
-	padding-right: 17px;
-	overflow: hidden;
-	--canvaspadding: 17px;
+html {
+	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
 }
+
 #three-canvas-container {
-	right: var(--canvaspadding, 0) !important;
+	scrollbar-gutter: stable;
 }
