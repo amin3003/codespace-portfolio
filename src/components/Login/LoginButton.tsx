@@ -2,6 +2,7 @@
 import LoginDialogContent from './LoginDialogContent';
 
 export default function LoginButton(props: any) {
+	return <></>; //login disabled
 	return (
 		<>
 			<button

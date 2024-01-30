@@ -22,11 +22,7 @@ export default function ServiceBlock(props: { service: Service }) {
 						})}
 						<li>...</li>
 					</ul>
-					<Link
-						className="flex align-middle justify-center"
-						scroll={false}
-						href={`services/${r.url}`}
-					>
+					<Link className="flex align-middle justify-center" href={`services/${r.url}`}>
 						<button className="btn btn-ghost text-secondary self-center">
 							Learn more
 						</button>

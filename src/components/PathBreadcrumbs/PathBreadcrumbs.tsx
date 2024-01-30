@@ -32,7 +32,7 @@ function PathBreadcrumbsInner(props: PathBreadcrumbsProps & { path_parts: string
 
 		return (
 			<li key={i}>
-				<Link scroll={false} href={path_until_now}>
+				<Link href={path_until_now}>
 					{isLastIndex ? <b>{translated_text}</b> : translated_text}
 				</Link>
 			</li>

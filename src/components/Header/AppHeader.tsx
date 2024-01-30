@@ -73,7 +73,7 @@ export default function AppHeader() {
 						<ul className="flex flex-row rounded-box">
 							{header_paths.map((v, i) => {
 								return (
-									<Link key={i} href={`${v.path}`} scroll={false}>
+									<Link key={i} href={`${v.path}`}>
 										<li className="btn btn-sm btn-ghost">
 											<b>{t(String(v.name).toLocaleLowerCase())}</b>
 										</li>

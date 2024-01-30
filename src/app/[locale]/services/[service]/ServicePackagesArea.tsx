@@ -9,7 +9,7 @@ export default function ServicePackagesArea(props: { currentService: Service }) 
 	return (
 		<section
 			id="packages"
-			className="flex flex-wrap min-h-lvh justify-center align-middle"
+			className="flex flex-wrap min-h-lvh justify-center align-middle pb-32"
 		>
 			<h2 className="text-center">Packages</h2>
 
