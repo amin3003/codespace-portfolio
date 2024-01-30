@@ -7,7 +7,10 @@ export default function ServicePackagesArea(props: { currentService: Service }) 
 	const currentService = props.currentService;
 
 	return (
-		<section id="packages" className="flex flex-wrap min-h-lvh">
+		<section
+			id="packages"
+			className="flex flex-wrap min-h-lvh justify-center align-middle"
+		>
 			<h2 className="text-center">Packages</h2>
 
 			<SwiperLayout

@@ -59,7 +59,7 @@ export default function SubServiceBlock(props: {
 							href={'/services'}
 							className="link link-hover text-center justify-center text-primary"
 						>
-							Contact us
+							Reserve
 						</Link>
 					</div>
 				</div>
