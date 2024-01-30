@@ -2,12 +2,18 @@ import AppLogo from "@c/Header/AppLogo";
 // import Instagram from "bootstrap-icons";
 import Github from "bootstrap-icons/icons/github.svg";
 import Facebook from "bootstrap-icons/icons/facebook.svg";
+
+const social_list = [
+	{ icon: 'bi-instagram', link: 'https://www.instagram.com/codespase.en' },
+	{ icon: 'bi-discord', link: '' },
+	{ icon: 'bi-envelope', link: '' },
+];
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-  return (
+	const currentYear = new Date().getFullYear();
+	return (
 		<footer className=" text-white mx-auto flex flex-col gap-5 justify-betwee items-center">
 			<AppLogo text small />
-			<div>
+			{/* <div>
 				<ul className="flex flex-wrap justify-center md:justify-around sm:justify-around gap-3 text-xs">
 					<li>
 						<a href="#" className="opacity-90 hover:opacity-100">
@@ -35,12 +41,15 @@ export default function Footer() {
 						</a>
 					</li>
 				</ul>
-			</div>
+			</div> */}
 			<div className="flex justify-center gap-5">
-				<a href="https://www.instagram.com/codespase.en">
-					<i className="bi bi-instagram opacity-90 hover:opacity-100" />
-				</a>
-				 
+				{social_list.map((r, i) => {
+					return (
+						<a key={i} target="_blank" href={r.link}>
+							<i className={`opacity-90 hover:opacity-100 bi ${r.icon}`} />
+						</a>
+					);
+				})}
 			</div>
 			<p className="text-xs mb-4 text-gray-400">{`Copyright © ${currentYear}- All right reserved`}</p>
 		</footer>
