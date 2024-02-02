@@ -8,7 +8,6 @@ export default function SidebarContent() {
 
 	return (
 		<div className="p-4 min-h-full !w-[75%] bg-base-200 flex flex-col">
-		
 			<ul className="menu flex-1">
 				{header_paths.map((v, i) => {
 					return (
@@ -21,7 +20,7 @@ export default function SidebarContent() {
 				})}
 			</ul>
 			<ul className="menu">
-				<LangSwitcher openUp className="navbar-end" />
+				<LangSwitcher openUp alwaysFullText className="navbar-end" />
 			</ul>
 		</div>
 	);

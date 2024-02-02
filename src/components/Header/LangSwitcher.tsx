@@ -6,7 +6,11 @@ import { useLocale } from 'next-intl';
 import { useRouter, usePathname, redirect } from '@src/navigation';
 import clsx from 'clsx';
 const FULL_RELOAD = false;
-export default function LangSwitcher(props: { className?: string; openUp?: boolean }) {
+export default function LangSwitcher(props: {
+	className?: string;
+	openUp?: boolean;
+	alwaysFullText?: boolean;
+}) {
 	const locale = useLocale();
 	const router = useRouter();
 	const pathname = usePathname();
@@ -40,7 +44,9 @@ export default function LangSwitcher(props: { className?: string; openUp?: boole
 				<button tabIndex={0} className="btn btn-sm btn-ghost">
 					<div className="flex flex-row gap-2">
 						<i className="bi bi-translate"></i>
-						<p> {currentLocaleName}</p>
+						<p className={clsx(!props.alwaysFullText && 'hidden lg:flex')}>
+							{currentLocaleName}
+						</p>
 					</div>
 				</button>
 

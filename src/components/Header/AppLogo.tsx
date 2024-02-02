@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from '@/navigation';
+import clsx from 'clsx';
 
 export default function AppLogo(props: {
 	className?: string;
@@ -10,7 +11,7 @@ export default function AppLogo(props: {
 		<Link href="/" className={'flex justify-start items-center w-min ' + props.className}>
 			{/* <Image src="" alt="chiztech logo" /> */}
 			{props.text && (
-				<div className={props.small ? 'text-md' : 'text-2xl'}>
+				<div className={clsx(props.small ? 'text-md' : 'text-md lg:text-2xl')}>
 					<span
 						className={'self-center font-semibold' + ' whitespace-nowrap text-primary'}
 					>

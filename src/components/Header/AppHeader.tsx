@@ -37,7 +37,7 @@ export default function AppHeader() {
 					' data-[is-going-down=true]:top-[-100%]' +
 					' data-[is-going-down=false]:top-0' +
 					//other classes
-					' data-[is-top=false]:shadow-md'
+					' w-full overflow-hidden data-[is-top=false]:shadow-md'
 				}
 			>
 				<ScrollDetector />
@@ -69,7 +69,7 @@ export default function AppHeader() {
 
 					<div className="navbar-center justify-between items-center hidden md:flex w-full md:w-auto">
 						{/*	https://daisyui.com/components/menu/ */}
-						<ul className="flex flex-row rounded-box gap-3">
+						<ul className="flex flex-row rounded-box lg:gap-3">
 							{header_paths.map((v, i) => {
 								return (
 									<Link key={i} href={`${v.path}`}>

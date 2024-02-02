@@ -73,7 +73,7 @@ export default function SectionArea(props: {
 			>
 				{typeof props.image === 'string' ? (
 					<figure>
-						<Image
+						<Image 
 							src={`/images/${props.image}.webp`}
 							width={props.width || 256}
 							height={props.height || props.width || 256}
