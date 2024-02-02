@@ -33,7 +33,7 @@ export default function SectionSkills(props: sectionProps) {
 								style={block_style}
 								key={i}
 								className={clsx(
-									`card h-[120px]`,
+									`card h-[110px] md:h-[120px]`,
 									`transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:duration-300`,
 									`aspect-square bg-gradient-to-r from-base-300 to-accent-content justify-center items-center`,
 									`border-2 border-[--blockcolor] shadow-sm`
@@ -43,7 +43,7 @@ export default function SectionSkills(props: sectionProps) {
 								<span className="flex flex-col justify-center items-center">
 									{r.title.split(' ').map((title_sp, i) => {
 										return (
-											<h5 key={i} className="text-center m-0">
+											<h5 key={i} className="text-center md:text-[15px] text-[13px] m-0">
 												{capitalize(title_sp)}
 											</h5>
 										);

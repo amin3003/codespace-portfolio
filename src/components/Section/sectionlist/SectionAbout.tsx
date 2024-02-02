@@ -44,9 +44,9 @@ export default function SectionAbout(props: sectionProps) {
 			id="section-about"
 			center
 			orientation="vertical"
-			className="items-center min-h-[100lvh]"
+			className="items-center min-h-[100lvh] md:mt-[150px]"
 		>
-			<h2 className="text-center">About</h2>
+			<h2 className="text-center mb-0 w-max opacity-55 md:text-[15vw] md:z-50 md:left-[18%] md:bottom-[80vh] md:right-[18%]">About Us</h2>
 			<AboutSlider data={team}/>
 		</SectionArea>
 	);

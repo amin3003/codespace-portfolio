@@ -8,7 +8,7 @@ export default function AboutSlider(props: any) {
 				return (
 					<div
 						key={index}
-						className={clsx('flex card cad-compact border-2 w-[100%] h-full bg-base-100')}
+						className={clsx(` flex card cad-compact border-2 w-[100%] h-full bg-base-100 z-[100]`)}
 					>
 						<div className="card-body content-center justify-center ">
 							<div className="avatar justify-center">
