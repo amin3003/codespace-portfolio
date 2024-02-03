@@ -24,5 +24,25 @@
 		"webdesign": "Web design",
 		"startup": "Startup",
 		"marketing": "Marketing"
+	},
+	"sectionHome":{
+		"title":"Crafting standout Websites and mastering Social media for businesses",
+		"subTitle":"we bring your brand to life online, making every click count",
+		"contactUs":"Contact Us",
+		"viewServices":"View Services"
+	},
+	"sectionSteps": {
+		"webDesign": {
+			"title": "We design and create the ideal website for your business",
+			"description": "At CodeSpace, we believe that a compelling online presence begins with stellar design. Our expert team specializes in creating visually stunning and user-friendly websites that leave a lasting impression. From sleek and responsive web designs to captivating logos that embody your brand identity, our first service is dedicated to bringing your vision to life."
+		},
+		"websiteDevelopment": {
+			"title": "Enhance your website's search visibility by using best SEO practices",
+			"description": "Elevate your digital footprint with our second service, where we go beyond just building websites. At CodeSpace, we integrate standard SEO practices seamlessly into the development process. Your website won't just look great – it will also be optimized for search engines, ensuring maximum visibility and driving organic traffic to your online space."
+		},
+		"mediaManager": {
+			"title": "We manage your social media",
+			"description": "In today's fast-paced digital landscape, effective content distribution is key. Our third service, the Media Manager, is designed to streamline your content across various platforms. From social media scheduling to content calendar management, we ensure your message reaches the right audience at the right time, enhancing your online presence and engagement."
+		}
 	}
 }

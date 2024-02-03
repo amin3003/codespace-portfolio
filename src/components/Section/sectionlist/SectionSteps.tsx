@@ -1,9 +1,11 @@
-"use client";
+// "use client";
 import MockupSite from "@c/MockupSite/MockupSite";
 import SectionArea from "@c/Section/SectionArea";
 import { sectionProps } from "./types";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 export default function SectionSteps(props: sectionProps) {
+  const t = useTranslations('sectionSteps');
   return (
     <div id="section-steps" className="flex flex-col gap-3">
       <SectionArea
@@ -15,13 +17,10 @@ export default function SectionSteps(props: sectionProps) {
         className="min-h-[80lvh]"
       >
         <h2 className="leading-10 md:leading-tight mb-4 md:text-[50px] text-[35px]">
-          We design and create the ideal website for your business
+          {t("webDesign.title")}
         </h2>
         <p>
-          Sit ipsum ea ea non aute velit occaecat culpa ipsum culpa labore
-          adipisicing duis. Incididunt ea officia id proident aliquip eiusmod
-          incididunt ad quis veniam eiusmod. Enim id exercitation duis in
-          consequat sint dolor culpa commodo laboris.
+        {t("webDesign.description")}
         </p>
       </SectionArea>
       <SectionArea
@@ -34,16 +33,10 @@ export default function SectionSteps(props: sectionProps) {
         className="min-h-[80lvh]"
       >
         <h2 className="leading-10 md:leading-tight mb-4 md:text-[50px] text-[35px]">
-          {`Enhance your website's search visibility by using best`}
-          <span className="text-primary">{` SEO `}</span>
-          {`practices`}
+        {t("websiteDevelopment.title")}
         </h2>
         <p>
-          Sit ipsum ea ea non aute velit occaecat culpa ipsum culpa labore
-          adipisicing duis. Incididunt ea officia id proident aliquip eiusmod
-          incididunt ad quis veniam eiusmod. Enim id exercitation duis in
-          consequat sint dolor culpa commodo laboris. Ut ex consectetur aute
-          quis nulla.
+        {t("websiteDevelopment.description")}
         </p>
       </SectionArea>
       <SectionArea
@@ -55,14 +48,10 @@ export default function SectionSteps(props: sectionProps) {
         className="min-h-[80lvh]"
       >
         <h2 className="leading-10 md:leading-tight mb-4 md:text-[50px] text-[35px]">
-          {`We manage your`}
-          <span className="text-primary">{` social media `}</span>
+        {t("mediaManager.title")}
         </h2>
         <p>
-          Enhance your website's social media presence to reach out to more
-          users Quis esse pariatur eu consequat sit adipisicing excepteur.
-          Eiusmod ad ad esse sint pariatur excepteur pariatur culpa mollit
-          adipisicing.
+        {t("mediaManager.description")}
         </p>
       </SectionArea>
     </div>
