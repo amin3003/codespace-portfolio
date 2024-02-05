@@ -37,7 +37,7 @@ export default function AppHeader() {
 					' data-[is-going-down=true]:top-[-100%]' +
 					' data-[is-going-down=false]:top-0' +
 					//other classes
-					' w-full overflow-hidden data-[is-top=false]:shadow-md'
+					' w-full data-[is-top=false]:shadow-md'
 				}
 			>
 				<ScrollDetector />

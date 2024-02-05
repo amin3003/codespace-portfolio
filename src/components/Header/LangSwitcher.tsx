@@ -41,18 +41,16 @@ export default function LangSwitcher(props: {
 					`${props.openUp ? 'dropdown-top' : 'dropdown-bottom'}`
 				)}
 			>
-				<button tabIndex={0} className="btn btn-sm btn-ghost">
+				<button tabIndex={0} role="button" className="btn btn-sm btn-ghost">
 					<div className="flex flex-row gap-2">
-					<i className="bi bi-caret-down-fill"/>
-						<p> {currentLocaleName}</p>
+						<i className="bi bi-translate"></i>
+						<p className={clsx(!props.alwaysFullText && 'hidden lg:flex')}>
+							{currentLocaleName}
+						</p>
 					</div>
 				</button>
 
-				<ul
-					style={{ right: 'auto', left: 'auto', width: '100%' }}
-					tabIndex={0}
-					className="dropdown-content z-[1] menu p-2 mt-3 bg-base-200 rounded-box items-center"
-				>
+				<ul className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box right-0">
 					{Object.keys(localeNames).map((r) => {
 						return (
 							<li key={r}>
