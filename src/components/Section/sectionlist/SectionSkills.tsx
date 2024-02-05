@@ -7,13 +7,7 @@ import Link from '@/navigation';
 import Service from '@/data/Service';
 import { capitalize } from '@azrico/string';
 
-// const skillsList = [
-// 	{ text: ['Website', 'Design'], icon: 'bi bi-code-slash', color: '#db2777' },
-// 	{ text: ['Website', 'Development'], icon: 'bi bi-window-stack', color: '#ea580c' },
-// 	{ text: ['Media', 'Management'], icon: 'bi bi-kanban', color: '#7e22ce' },
-// 	{ text: ['SEO'], icon: 'bi bi-graph-up-arrow', color: '#0d9488' },
-// 	{ text: ['Content ', 'Marketing'], icon: 'bi bi-blockquote-right', color: '#16a34a' },
-// ];
+
 export default function SectionSkills(props: sectionProps) {
 	const services = Service.get_list();
 	return (
