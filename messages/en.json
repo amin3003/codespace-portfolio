@@ -1,6 +1,9 @@
 {
+	"webdesign": {
+		"title": ["a", "b", "c"]
+	},
 	"services": {
-		"starting from": "Starting from",
+	 
 		"webDesign": {
 			"webDesign": "Web Design",
 			"accordion": {
@@ -34,14 +37,8 @@
 						"en": 49
 					},
 					"features": [
-						[
-							"pages",
-							"1-7 Pages"
-						],
-						[
-							"Logo",
-							"1x Logo Design"
-						]
+						["pages", "1-7 Pages"],
+						["Logo", "1x Logo Design"]
 					]
 				},
 				{
@@ -51,18 +48,7 @@
 						"tr": "1499",
 						"en": 69
 					},
-					"features": [
-						[
-							"pages",
-							"1-10 Pages"
-						],
-						[
-							"Logo",
-							"2x Logo Design"
-						],
-						"Motion",
-						"Media kit"
-					]
+					"features": { "10pages": " +10 Pages", "logo3": "+3 Logos" }
 				},
 				{
 					"title": "Premium",
@@ -72,14 +58,8 @@
 						"en": 99
 					},
 					"features": [
-						[
-							"pages",
-							"+10 Pages"
-						],
-						[
-							"Logo",
-							"3x Logo Design"
-						],
+						["pages", "+10 Pages"],
+						["Logo", "3x Logo Design"],
 						"Vector File",
 						"Dark/Light Theme"
 					]
@@ -119,14 +99,8 @@
 						"en": 149
 					},
 					"features": [
-						[
-							"pages",
-							"1-7 Pages"
-						],
-						[
-							"support",
-							"Free 1 Month Support"
-						]
+						["pages", "1-7 Pages"],
+						["support", "Free 1 Month Support"]
 					]
 				},
 				{
@@ -137,14 +111,8 @@
 						"en": 249
 					},
 					"features": [
-						[
-							"pages",
-							"1-10 Pages"
-						],
-						[
-							"support",
-							"Free 1 Month Support + 3 Month Extra Support"
-						],
+						["pages", "1-10 Pages"],
+						["support", "Free 1 Month Support + 3 Month Extra Support"],
 						"Google Search Console",
 						"Content Management",
 						"CMS Support",
@@ -160,14 +128,8 @@
 						"en": 349
 					},
 					"features": [
-						[
-							"pages",
-							"+10 Pages"
-						],
-						[
-							"support",
-							"Free 1 Month Support + 6 Month Extra Support"
-						],
+						["pages", "+10 Pages"],
+						["support", "Free 1 Month Support + 6 Month Extra Support"],
 						"Speed Optimization"
 					]
 				}
@@ -207,14 +169,8 @@
 						"en": 149
 					},
 					"features": [
-						[
-							"pages",
-							"1-7 Pages"
-						],
-						[
-							"support",
-							"Free 1 Month Support"
-						]
+						["pages", "1-7 Pages"],
+						["support", "Free 1 Month Support"]
 					]
 				},
 				{
@@ -225,14 +181,8 @@
 						"en": 249
 					},
 					"features": [
-						[
-							"pages",
-							"1-10 Pages"
-						],
-						[
-							"support",
-							"Free 1 Month Support + 3 Month Extra Support"
-						],
+						["pages", "1-10 Pages"],
+						["support", "Free 1 Month Support + 3 Month Extra Support"],
 						"Google Search Console",
 						"Content Management",
 						"CMS Support",
@@ -248,14 +198,8 @@
 						"en": 349
 					},
 					"features": [
-						[
-							"pages",
-							"+10 Pages"
-						],
-						[
-							"support",
-							"Free 1 Month Support + 6 Month Extra Support"
-						],
+						["pages", "+10 Pages"],
+						["support", "Free 1 Month Support + 6 Month Extra Support"],
 						"Speed Optimization"
 					]
 				}
@@ -295,14 +239,8 @@
 						"en": 149
 					},
 					"features": [
-						[
-							"pages",
-							"1-7 Pages"
-						],
-						[
-							"support",
-							"Free 1 Month Support"
-						]
+						["pages", "1-7 Pages"],
+						["support", "Free 1 Month Support"]
 					]
 				},
 				{
@@ -313,14 +251,8 @@
 						"en": 249
 					},
 					"features": [
-						[
-							"pages",
-							"1-10 Pages"
-						],
-						[
-							"support",
-							"Free 1 Month Support + 3 Month Extra Support"
-						],
+						["pages", "1-10 Pages"],
+						["support", "Free 1 Month Support + 3 Month Extra Support"],
 						"Google Search Console",
 						"Content Management",
 						"CMS Support",
@@ -336,14 +268,8 @@
 						"en": 349
 					},
 					"features": [
-						[
-							"pages",
-							"+10 Pages"
-						],
-						[
-							"support",
-							"Free 1 Month Support + 6 Month Extra Support"
-						],
+						["pages", "+10 Pages"],
+						["support", "Free 1 Month Support + 6 Month Extra Support"],
 						"Speed Optimization"
 					]
 				}

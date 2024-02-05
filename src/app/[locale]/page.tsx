@@ -2,14 +2,14 @@ import React from 'react';
 import state from '@c/shared/Store';
 import SectionAbout from '@/components/Section/sectionlist/SectionAbout';
 import SectionSteps from '@/components/Section/sectionlist/SectionSteps';
-import SectionSkills from '@/components/Section/sectionlist/SectionSkills';
 import SectionHome from '@/components/Section/sectionlist/SectionHome';
+import SectionServices from '@/components/Section/sectionlist/SectionServices';
 import ThreeCanvas from '@c/Three/ThreeCanvas';
 import StarPage from '@c/Three/StarPage';
 import OrbitPage from '@c/Three/OrbitPage';
 export default function PageIndex() {
 	const { sections, pages } = state;
-	const list_sections = [SectionHome, SectionSkills, SectionSteps, SectionAbout];
+	const list_sections = [SectionHome, SectionSteps, SectionServices, SectionAbout];
 	return (
 		<>
 			<ThreeCanvas>

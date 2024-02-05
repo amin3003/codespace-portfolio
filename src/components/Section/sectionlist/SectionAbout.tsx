@@ -40,16 +40,14 @@ const team = [
 
 export default function SectionAbout(props: sectionProps) {
   return (
-    <SectionArea
-      id="section-about"
-      center
-      orientation="vertical"
-      className="items-center min-h-[100lvh] md:mt-[150px] "
-    >
-      <h2 className="text-center m-0 bottom-[-30px] max-w-[150vw] opacity-35 text-[18vw]">
-        About Us
-      </h2>
-      <AboutSlider data={team} />
-    </SectionArea>
-  );
+		<SectionArea
+			id="section-about"
+			center
+			orientation="vertical"
+			className="items-center min-h-lvh pt-20"
+		>
+			<h4 className="text-center">About us</h4>
+			<AboutSlider data={team} />
+		</SectionArea>
+	);
 }

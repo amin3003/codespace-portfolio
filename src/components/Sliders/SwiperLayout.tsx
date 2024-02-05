@@ -13,8 +13,9 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import { wrap_array } from '@azrico/object';
 import { useBlock } from '@c/shared/Blocks';
+import clsx from 'clsx';
 
-export default function SwiperLayout(props: { content: any }) {
+export default function SwiperLayout(props: { content: any; className?: string }) {
 	const swiperOptions = {
 		effect: 'coverflow',
 		grabCursor: false,
@@ -38,7 +39,12 @@ export default function SwiperLayout(props: { content: any }) {
 
 	return (
 		<>
-			<div className="hidden md:flex flex-row w-full justify-center items-center">
+			<div
+				className={clsx(
+					'hidden md:flex flex-row w-full justify-center items-center',
+					props.className
+				)}
+			>
 				{wrap_array(props.content).map((r: any, i: any) => {
 					return (
 						<div key={i} className="w-[300px] h-full p-2">

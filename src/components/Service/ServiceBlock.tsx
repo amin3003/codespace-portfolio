@@ -12,7 +12,7 @@ export default function ServiceBlock(props: { service: Service }) {
 				</span>
 			)}
 
-			<div className="flex glass card w-[270px] bg-base-100 ">
+			<div className="flex glass card w-[240px] bg-base-100 ">
 				<div className="card-body content-center flex">
 					<b className="card-title text-center justify-center text-nowrap">{r.title}</b>
 					<div className="divider p-0 m-0"></div>
@@ -22,7 +22,7 @@ export default function ServiceBlock(props: { service: Service }) {
 						})}
 						<li>...</li>
 					</ul>
-					<Link className="flex align-middle justify-center" href={`services/${r.url}`}>
+					<Link className="flex align-middle justify-center" href={`/${r.url}`}>
 						<button className="btn btn-ghost text-secondary self-center">
 							Learn more
 						</button>
