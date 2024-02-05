@@ -17,6 +17,8 @@ export class Feature extends SimpleObject {
 	isAvailable: boolean = true;
 	constructor(inputdata: Partial<Feature> | any) {
 		super();
+
+		//if input is only a string treat input as title
 		if (typeof inputdata === 'string') inputdata = { title: inputdata };
 
 		//load information from array input
@@ -59,4 +61,8 @@ export class Feature extends SimpleObject {
 		return Feature.mapto(Feature, resultFeatures);
 	}
 }
+Feature.prototype.toString = function () {
+	return this.title || '';
+};
+
 export default Feature;

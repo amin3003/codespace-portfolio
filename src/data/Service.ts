@@ -40,15 +40,18 @@ export default class Service extends SimpleObject {
 		this.features = Feature.convert(this.features);
 		this.articles = Feature.convert(this.articles);
 
+		/* -------- make sure each subservices knows title of current service ------- */
 		this.subservices = SubService.mapto(
 			SubService,
 			this.subservices.map((r) => ({ ...r, service_title: this.title }))
 		);
 
-		const all_features_mapped = array_makeMap(
-			array_merge(this.features, ...this.subservices.flatMap((r) => r.features)),
-			'id'
+		/* ----------------------- put all features in a list ----------------------- */
+		const all_features_list = array_merge(
+			this.features,
+			...this.subservices.flatMap((r) => r.features)
 		);
+		const all_features_mapped = array_makeMap(all_features_list, 'id');
 		this.subservice_all_features = Feature.convert(all_features_mapped);
 
 		this.init();
@@ -89,5 +92,9 @@ export default class Service extends SimpleObject {
 		return (obj[locale] || obj['en']) + ` ${localeCurrencies[locale]}`;
 	}
 }
+Service.prototype.toString = function () {
+	return this.title || '';
+};
+
 
 const allServices = servicesJson.map((r) => new Service(r));

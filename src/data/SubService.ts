@@ -1,13 +1,4 @@
-import {
-	array_makeMap,
-	array_merge,
-	array_remove_duplicates,
-	object_clone,
-	wrap_array,
-} from '@azrico/object';
 import { SimpleObject } from '@azrico/webobject';
-import servicesJson from './services.json';
-import { localeCurrencies } from '@/i18nConfig';
 import { Feature } from './Feature';
 import { convert_to_simple_string } from '@azrico/string';
 export class SubService extends SimpleObject {
@@ -26,9 +17,11 @@ export class SubService extends SimpleObject {
 		this.loadValues(inputdata);
 		this.features = Feature.convert(this.features);
 		this.all_features = Feature.convert(this.all_features);
-
 		this.id = `${convert_to_simple_string(this.service_title)}-${convert_to_simple_string(
 			this.title
 		)}`;
 	}
 }
+SubService.prototype.toString = function () {
+	return this.title || '';
+};

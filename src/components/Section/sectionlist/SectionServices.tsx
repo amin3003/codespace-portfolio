@@ -11,12 +11,14 @@ import ServiceBlock from '@/components/Service/ServiceBlock';
 
 export default function SectionServices(props: sectionProps) {
 	const services = Service.get_list();
+	 
 	return (
 		<SectionArea
 			id="section-services"
 			center
 			title={'Services'}
 			dynamicMargin
+			dynamicTitleSize
 			orientation="vertical"
 			className="min-h-lvh mt-20"
 		>

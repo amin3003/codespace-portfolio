@@ -1,9 +1,12 @@
 import Service from '@/data/Service';
 import Link from '@src/navigation';
+import { useTranslations } from 'next-intl';
+
 export default function ServiceBlock(props: { service: Service }) {
 	const r = props.service;
+	const translate_path = useTranslations('path');
 
-	const topFeatures = r.features.slice(0, 5);
+	const topFeatures = r.subservice_all_features.slice(0, 5);
 	return (
 		<div className="indicator">
 			{r.isBest && (

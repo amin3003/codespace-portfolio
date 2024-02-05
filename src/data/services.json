@@ -3,9 +3,7 @@
 		"color": "#db2777",
 		"url": "webdesign",
 		"icon": "bi-code-slash",
-		"solution_header": "solution-header",
-		"solution_title": "get-paid-faster",
-		"solution_texts": ["text-line-1", "text-line-2", "text-line-3", "text-line-4"],
+	 
 		"subservices": [
 			{
 				"title": "basic",
