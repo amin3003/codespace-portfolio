@@ -1,6 +1,354 @@
 {
-	"service": {
-		"starting from": "Starting from"
+	"services": {
+		"starting from": "Starting from",
+		"webDesign": {
+			"webDesign": "Web Design",
+			"accordion": {
+				"description": {
+					"title": "Description",
+					"description": "Ever visited a website that felt like a breeze to navigate? That's the magic of web design, and we're here to make it happen for you. Imagine your online space as a cozy home – we arrange the furniture (content) in a way that feels just right. From the colors on the walls to the layout of the rooms, we create a welcoming environment that visitors won't want to leave."
+				},
+				"pricingOverview": {
+					"pricingOverview": "Pricing Overview",
+					"description": "",
+					"seePackages": "See Packages"
+				},
+				"features": {
+					"features": "Features",
+					"description": {
+						"AdobeXD": "Adobe XD",
+						"ResponsiveDesign": "Responsive Design",
+						"svgFile": "SVG File",
+						"file": "PNG/JPEG File"
+					}
+				}
+			},
+			"title": "Designing Digital Havens: Navigating the Online Landscape with CodeSpace's Web Expertise",
+			"description": "Ever visited a website that felt like a breeze to navigate? That's the magic of web design, and at CodeSpace, we're committed to bringing that magic to your online space. Think of your website as more than just a collection of pages; envision it as a cozy home in the digital realm. Our Web Design service is akin to arranging the furniture (content) in a way that feels just right, ensuring a seamless and enjoyable experience for your visitors. We pay meticulous attention to every detail, from the colors on the walls to the layout of the rooms, creating a virtual environment that beckons exploration. Our goal is to make your website a welcoming haven that visitors won't want to leave, where they effortlessly find what they're looking for and leave with a positive impression. Let CodeSpace be your architect in the vast online landscape, crafting a digital home that not only reflects your brand but also provides a delightful user journey for everyone who steps through its virtual doors.",
+			"subservices": [
+				{
+					"title": "Basic",
+					"color": "#81D4FA",
+					"price": {
+						"tr": "999",
+						"en": 49
+					},
+					"features": [
+						[
+							"pages",
+							"1-7 Pages"
+						],
+						[
+							"Logo",
+							"1x Logo Design"
+						]
+					]
+				},
+				{
+					"title": "Standard",
+					"color": "#E6EE9C",
+					"price": {
+						"tr": "1499",
+						"en": 69
+					},
+					"features": [
+						[
+							"pages",
+							"1-10 Pages"
+						],
+						[
+							"Logo",
+							"2x Logo Design"
+						],
+						"Motion",
+						"Media kit"
+					]
+				},
+				{
+					"title": "Premium",
+					"color": "#FF8A65",
+					"price": {
+						"tr": "1999",
+						"en": 99
+					},
+					"features": [
+						[
+							"pages",
+							"+10 Pages"
+						],
+						[
+							"Logo",
+							"3x Logo Design"
+						],
+						"Vector File",
+						"Dark/Light Theme"
+					]
+				}
+			]
+		},
+		"webDev": {
+			"webDevelopement": "Web developement",
+			"accordion": {
+				"description": {
+					"title": "Description",
+					"description": "CodeSpace's Web Development service is the magic behind the websites you adore. Acting as digital architects, we construct online homes for businesses, turning your ideas into functional and stunning websites. From structure to features, we handle the behind-the-scenes, ensuring your site not only looks fantastic but works seamlessly. Let CodeSpace guide you through web development, transforming your digital dreams into a thriving online reality."
+				},
+				"pricingOverview": {
+					"pricingOverview": "Pricing Overview",
+					"description": "",
+					"seePackages": "See Packages"
+				},
+				"features": {
+					"features": "Features",
+					"description": {
+						"defaultDesign": "Default Design",
+						"responsiveDesign": "Responsive design",
+						"seoStandard": "SEO Standard",
+						"staticPages": "Static Pages"
+					}
+				}
+			},
+			"title": "Building Your Digital Home: The Art and Science of Web Development with CodeSpace",
+			"description": "Ever wondered about the magic behind the websites you love? That's where our Web Development service comes in. At CodeSpace, we're like digital architects, building the online homes for businesses. Think of it as constructing a house; we bring your ideas to life, creating functional and beautiful websites that you and your visitors will love. From the structure to the features, we handle the behind-the-scenes work to make sure your online space not only looks fantastic but also works seamlessly. Your website is like a 24/7 storefront, and we're here to ensure it's open for business, impressing visitors and helping your online presence thrive. Let CodeSpace be your guide in the world of web development, making your digital dreams a reality.",
+			"subservices": [
+				{
+					"title": "Basic",
+					"color": "#81D4FA",
+					"price": {
+						"tr": "5499",
+						"en": 149
+					},
+					"features": [
+						[
+							"pages",
+							"1-7 Pages"
+						],
+						[
+							"support",
+							"Free 1 Month Support"
+						]
+					]
+				},
+				{
+					"title": "Standard",
+					"color": "#E6EE9C",
+					"price": {
+						"tr": "8499",
+						"en": 249
+					},
+					"features": [
+						[
+							"pages",
+							"1-10 Pages"
+						],
+						[
+							"support",
+							"Free 1 Month Support + 3 Month Extra Support"
+						],
+						"Google Search Console",
+						"Content Management",
+						"CMS Support",
+						"Admin Page",
+						"Multi Language Support"
+					]
+				},
+				{
+					"title": "Premium",
+					"color": "#FF8A65",
+					"price": {
+						"tr": "11499",
+						"en": 349
+					},
+					"features": [
+						[
+							"pages",
+							"+10 Pages"
+						],
+						[
+							"support",
+							"Free 1 Month Support + 6 Month Extra Support"
+						],
+						"Speed Optimization"
+					]
+				}
+			]
+		},
+		"marketing": {
+			"marketing": "Marketing",
+			"accordion": {
+				"description": {
+					"title": "Description",
+					"description": "CodeSpace offers Social Media Management expertise, acting as your digital storytellers to boost online visibility and engagement. With a focus on platforms like Facebook, Instagram, and Twitter, we strategically craft and schedule compelling content, freeing you to concentrate on your core business. Let CodeSpace guide you through the dynamic landscape of social media, ensuring your brand makes a lasting impact."
+				},
+				"pricingOverview": {
+					"pricingOverview": "Pricing Overview",
+					"description": "",
+					"seePackages": "See Packages"
+				},
+				"features": {
+					"features": "Features",
+					"description": {
+						"personalizedDesign": "Personalized Design",
+						"logoDesign": "Logo Design",
+						"webDevelopement": "Web Developement",
+						"mediaManagement": "Media Management",
+						"seoStandard": "SEO Standard"
+					}
+				}
+			},
+			"title": "Navigating the Social Sphere: Social Media Management Mastery with CodeSpace",
+			"description": "Embark on a journey of digital influence with CodeSpace's Social Media Management expertise. Imagine us as your digital storytellers, weaving compelling narratives across platforms like Facebook, Instagram, and Twitter. Our Social Media Management service is your secret weapon to enhance online visibility and engagement. From crafting attention-grabbing posts to strategically scheduling content, we take the reins, allowing you to focus on what you do best – running your business. Let CodeSpace be your partner in navigating the dynamic world of social media, ensuring your brand leaves a lasting impression in the hearts and minds of your audience",
+			"subservices": [
+				{
+					"title": "Basic",
+					"color": "#81D4FA",
+					"price": {
+						"tr": "5499",
+						"en": 149
+					},
+					"features": [
+						[
+							"pages",
+							"1-7 Pages"
+						],
+						[
+							"support",
+							"Free 1 Month Support"
+						]
+					]
+				},
+				{
+					"title": "Standard",
+					"color": "#E6EE9C",
+					"price": {
+						"tr": "8499",
+						"en": 249
+					},
+					"features": [
+						[
+							"pages",
+							"1-10 Pages"
+						],
+						[
+							"support",
+							"Free 1 Month Support + 3 Month Extra Support"
+						],
+						"Google Search Console",
+						"Content Management",
+						"CMS Support",
+						"Admin Page",
+						"Multi Language Support"
+					]
+				},
+				{
+					"title": "Premium",
+					"color": "#FF8A65",
+					"price": {
+						"tr": "11499",
+						"en": 349
+					},
+					"features": [
+						[
+							"pages",
+							"+10 Pages"
+						],
+						[
+							"support",
+							"Free 1 Month Support + 6 Month Extra Support"
+						],
+						"Speed Optimization"
+					]
+				}
+			]
+		},
+		"startup": {
+			"startup": "Startup Package",
+			"accordion": {
+				"description": {
+					"title": "Description",
+					"description": "CodeSpace offers a holistic digital solution, merging web development, design, logo creation, and marketing into a seamless experience. Our expert team crafts visually stunning websites, eye-catching logos, and strategic marketing initiatives for a comprehensive and effective online presence. Let CodeSpace be your digital conductor, harmonizing all elements for a memorable and successful online journey."
+				},
+				"pricingOverview": {
+					"pricingOverview": "Pricing Overview",
+					"description": "",
+					"seePackages": "See Packages"
+				},
+				"features": {
+					"features": "Features",
+					"description": {
+						"personalizedDesign": "Personalized Design",
+						"logoDesign": "Logo Design",
+						"webDevelopement": "Web Developement",
+						"mediaManagement": "Media Management",
+						"seoStandard": "SEO Standard"
+					}
+				}
+			},
+			"title": "Digital Symphony: CodeSpace's All-in-One Solution for Your Online Presence",
+			"description": "Embark on a seamless digital journey with CodeSpace's comprehensive service that encapsulates web development, web design, logo design, and marketing. Imagine it as your one-stop-shop for crafting a captivating and effective online presence. Our expert team not only builds your website from the ground up but also ensures it looks visually stunning and resonates with your brand identity. From creating an eye-catching logo to implementing strategic marketing initiatives, we're here to turn your digital aspirations into reality. Whether you're just starting or looking to revamp your online space, let CodeSpace be the conductor of your digital symphony, harmonizing all elements for a memorable and successful online presence.",
+			"subservices": [
+				{
+					"title": "Basic",
+					"color": "#81D4FA",
+					"price": {
+						"tr": "5499",
+						"en": 149
+					},
+					"features": [
+						[
+							"pages",
+							"1-7 Pages"
+						],
+						[
+							"support",
+							"Free 1 Month Support"
+						]
+					]
+				},
+				{
+					"title": "Standard",
+					"color": "#E6EE9C",
+					"price": {
+						"tr": "8499",
+						"en": 249
+					},
+					"features": [
+						[
+							"pages",
+							"1-10 Pages"
+						],
+						[
+							"support",
+							"Free 1 Month Support + 3 Month Extra Support"
+						],
+						"Google Search Console",
+						"Content Management",
+						"CMS Support",
+						"Admin Page",
+						"Multi Language Support"
+					]
+				},
+				{
+					"title": "Premium",
+					"color": "#FF8A65",
+					"price": {
+						"tr": "11499",
+						"en": 349
+					},
+					"features": [
+						[
+							"pages",
+							"+10 Pages"
+						],
+						[
+							"support",
+							"Free 1 Month Support + 6 Month Extra Support"
+						],
+						"Speed Optimization"
+					]
+				}
+			]
+		}
 	},
 	"path": {
 		"services": "Services",
@@ -25,11 +373,11 @@
 		"startup": "Startup",
 		"marketing": "Marketing"
 	},
-	"sectionHome":{
-		"title":"Crafting standout Websites and mastering Social media for businesses",
-		"subTitle":"we bring your brand to life online, making every click count",
-		"contactUs":"Contact Us",
-		"viewServices":"View Services"
+	"sectionHome": {
+		"title": "Crafting standout Websites and mastering Social media for businesses",
+		"subTitle": "we bring your brand to life online, making every click count",
+		"contactUs": "Contact Us",
+		"viewServices": "View Services"
 	},
 	"sectionSteps": {
 		"webDesign": {
