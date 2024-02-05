@@ -3,12 +3,12 @@
 		"color": "#db2777",
 		"url": "webdesign",
 		"icon": "bi-code-slash",
-		"long_desc": ["long-desc-1"],
 		"solution_header": "solution-header",
 		"solution_title": "get-paid-faster",
 		"solution_texts": ["text-line-1", "text-line-2", "text-line-3", "text-line-4"],
-		"subservices": {
-			"basic": {
+		"subservices": [
+			{
+				"title": "basic",
 				"color": "#81D4FA",
 				"price": { "tr": "999", "en": 49 },
 				"features": [
@@ -16,12 +16,14 @@
 					["logo", "1logo"]
 				]
 			},
-			"standard": {
+			{
+				"title": "standard",
 				"color": "#E6EE9C",
 				"price": { "tr": "1499", "en": 69 },
 				"features": [["pages", "1-10pages"], ["logo", "2logo"], "motion", "media-kit"]
 			},
-			"advanced": {
+			{
+				"title": "advanced",
 				"color": "#FF8A65",
 				"price": { "tr": "1999", "en": 99 },
 				"features": [
@@ -31,7 +33,7 @@
 					["theme", "dltheme"]
 				]
 			}
-		}
+		]
 	},
 	{
 		"color": "#ea580c",
@@ -45,8 +47,9 @@
 			"1-year-free-hosting",
 			"1-year-domain"
 		],
-		"subservices": {
-			"basic": {
+		"subservices": [
+			{
+				"title": "basic",
 				"color": "#81D4FA",
 				"price": { "tr": "5499", "en": 69 },
 				"features": [
@@ -55,7 +58,8 @@
 					["cms", "static-pages"]
 				]
 			},
-			"standard": {
+			{
+				"title": "standard",
 				"color": "#E6EE9C",
 				"price": { "tr": "7499", "en": 99 },
 				"features": [
@@ -66,12 +70,13 @@
 					"admin-page"
 				]
 			},
-			"e-commerce": {
+			{
+				"title": "e-commerce",
 				"color": "#FF8A65",
 				"price": { "tr": "9499", "en": 129 },
 				"features": [["pages", "+10pages"], ["support", "1+6-support"], "online-shop"]
 			}
-		}
+		]
 	},
 	{
 		"color": "#0d9488",
@@ -88,8 +93,9 @@
 			"1-year-domain",
 			"ssl-https"
 		],
-		"subservices": {
-			"basic": {
+		"subservices": [
+			{
+				"title": "basic",
 				"color": "#81D4FA",
 				"price": { "tr": "5499", "en": 149 },
 				"features": [
@@ -97,7 +103,8 @@
 					["support", "1-support"]
 				]
 			},
-			"standard": {
+			{
+				"title": "standard",
 				"color": "#E6EE9C",
 				"price": { "tr": "8499", "en": 249 },
 				"features": [
@@ -109,7 +116,8 @@
 					"multi-language"
 				]
 			},
-			"advanced": {
+			{
+				"title": "advanced",
 				"color": "#FF8A65",
 				"price": { "tr": "11499", "en": 349 },
 				"features": [
@@ -118,12 +126,12 @@
 					"speed-optimization"
 				]
 			}
-		}
+		]
 	},
 	{
 		"color": "#7e22ce",
 		"url": "marketing",
 		"icon": "bi-kanban",
-		"subservices": {}
+		"subservices": []
 	}
 ]

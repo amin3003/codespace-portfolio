@@ -10,23 +10,7 @@ import servicesJson from './services.json';
 import { localeCurrencies } from '@/i18nConfig';
 import { Feature } from './Feature';
 import { convert_to_simple_string } from '@azrico/string';
-export class SubService extends SimpleObject {
-	readonly id: string = '';
-	readonly title: string = '';
-	readonly color: string = '';
-	readonly features: Feature[] = [];
-
-	//list of all features for parent Service, some may be unavailable
-	all_features: Feature[] = [];
-
-	readonly price: number | string = 0;
-	constructor(inputdata: Partial<SubService>) {
-		super();
-		this.loadValues(inputdata);
-		this.features = Feature.convert(this.features);
-		this.all_features = Feature.convert(this.all_features);
-	}
-}
+import { SubService } from './SubService';
 
 export default class Service extends SimpleObject {
 	readonly url: string = '';
@@ -56,24 +40,16 @@ export default class Service extends SimpleObject {
 		this.features = Feature.convert(this.features);
 		this.articles = Feature.convert(this.articles);
 
-		//id of subservice = Serice.Title+SubService.Title
 		this.subservices = SubService.mapto(
 			SubService,
-			this.subservices.map((r) => {
-				return {
-					...r,
-					id: `${convert_to_simple_string(this.title)}-${convert_to_simple_string(
-						r.title
-					)}`,
-				};
-			})
+			this.subservices.map((r) => ({ ...r, service_title: this.title }))
 		);
 
-		const mapped_features = array_makeMap(
+		const all_features_mapped = array_makeMap(
 			array_merge(this.features, ...this.subservices.flatMap((r) => r.features)),
 			'id'
 		);
-		this.subservice_all_features = Feature.convert(mapped_features);
+		this.subservice_all_features = Feature.convert(all_features_mapped);
 
 		this.init();
 	}
@@ -106,10 +82,12 @@ export default class Service extends SimpleObject {
 		return this.get_list().find((s) => s.url === search || s.title === search);
 	}
 	static get_list(): Service[] {
-		return servicesJson.map((r) => new Service(r));
+		return allServices;
 	}
 	static getPrice(obj: any, locale: string) {
 		if (typeof obj === 'string') return obj + ` ${localeCurrencies[locale]}`;
 		return (obj[locale] || obj['en']) + ` ${localeCurrencies[locale]}`;
 	}
 }
+
+const allServices = servicesJson.map((r) => new Service(r));

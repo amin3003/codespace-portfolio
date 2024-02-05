@@ -13,6 +13,7 @@ export class Feature extends SimpleObject {
 	readonly id: string = '';
 	readonly title: string = '';
 	readonly text: string = '';
+
 	isAvailable: boolean = true;
 	constructor(inputdata: Partial<Feature> | any) {
 		super();
