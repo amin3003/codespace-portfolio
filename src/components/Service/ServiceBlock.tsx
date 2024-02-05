@@ -4,7 +4,8 @@ import { useTranslations } from 'next-intl';
 
 export default function ServiceBlock(props: { service: Service }) {
 	const r = props.service;
-	const translate_path = useTranslations('path');
+	const translate_service = useTranslations('service.' + r.getID());
+	const translate_feature = useTranslations('service.feature');
 
 	const topFeatures = r.subservice_all_features.slice(0, 5);
 	return (
@@ -17,11 +18,13 @@ export default function ServiceBlock(props: { service: Service }) {
 
 			<div className="flex glass card w-[240px] bg-base-100 ">
 				<div className="card-body content-center flex">
-					<b className="card-title text-center justify-center text-nowrap">{r.title}</b>
+					<b className="card-title text-center justify-center text-nowrap">
+						{translate_service('title')}
+					</b>
 					<div className="divider p-0 m-0"></div>
 					<ul className="py-1 px-4 flex-1 list-disc">
 						{topFeatures.map((feature, i: number) => {
-							return <li key={i}>{feature.title}</li>;
+							return <li key={i}>{translate_feature(String(feature))}</li>;
 						})}
 						<li>...</li>
 					</ul>

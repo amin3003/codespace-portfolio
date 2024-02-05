@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import LangSwitcher from '@c/Header/LangSwitcher';
 
 export default function SidebarContent() {
-	const t = useTranslations('navbar');
+	const translate_nav = useTranslations('nav');
 
 	return (
 		<div className="p-4 min-h-full !w-[75%] bg-base-200 flex flex-col">
@@ -13,7 +13,7 @@ export default function SidebarContent() {
 					return (
 						<li key={i} className="text-md">
 							<Link href={`${v.path}`}>
-								<b>{t(String(v.name).toLowerCase())}</b>
+								<b>{translate_nav(String(v.name).toLowerCase())}</b>
 							</Link>
 						</li>
 					);

@@ -15,7 +15,7 @@ export default async function PathBreadcrumbs(props: PathBreadcrumbsProps) {
  * @returns
  */
 function PathBreadcrumbsInner(props: PathBreadcrumbsProps & { path_parts: string[] }) {
-	const t = useTranslations('path');
+	const translate_nav = useTranslations('nav');
 	const PathPartsElement = props.path_parts.map((r, i) => {
 		/*
 		 example: services/webdev/gold
@@ -25,7 +25,7 @@ function PathBreadcrumbsInner(props: PathBreadcrumbsProps & { path_parts: string
 		const path_until_now = `/` + props.path_parts.slice(0, i + 1).join('/');
 
 		//translate the text
-		const translated_text = capitalize(t(String(r).toLowerCase()));
+		const translated_text = capitalize(translate_nav(String(r).toLowerCase()));
 
 		//the last index of url path is bold
 		const isLastIndex = i == props.path_parts.length - 1;

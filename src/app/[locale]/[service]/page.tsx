@@ -21,8 +21,8 @@ import ServiceMainArea from './ServiceMainArea';
 export default function PageService(props: any) {
 	const currentServiceName = props.params.service;
 	const currentService = Service.get_single(currentServiceName);
-	const translate_path = useTranslations('path');
 
+	
 	//service not found. return null
 	if (!currentService) return null;
 	const service_style = { '--servicecolor': currentService.color } as React.CSSProperties;

@@ -26,7 +26,8 @@ export const header_paths = [
 
 export default function Footer() {
 	const currentYear = new Date().getFullYear();
-	const t = useTranslations('navbar');
+	const translate_nav = useTranslations('nav');
+	 
 	return (
 		<footer className=" text-white mx-auto flex flex-col gap-5 justify-betwee items-center">
 			<AppLogo text small />
@@ -41,7 +42,7 @@ export default function Footer() {
 								return (
 									<Link key={i} href={`${v.path}`} className="mx-2">
 										<li className="opacity-90 hover:opacity-100 text-xs">
-											{t(String(v.name).toLocaleLowerCase())}
+											{translate_nav((v.name))}
 										</li>
 									</Link>
 								);

@@ -18,10 +18,13 @@ export const header_paths = [
 			path: '/' + r.url,
 		};
 	}),
-];
+].map((r) => {
+	return { ...r, name: String(r.name.toLocaleLowerCase()) };
+});
 
 export default function AppHeader() {
-	const t = useTranslations('navbar');
+	const translate_nav = useTranslations('nav');
+
 	return (
 		<>
 			<header
@@ -74,7 +77,7 @@ export default function AppHeader() {
 								return (
 									<Link key={i} href={`${v.path}`}>
 										<li className="btn btn-sm btn-ghost">
-											<b>{t(String(v.name).toLocaleLowerCase())}</b>
+											<b>{translate_nav(v.name)}</b>
 										</li>
 									</Link>
 								);

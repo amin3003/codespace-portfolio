@@ -10,11 +10,12 @@ export default function SubServiceBlock(props: {
 	subservice: SubService;
 }) {
 	const locale = useLocale();
+	const { service, subservice } = props;
 
-	const translate_service = useTranslations('service');
+	const translate_service = useTranslations('service.' + service.getID());
+	const translate_feature = useTranslations('service.feature');
+	const translate_shared = useTranslations('service.shared');
 
-	const service = props.service;
-	const subservice = props.subservice;
 	/* -------------------------------------------------------------------------- */
 	const subservice_style = {
 		'--subservicecolor': subservice.color,
@@ -33,9 +34,11 @@ export default function SubServiceBlock(props: {
 				<div className="card-body content-center flex">
 					<div className="flex-1 flex flex-col gap-6">
 						<div className="h-[150px] flex flex-col">
-							<b className="card-title text-center justify-center">{subservice.title}</b>
+							<b className="card-title text-center justify-center">
+								{translate_shared(subservice.title)}
+							</b>
 							<p className="flex flex-1 flex-col gap-1 text-center py-3">
-								<span>{capitalize(translate_service('starting from'))}</span>
+								<span>{translate_shared('starting-from')}</span>
 
 								<b className="text-3xl">{Service.getPrice(subservice.price, locale)}</b>
 							</p>
@@ -50,7 +53,7 @@ export default function SubServiceBlock(props: {
 										) : (
 											<i className="bi bi-x text-red-500" />
 										)}
-										<b>{feature.title}</b>
+										<b>{translate_feature(String(feature))}</b>
 									</li>
 								);
 							})}
@@ -59,7 +62,7 @@ export default function SubServiceBlock(props: {
 							href={'/services'}
 							className="link link-hover text-center justify-center text-primary"
 						>
-							Reserve
+							{translate_shared('reserve')}
 						</Link>
 					</div>
 				</div>

@@ -13,6 +13,7 @@ import { convert_to_simple_string } from '@azrico/string';
 import { SubService } from './SubService';
 
 export default class Service extends SimpleObject {
+	readonly id: string = '';
 	readonly url: string = '';
 	readonly title: string = '';
 	readonly icon: string = '';
@@ -39,7 +40,7 @@ export default class Service extends SimpleObject {
 		this.loadValues(inputdata);
 		this.features = Feature.convert(this.features);
 		this.articles = Feature.convert(this.articles);
-
+		this.id = convert_to_simple_string(this.title || this.url);
 		/* -------- make sure each subservices knows title of current service ------- */
 		this.subservices = SubService.mapto(
 			SubService,
