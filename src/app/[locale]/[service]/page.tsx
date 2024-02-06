@@ -26,7 +26,6 @@ export default function PageService(props: any) {
 	//service not found. return null
 	if (!currentService) return null;
 	const service_style = { '--servicecolor': currentService.color } as React.CSSProperties;
-
 	return (
 		<>
 			<ThreeCanvas>

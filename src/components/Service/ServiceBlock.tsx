@@ -1,40 +1,57 @@
-import Service from '@/data/Service';
-import Link from '@src/navigation';
-import { useTranslations } from 'next-intl';
+import Service from "@/data/Service";
+import Link from "@src/navigation";
+import { useTranslations } from "next-intl";
 
 export default function ServiceBlock(props: { service: Service }) {
-	const r = props.service;
-	const translate_service = useTranslations('service.' + r.getID());
-	const translate_feature = useTranslations('service.feature');
+  const r = props.service;
+  const translate_service = useTranslations("service." + r.getID());
+  const translate_feature = useTranslations("service.feature");
+  const translate_shared = useTranslations('service.shared');
+  const topFeatures = r.subservice_all_features.slice(0, 3);
 
-	const topFeatures = r.subservice_all_features.slice(0, 5);
-	return (
-		<div className="indicator">
-			{r.isBest && (
-				<span className="indicator-item indicator-center badge badge-primary">
-					{'Best Value'}
-				</span>
-			)}
+  function summarizeText(text:string, maxLength:number) {
+    if (text.length <= maxLength) {
+        return text;
+    } else {
+        return text.substring(0, maxLength).trim() + '...';
+    }
+}
 
-			<div className="flex glass card w-[240px] bg-base-100 ">
-				<div className="card-body content-center flex">
-					<b className="card-title text-center justify-center text-nowrap">
-						{translate_service('title')}
-					</b>
-					<div className="divider p-0 m-0"></div>
-					<ul className="py-1 px-4 flex-1 list-disc">
-						{topFeatures.map((feature, i: number) => {
-							return <li key={i}>{translate_feature(String(feature))}</li>;
-						})}
-						<li>...</li>
-					</ul>
-					<Link className="flex align-middle justify-center" href={`/${r.url}`}>
-						<button className="btn btn-ghost text-secondary self-center">
-							Learn more
-						</button>
-					</Link>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className="indicator ">
+      {r.isBest && (
+        <span className="indicator-item indicator-center badge badge-primary">
+          {"Best Value"}
+        </span>
+      )}
+      <div className="flex glass card w-[240px] bg-base-100 ">
+        <div className="card-body content-center py-3 px-0 flex">
+          <h4 className="card-title text-center justify-center text-nowrap mb-4 px-5">
+            {translate_service("title")}
+          </h4>
+          <ul className=" flex-1 px-5">
+			<p className="text-[14px] w-max">{translate_shared("popularfeatures")} :</p>
+            {topFeatures.map((feature, i: number) => {
+              return (
+                <li
+                  key={i}
+                  className="w-max flex text-[17px] items-center justify-center gap-2 my-3 mb-0"
+                >
+                  <i className="bi bi-check-circle-fill" />
+                  {translate_feature(String(feature))}
+                </li>
+              );
+            })}
+          </ul>
+		  <div className="divider mx-3 my-0"></div>
+		  <p className="px-5 mt-0 text-[15px] text-justify">{summarizeText(translate_service("long_desc"),100)}</p>
+          <Link className="flex align-middle justify-center" href={`/${r.url}`}>
+            <button className="btn btn-ghost text-secondary self-center">
+              Learn more
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
