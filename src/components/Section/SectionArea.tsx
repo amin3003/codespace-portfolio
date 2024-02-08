@@ -58,8 +58,7 @@ export default function SectionArea(props: {
 							? clsx(
 									props.dynamicMargin
 										? 'mt-[-5vw] md:mt-[-100px] lg:mt-[-160px]'
-										: 'mt-[-160px]',
-									'md:pl-[50px]'
+										: 'mt-[-160px]'
 							  )
 							: ''
 					}
@@ -79,7 +78,7 @@ export default function SectionArea(props: {
 							src={`/images/${props.image}.webp`}
 							width={props.width || 256}
 							height={props.height || props.width || 256}
-							alt="Image"
+							alt={props.image}
 						/>
 					</figure>
 				) : props.image != null ? (

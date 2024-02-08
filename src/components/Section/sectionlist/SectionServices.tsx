@@ -8,6 +8,7 @@ import Service from '@/data/Service';
 import { capitalize } from '@azrico/string';
 import SectionArea from '@c/Section/SectionArea';
 import ServiceBlock from '@/components/Service/ServiceBlock';
+import SwiperLayout from '@/components/Sliders/SwiperLayout';
 
 export default function SectionServices(props: sectionProps) {
 	const services = Service.get_list();
@@ -22,11 +23,12 @@ export default function SectionServices(props: sectionProps) {
 			orientation="vertical"
 			className="min-h-lvh mt-20"
 		>
-			<div className="flex flex-wrap justify-center gap-3 pt-20">
-				{services.map((r, i) => {
+			<SwiperLayout
+				content={services.map((r, i) => {
 					return <ServiceBlock service={r} key={i} />;
 				})}
-			</div>
+			></SwiperLayout>
+			{/* <div className="flex flex-wrap justify-center gap-3 pt-20"></div> */}
 		</SectionArea>
 	);
 }

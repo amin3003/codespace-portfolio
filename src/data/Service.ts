@@ -32,6 +32,7 @@ export default class Service extends SimpleObject {
 	readonly solution_header: string = '';
 	readonly solution_title: string = '';
 	readonly solution_texts: string[] = [];
+	readonly solution_image: string[] = [];
 
 	readonly color: string = '';
 

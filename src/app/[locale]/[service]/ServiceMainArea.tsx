@@ -31,6 +31,7 @@ function AccodionArea(props: { currentService: Service }) {
 	const translate_service = useTranslations('service.' + currentService.getID());
 	const translate_feature = useTranslations('service.feature');
 	const translate_shared = useTranslations('service.shared');
+	const topFeatures = currentService.subservice_all_features.slice(0, 3);
 
 	return (
 		<>
@@ -39,13 +40,7 @@ function AccodionArea(props: { currentService: Service }) {
 				<div className="collapse-title text-xl font-medium">
 					{translate_shared('description')}
 				</div>
-				<div className="collapse-content">
-					{wrap_array(currentService.long_desc).map((r, i) => (
-						<p key={i} className="flex flex-row gap-2">
-							{r}
-						</p>
-					))}
-				</div>
+				<div className="collapse-content">{translate_service('long_desc')}</div>
 			</div>
 			<div className="collapse bg-base-200 glass">
 				<input type="radio" name="service-accodion" />
@@ -80,8 +75,8 @@ function AccodionArea(props: { currentService: Service }) {
 				</div>
 				<div className="collapse-content">
 					<ul role="list" className="marker:text-primary list-disc pl-4">
-						{currentService.features.map((r, i) => {
-							return <li key={i}>{translate_service(String(r))}</li>;
+						{topFeatures.map((feat, i) => {
+							return <li key={i}>{translate_feature(String(feat))}</li>;
 						})}
 					</ul>
 				</div>
