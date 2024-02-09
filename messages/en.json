@@ -16,8 +16,8 @@
 			"price": "price",
 			"view-other": "View Other",
 			"packages": "packages",
-			"popularfeatures":"Popular Features",
-			"advanced":"advanced"
+			"popularfeatures": "Popular Features",
+			"advanced": "advanced"
 		},
 		"feature": {
 			"1-7pages": "1-7pages",
@@ -50,82 +50,62 @@
 			"ssl-https": "ssl https",
 			"google-search-console": "google search console",
 			"multi-language": "multi language",
-			"speed-optimization": "speed optimization"
+			"speed-optimization": "speed optimization",
+			"15-reels": "10-15 Reels Per Month",
+			"1story": "1 Stories Per Day",
+			"Instagram-advertising": "Instagram Advertising",
+			"Facebook-ceo": "Facebook CEO",
+			"5videos": "Make 5 Videos If You Are In Izmir",
+			"20-reels": "20 Reels Per Month",
+			"3story": "3 Stories Per Day",
+			"Instagram-ceo": "Instagram CEO",
+			"Branding-Marketing": "Branding Marketing",
+			"10videos": "Make 10 Videos If You Are In Izmir",
+			"30-reels": "30 Reels Per Month",
+			"5story": "5 Stories Per Day",
+			"Business-Development": "Business Development",
+			"Coach-way": "Coach Way",
+			"15videos": "Make 15 Videos If You Are In Izmir"
 		},
 		"webdesign": {
 			"title": "Web Design",
-			"AdobeXD": "Adobe XD",
-			"ResponsiveDesign": "Responsive Design",
-			"svgFile": "SVG File",
-			"file": "PNG/JPEG File",
-			
-			"long_desc": "Ever visited a website that felt like a breeze to navigate? That's the magic of web design, and we're here to make it happen for you. Imagine your online space as a cozy home – we arrange the furniture (content) in a way that feels just right. From the colors on the walls to the layout of the rooms, we create a welcoming environment that visitors won't want to leave.",
-			"solution":{
-				"title":"Get paid faster",
-				"desc":"Ever visited a website that felt like a breeze to navigate? That's the magic of web design, and at CodeSpace, we're committed to bringing that magic to your online space. Think of your website as more than just a collection of pages; envision it as a cozy home in the digital realm. Our Web Design service is akin to arranging the furniture (content) in a way that feels just right, ensuring a seamless and enjoyable experience for your visitors. We pay meticulous attention to every detail, from the colors on the walls to the layout of the rooms, creating a virtual environment that beckons exploration. Our goal is to make your website a welcoming haven that visitors won't want to leave, where they effortlessly find what they're looking for and leave with a positive impression. Let CodeSpace be your architect in the vast online landscape, crafting a digital home that not only reflects your brand but also provides a delightful user journey for everyone who steps through its virtual doors."
+			"long_desc": "At Codespace, we leverage Adobe XD and Figma to create captivating web designs. With our creative flair, we incorporate the best models and icons into our designs. Ensuring standards of responsiveness and employing color psychology, our designs captivate and engage users effectively.",
+			"solution": {
+				"header": "Crafting Digital Experiences for All",
+				"title": "What is website design?",
+				"desc": "Web design encompasses the process of conceptualizing, planning, and creating visually appealing and functional websites. It involves a combination of graphic design, user experience design, and coding techniques to craft websites that effectively communicate a message, engage users, and deliver an optimal browsing experience across various devices and screen sizes. Good web design incorporates elements such as layout, typography, color schemes, navigation, and multimedia to achieve a harmonious balance between aesthetics and usability, ultimately contributing to the overall success of a website in achieving its goals."
 			},
 			"articles": {
 				"title": "AdobeXD File",
 				"text": "Sint incididunt eiusmod elit aliquip exercitation elit laborum."
-			},
-			"header": "",
-			"description": ""
+			}
 		},
 		"webdev": {
 			"title": "Web developement",
-			"default-design": "Default Design",
-			"responsive": "Responsive design",
-			"1-year-free-hosting": "1 year free hosting",
-			"1-year-domain": "1 year domain",
+			"long_desc": "At Codespace, we're experts at making unique websites using the latest programming languages and best frameworks. Our packages include free support for a few months, as well as free hosting and domain registration. Our plans are totally adjustable to fit what you want, ensuring we bring your ideas to reality. And if you need extra features, just ask! We'll make sure your project is exactly how you want it.",
 			"solution": {
-				"title": "CodeSpace",
-				"desc": "CodeSpace's Web Development service is the magic behind the websites you adore. Acting as digital architects, we construct online homes for businesses, turning your ideas into functional and stunning websites. From structure to features, we handle the behind-the-scenes, ensuring your site not only looks fantastic but works seamlessly. Let CodeSpace guide you through web development, transforming your digital dreams into a thriving online reality."
-			},
-			"header": "Building Your Digital Home: The Art and Science of Web Development with CodeSpace",
-			"description": "Ever wondered about the magic behind the websites you love? That's where our Web Development service comes in. At CodeSpace, we're like digital architects, building the online homes for businesses. Think of it as constructing a house; we bring your ideas to life, creating functional and beautiful websites that you and your visitors will love. From the structure to the features, we handle the behind-the-scenes work to make sure your online space not only looks fantastic but also works seamlessly. Your website is like a 24/7 storefront, and we're here to ensure it's open for business, impressing visitors and helping your online presence thrive. Let CodeSpace be your guide in the world of web development, making your digital dreams a reality."
+				"header": "Building Websites with Code and Creativity",
+				"title": "What is web development?",
+				"desc": "Web development involves the creation and maintenance of websites and web applications using programming languages such as HTML, CSS, and JavaScript, alongside frameworks and libraries like React, Angular, and Vue.js. Developers write code to build the structure, layout, and functionality of websites, ensuring they are responsive, user-friendly, and performant across various devices and browsers. They also work on backend development, handling server-side scripting, databases, and server management to enable dynamic and interactive features on websites."
+			}
 		},
 		"marketing": {
 			"title": "Marketing",
-			"accordion": {
-				"description": {
-					"title": "Description",
-					"description": "CodeSpace offers Social Media Management expertise, acting as your digital storytellers to boost online visibility and engagement. With a focus on platforms like Facebook, Instagram, and Twitter, we strategically craft and schedule compelling content, freeing you to concentrate on your core business. Let CodeSpace guide you through the dynamic landscape of social media, ensuring your brand makes a lasting impact."
-				},
-				"pricingOverview": {
-					"pricingOverview": "Pricing Overview",
-					"description": "",
-					"seePackages": "See Packages"
-				},
-				"features": {
-					"features": "Features",
-					"description": {
-						"personalizedDesign": "Personalized Design",
-						"logoDesign": "Logo Design",
-						"webDevelopement": "Web Developement",
-						"mediaManagement": "Media Management",
-						"seoStandard": "SEO Standard"
-					}
-				}
-			},
-			"header": "Navigating the Social Sphere: Social Media Management Mastery with CodeSpace",
-			"description": "Embark on a journey of digital influence with CodeSpace's Social Media Management expertise. Imagine us as your digital storytellers, weaving compelling narratives across platforms like Facebook, Instagram, and Twitter. Our Social Media Management service is your secret weapon to enhance online visibility and engagement. From crafting attention-grabbing posts to strategically scheduling content, we take the reins, allowing you to focus on what you do best – running your business. Let CodeSpace be your partner in navigating the dynamic world of social media, ensuring your brand leaves a lasting impression in the hearts and minds of your audience"
+			"long_desc": "As your media management service provider, we offer a wide range of services designed to boost your online presence. From making interesting short videos every month to posting captivating daily updates, we ensure your audience remains engaged and connected. We're skilled at running targeted ads on Instagram and using effective Facebook strategies to increase your visibility and interaction. Moreover, we're experts in creating videos, using our talents in filming, photography, and Adobe software for smooth editing and compelling visual storytelling. With our commitment to improving your online presence, we help your brand shine in today's ever-changing media world.",
+			"solution": {
+				"header": "Understanding the Role of a Social Media Manager",
+				"title": "What Is a Media Manager?",
+				"desc": "A media manager is an individual or a team responsible for overseeing and implementing strategies related to a company's presence on social media platforms like Instagram and Facebook Business. They handle tasks such as content creation, scheduling, engagement with followers, running advertising campaigns, analyzing data to track performance, and adjusting strategies to optimize results. Their primary goal is to enhance the brand's visibility, engagement, and reputation across these platforms, ultimately contributing to its overall marketing and business objectives."
+			}
 		},
 		"startup": {
 			"title": "Startup Package",
-			"pesonalized": "Personalized Design",
-			"logo": "Logo Design",
-			"web-developement": "Web Developement",
-			"media": "Media Management",
-			"standard": "SEO Standard",
-			"1-year-free-hosting": "1 year free hosting",
-			"1-year-domain": "1 year domain",
-			"ssl-https": "ssl https",
+			"long_desc": "Unlock the essentials for your digital journey with web design, logo creation, and web logo design services bundled together. This comprehensive package ensures your startup receives all necessary support and features to establish a strong online presence from the get-go.",
 			"solution": {
-				"title": "title",
-				"desc": "CodeSpace offers a holistic digital solution, merging web development, design, logo creation, and marketing into a seamless experience. Our expert team crafts visually stunning websites, eye-catching logos, and strategic marketing initiatives for a comprehensive and effective online presence. Let CodeSpace be your digital conductor, harmonizing all elements for a memorable and successful online journey."
-			},
-			"header": "Digital Symphony: CodeSpace's All-in-One Solution for Your Online Presence",
-			"description": "Embark on a seamless digital journey with CodeSpace's comprehensive service that encapsulates web development, web design, logo design, and marketing. Imagine it as your one-stop-shop for crafting a captivating and effective online presence. Our expert team not only builds your website from the ground up but also ensures it looks visually stunning and resonates with your brand identity. From creating an eye-catching logo to implementing strategic marketing initiatives, we're here to turn your digital aspirations into reality. Whether you're just starting or looking to revamp your online space, let CodeSpace be the conductor of your digital symphony, harmonizing all elements for a memorable and successful online presence."
+				"header": "Boost Your Startup, All in One Support Package",
+				"title": "What is a startup package?",
+				"desc": "In our startup package, we provide comprehensive support to enhance your startup. From web design, logo design, and graphic design to media marketing services, we cover all the essentials to bolster your online presence. Our offerings ensure that your business gains visibility and recognition on the internet, aiding in its growth and success."
+			}
 		}
 	},
 	"path": {
