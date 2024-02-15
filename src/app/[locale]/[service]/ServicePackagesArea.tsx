@@ -22,6 +22,7 @@ export default function ServicePackagesArea(props: { currentService: Service }) 
 						<SubServiceBlock index={i} key={i} service={currentService} subservice={r} />
 					);
 				})}
+				className={'pt-8'}
 			/>
 			<div className="flex flex-col gap-7 max-w-fit mx-auto py-7">
 				<Link href={'/services'} className="link link-hover">

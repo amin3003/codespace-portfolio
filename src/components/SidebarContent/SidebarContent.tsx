@@ -20,7 +20,7 @@ export default function SidebarContent() {
 				})}
 			</ul>
 			<ul className="menu">
-				<LangSwitcher openUp alwaysFullText className="navbar-end" />
+				<LangSwitcher openUp className="navbar-end" />
 			</ul>
 		</div>
 	);

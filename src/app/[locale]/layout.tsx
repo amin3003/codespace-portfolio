@@ -12,7 +12,7 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 	if (!locales.includes(locale as any)) notFound();
 
 	return (
-		<html lang={locale} data-theme="dracula" className="">
+		<html lang={locale} data-theme="dracula" className="overflow-x-clip">
 			<title>Codespase</title>
 			<body id="doc-body" className="overflow-x-clip">
 				<AppHeader />
@@ -29,7 +29,7 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 						{children}
 					</div>
 
-					<div className="md:hidden drawer-side z-[40000]">
+					<div className="drawer-side z-[40000]">
 						<label
 							htmlFor="my-drawer"
 							aria-label="close sidebar"

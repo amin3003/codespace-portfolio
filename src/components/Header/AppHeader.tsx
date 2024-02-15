@@ -6,6 +6,7 @@ import AppLogo from './AppLogo';
 import LangSwitcher from './LangSwitcher';
 import LoginButton from '@c/Login/LoginButton';
 import Service from '@/data/Service';
+import clsx from 'clsx';
 
 export const header_paths = [
 	{
@@ -29,24 +30,24 @@ export default function AppHeader() {
 		<>
 			<header
 				id="header"
-				className={
+				className={clsx(
 					//animated bg change
-					' transition-all duration-1000 delay-0' +
+					'transition-all duration-1000 delay-0',
 					//change background based on scroll
-					' data-[is-top=false]:bg-[#aaaaaa22] bg-transparent' +
+					'data-[is-top=false]:bg-[#aaaaaa22] bg-transparent',
 					//header
-					' navbar sticky justify-between' +
+					'navbar sticky justify-between',
 					//change sticky based on scroll
-					' data-[is-going-down=true]:top-[-100%]' +
-					' data-[is-going-down=false]:top-0' +
+					'data-[is-going-down=true]:top-[-100%]',
+					'data-[is-going-down=false]:top-0',
 					//other classes
-					' w-full data-[is-top=false]:shadow-md'
-				}
+					'w-full data-[is-top=false]:shadow-md'
+				)}
 			>
 				<ScrollDetector />
 				<React.Suspense fallback={null}>
 					<div>
-						<div className="flex-none md:hidden">
+						<div className="flex-none lg:hidden">
 							<label
 								htmlFor="my-drawer"
 								aria-label="open sidebar"
@@ -67,12 +68,17 @@ export default function AppHeader() {
 								</svg>
 							</label>
 						</div>
-						<AppLogo text className="navbar-start hidden md:flex" />
+						<AppLogo text className="navbar-start hidden lg:flex" />
 					</div>
 
-					<div className="navbar-center justify-between items-center hidden md:flex w-full md:w-auto">
+					<div
+						className={clsx(
+							'navbar-center justify-between items-center w-full',
+							'hidden lg:flex lg:w-auto'
+						)}
+					>
 						{/*	https://daisyui.com/components/menu/ */}
-						<ul className="flex flex-row rounded-box lg:gap-3">
+						<ul className="flex flex-row rounded-box gap-1 md:gap-2 lg:gap-3">
 							{header_paths.map((v, i) => {
 								return (
 									<Link key={i} href={`${v.path}`}>
@@ -86,7 +92,7 @@ export default function AppHeader() {
 					</div>
 					<div className="flex flex-row">
 						<LoginButton />
-						<LangSwitcher className="hidden md:block" />
+						<LangSwitcher className="hidden lg:block" />
 					</div>
 				</React.Suspense>
 			</header>
