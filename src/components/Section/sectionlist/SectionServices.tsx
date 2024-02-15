@@ -28,7 +28,7 @@ export default function SectionServices(props: sectionProps) {
 				content={services.map((r, i) => {
 					return <ServiceBlock service={r} key={i} />;
 				})}
-			></SwiperLayout>
+			/>
 			{/* <div className="flex flex-wrap justify-center gap-3 pt-20"></div> */}
 		</SectionArea>
 	);
