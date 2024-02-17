@@ -24,10 +24,11 @@ export default function SectionServices(props: sectionProps) {
 			className="min-h-lvh mt-20"
 		>
 			<SwiperLayout
+				className={'pt-8'}
 				content={services.map((r, i) => {
 					return <ServiceBlock service={r} key={i} />;
 				})}
-			></SwiperLayout>
+			/>
 			{/* <div className="flex flex-wrap justify-center gap-3 pt-20"></div> */}
 		</SectionArea>
 	);

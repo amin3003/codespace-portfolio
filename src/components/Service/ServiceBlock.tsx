@@ -11,13 +11,13 @@ export default function ServiceBlock(props: { service: Service }) {
 	const topFeatures = r.subservice_all_features.slice(0, 3);
 
 	return (
-		<div className="indicator h-full">
+		<div className="indicator h-full w-full justify-center">
 			{r.isBest && (
 				<span className="indicator-item indicator-center badge badge-primary">
 					{'Best Value'}
 				</span>
 			)}
-			<div className="flex glass card w-[300px] md:w-[240px] h-full bg-base-100 ">
+			<div className="flex glass card w-[300px] md:w-[240px] max-w-full h-full bg-base-100 ">
 				<div className="card-body content-center py-3 px-0 flex">
 					<h4 className="card-title text-center justify-center text-nowrap mb-4 px-5">
 						{translate_service('title')}

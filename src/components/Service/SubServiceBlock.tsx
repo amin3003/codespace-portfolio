@@ -24,7 +24,10 @@ export default function SubServiceBlock(props: {
 	const allFeatures = subservice.all_features;
 
 	return (
-		<div className="indicator w-full h-full" style={subservice_style}>
+		<div
+			className="indicator w-[300px] md:w-[240px] max-w-full h-full"
+			style={subservice_style}
+		>
 			<div
 				className={clsx(
 					`card card-compact rounded-none bg-base-200 `,
