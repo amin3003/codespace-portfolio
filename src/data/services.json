@@ -125,11 +125,5 @@
 				]
 			}
 		]
-	},
-	{
-		"color": "#7e22ce",
-		"url": "marketing",
-		"icon": "bi-kanban",
-		"subservices": []
 	}
 ]
