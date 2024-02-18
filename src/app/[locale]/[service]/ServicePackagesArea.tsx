@@ -4,9 +4,10 @@ import SubServiceBlock from '@/components/Service/SubServiceBlock';
 import Link from '@/navigation';
 import SwiperLayout from '@/components/Sliders/SwiperLayout';
 import { useTranslations } from 'next-intl';
+import SubServiceModal from '@/components/Service/SubServiceModal';
 export default function ServicePackagesArea(props: { currentService: Service }) {
 	const currentService = props.currentService;
- 
+
 	const translate_shared = useTranslations('service.shared');
 
 	return (
@@ -24,6 +25,7 @@ export default function ServicePackagesArea(props: { currentService: Service }) 
 					);
 				})}
 			/>
+			<SubServiceModal defaultHash="packages" />
 		</section>
 	);
 }

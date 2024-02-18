@@ -2,8 +2,7 @@ import { header_paths } from '@c/Header/AppHeader';
 import { useTranslations } from 'next-intl';
 import LangSwitcher from '@c/Header/LangSwitcher';
 import { Link, getServerPathname } from '@src/navigation';
-
-import { usePathname } from 'next/navigation';
+ 
 import { SidebarController } from './SidebarController';
 export default function SidebarContent() {
 	const translate_nav = useTranslations('nav');

@@ -1,13 +1,6 @@
 import SectionArea from '@/components/Section/SectionArea';
-import PathBreadcrumbs from '@/components/PathBreadcrumbs/PathBreadcrumbs';
-import { capitalize } from '@azrico/string';
 import Service from '@/data/Service';
 import { useTranslations } from 'next-intl';
-import ThreeCanvas from '@/components/Three/ThreeCanvas';
-import StarPage from '@/components/Three/StarPage';
-import OrbitPage from '@/components/Three/OrbitPage';
-import SubServiceBlock from '@/components/Service/SubServiceBlock';
-import { array_first, wrap_array } from '@azrico/object';
 import { useLocale } from 'next-intl';
 
 export default function ServiceMainArea(props: { currentService: Service }) {

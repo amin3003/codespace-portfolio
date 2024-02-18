@@ -1,9 +1,11 @@
-import Service, { SubService } from '@/data/Service';
+import Service from '@/data/Service';
+import SubService from '@/data/SubService';
 import Feature from '@/data/Feature';
 import { capitalize } from '@azrico/string';
 import Link from '@src/navigation';
 import clsx from 'clsx';
 import { useLocale, useTranslations } from 'next-intl';
+/* -------------------------------------------------------------------------- */
 export default function SubServiceBlock(props: {
 	index: number;
 	service: Service;
@@ -22,9 +24,13 @@ export default function SubServiceBlock(props: {
 	} as React.CSSProperties;
 
 	const allFeatures = subservice.all_features;
-
+	const sub_id = `reserve-${subservice.id}`;
 	return (
-		<div className="indicator w-[300px] md:w-[240px] h-full" style={subservice_style}>
+		<div
+			id={sub_id}
+			className="indicator w-[300px] md:w-[240px] h-full"
+			style={subservice_style}
+		>
 			<div
 				className={clsx(
 					`card card-compact rounded-none bg-base-200 `,
@@ -59,7 +65,7 @@ export default function SubServiceBlock(props: {
 							})}
 						</ul>
 						<Link
-							href={'/services'}
+							href={`#${sub_id}`}
 							className="link link-hover text-center justify-center text-primary"
 						>
 							{translate_shared('reserve')}

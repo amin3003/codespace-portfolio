@@ -45,7 +45,11 @@ export default class Service extends SimpleObject {
 		/* -------- make sure each subservices knows title of current service ------- */
 		this.subservices = SubService.mapto(
 			SubService,
-			this.subservices.map((r) => ({ ...r, service_title: this.title }))
+			this.subservices.map((r) => ({
+				...r,
+				service_id: this.id,
+				service_title: this.title,
+			}))
 		);
 
 		/* ----------------------- put all features in a list ----------------------- */
@@ -85,6 +89,12 @@ export default class Service extends SimpleObject {
 
 	static get_single(search: string): Service | undefined {
 		return this.get_list().find((s) => s.url === search || s.title === search);
+	}
+	static get_subservice(search: string): SubService | undefined {
+		const serviceid = String(search.split('-').shift() || '');
+		 const service = Service.get_single(serviceid);
+		 
+		  return service?.subservices.find((s) => s.id === search);
 	}
 	static get_list(): Service[] {
 		return allServices;
