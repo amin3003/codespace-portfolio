@@ -13,7 +13,13 @@ import { wrap_array } from '@azrico/object';
 import clsx from 'clsx';
 import React from 'react';
 
-export default function SwiperLayout(props: { content: any; className?: string,center?:boolean }) {
+export default function SwiperLayout(props: {
+	content: any[];
+	className?: string;
+	center?: boolean;
+	swiperOptions?: SwiperProps;
+}) {
+	const propSwiperOptions = props.swiperOptions || {};
 	const contentArray = wrap_array(props.content);
 	const swiperOptions: SwiperProps = {
 		grabCursor: false,
@@ -22,8 +28,9 @@ export default function SwiperLayout(props: { content: any; className?: string,c
 		slidesPerView: 1,
 		breakpoints: {
 			768: { slidesPerView: 2 },
-			1024: { slidesPerView: 4  },
+			1024: { slidesPerView: contentArray.length },
 		},
+
 		pagination: {
 			clickable: true, // Enable navigation through pagination bullets
 		},
@@ -31,16 +38,22 @@ export default function SwiperLayout(props: { content: any; className?: string,c
 		style: { flex: 1, paddingTop: 4, display: 'flex' },
 
 		initialSlide: Math.floor(contentArray.length / 2),
+		...propSwiperOptions,
 	};
 
 	return (
-		<div className={clsx(props.className )}>
-			<Swiper {...(swiperOptions as any)}>
+		<div className={clsx('max-w-full mx-auto', props.className)}>
+			<Swiper {...(swiperOptions as any)} className="!overflow-visible">
 				{contentArray.map((r: any, i: any) => {
+					// const isFirstIndex = i === 0;
+					// const isLastIndex = i === contentArray.length - 1;
 					return (
 						<SwiperSlide
 							key={i}
 							style={{
+								display: 'flex',
+								justifyContent: 'center',
+								justifyItems: 'center',
 								borderRadius: '18px',
 								padding: '0.5em',
 								height: 'auto',
