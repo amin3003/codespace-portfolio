@@ -15,7 +15,13 @@ export default function SubServiceModal(props: { defaultHash: string; children: 
 			<SubServiceModalController defaultHash={props.defaultHash} />
 			<dialog id="subservice-modal" className="modal modal-bottom outline-none">
 				<div className="modal-box px-4 py-1 lg:py-4">
-					<h3 className="font-bold text-lg text-center">{'Contact us'}</h3>
+					<div className={clsx('text-center item-center flex pt-2 pb-5', 'relative')}>
+						<span className="flex-1 font-bold md:text-xl h-[36px]">{'Contact us'}</span>
+						<form method="dialog" className="absolute right-0">
+							{/* if there is a button in form, it will close the modal */}
+							<button className="btn btn-sm btn-circle btn-ghost">✕</button>
+						</form>
+					</div>
 
 					<form method="none" name="contact-form" className={clsx('flex flex-row')}>
 						<div className="gap-4 flex flex-col flex-[4]">
