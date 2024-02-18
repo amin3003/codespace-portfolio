@@ -8,27 +8,62 @@
 			{
 				"title": "basic",
 				"color": "#81D4FA",
-				"price": { "tr": "999", "en": 49 },
+				"price": {
+					"tr": "999",
+					"en": 49
+				},
 				"features": [
-					["pages", "1-7pages"],
-					["logo", "1logo"]
+					[
+						"pages",
+						"1-7pages"
+					],
+					[
+						"logo",
+						"1logo"
+					]
 				]
 			},
 			{
 				"title": "standard",
 				"color": "#E6EE9C",
-				"price": { "tr": "1499", "en": 69 },
-				"features": [["pages", "1-10pages"], ["logo", "2logo"], "motion", "media-kit"]
+				"price": {
+					"tr": "1499",
+					"en": 69
+				},
+				"features": [
+					[
+						"pages",
+						"1-10pages"
+					],
+					[
+						"logo",
+						"2logo"
+					],
+					"motion",
+					"media-kit"
+				]
 			},
 			{
 				"title": "advanced",
 				"color": "#FF8A65",
-				"price": { "tr": "1999", "en": 99 },
+				"price": {
+					"tr": "1999",
+					"en": 99
+				},
 				"features": [
-					["pages", "+10pages"],
-					["logo", "3logo"],
+					[
+						"pages",
+						"+10pages"
+					],
+					[
+						"logo",
+						"3logo"
+					],
 					"vector",
-					["theme", "dltheme"]
+					[
+						"theme",
+						"dltheme"
+					]
 				]
 			}
 		]
@@ -37,7 +72,6 @@
 		"color": "#ea580c",
 		"url": "webdev",
 		"icon": "bi-window-stack",
-
 		"features": [
 			"default-design",
 			"responsive",
@@ -49,21 +83,45 @@
 			{
 				"title": "basic",
 				"color": "#81D4FA",
-				"price": { "tr": "5499", "en": 69 },
+				"price": {
+					"tr": "5499",
+					"en": 69
+				},
 				"features": [
-					["pages", "1-7pages"],
-					["support", "1-support"],
-					["cms", "static-pages"]
+					[
+						"pages",
+						"1-7pages"
+					],
+					[
+						"support",
+						"1-support"
+					],
+					[
+						"cms",
+						"static-pages"
+					]
 				]
 			},
 			{
 				"title": "standard",
 				"color": "#E6EE9C",
-				"price": { "tr": "7499", "en": 99 },
+				"price": {
+					"tr": "7499",
+					"en": 99
+				},
 				"features": [
-					["pages", "1-10pages"],
-					["support", "1+3-support"],
-					["cms", "dynamic-cms"],
+					[
+						"pages",
+						"1-10pages"
+					],
+					[
+						"support",
+						"1+3-support"
+					],
+					[
+						"cms",
+						"dynamic-cms"
+					],
 					"rest-api",
 					"admin-page"
 				]
@@ -71,8 +129,21 @@
 			{
 				"title": "e-commerce",
 				"color": "#FF8A65",
-				"price": { "tr": "9499", "en": 129 },
-				"features": [["pages", "+10pages"], ["support", "1+6-support"], "online-shop"]
+				"price": {
+					"tr": "9499",
+					"en": 129
+				},
+				"features": [
+					[
+						"pages",
+						"+10pages"
+					],
+					[
+						"support",
+						"1+6-support"
+					],
+					"online-shop"
+				]
 			}
 		]
 	},
@@ -95,20 +166,41 @@
 			{
 				"title": "basic",
 				"color": "#81D4FA",
-				"price": { "tr": "5499", "en": 149 },
+				"price": {
+					"tr": "5499",
+					"en": 149
+				},
 				"features": [
-					["pages", "1-7pages"],
-					["support", "1-support"]
+					[
+						"pages",
+						"1-7pages"
+					],
+					[
+						"support",
+						"1-support"
+					]
 				]
 			},
 			{
 				"title": "standard",
 				"color": "#E6EE9C",
-				"price": { "tr": "8499", "en": 249 },
+				"price": {
+					"tr": "8499",
+					"en": 249
+				},
 				"features": [
-					["pages", "1-10pages"],
-					["support", "1+3-support"],
-					["cms", "dynamic-cms"],
+					[
+						"pages",
+						"1-10pages"
+					],
+					[
+						"support",
+						"1+3-support"
+					],
+					[
+						"cms",
+						"dynamic-cms"
+					],
 					"google-search-console",
 					"admin-page",
 					"multi-language"
@@ -117,10 +209,19 @@
 			{
 				"title": "advanced",
 				"color": "#FF8A65",
-				"price": { "tr": "11499", "en": 349 },
+				"price": {
+					"tr": "11499",
+					"en": 349
+				},
 				"features": [
-					["pages", "+10pages"],
-					["support", "1+6-support"],
+					[
+						"pages",
+						"+10pages"
+					],
+					[
+						"support",
+						"1+6-support"
+					],
 					"speed-optimization"
 				]
 			}

@@ -1,21 +1,154 @@
 {
+	"service": {
+		"shared": {
+			"see-packages": "paketlere bak",
+			"features": "özellikler",
+			"pricing-overview": "fiyatlandırma genel bakış",
+			"description": "Açıklama",
+			"View-other-services": "Diğer hizmetlere bak",
+			"starting-from": "başlangıç",
+			"reserve": "rezervasyon yap",
+			"standard": "Standart",
+			"basic": "Temel",
+			"e-commerce": "E-ticaret",
+			"premium": "premium",
+			"advance": "ileri",
+			"price": "fiyat",
+			"view-other": "Diğerini Görüntüle",
+			"packages": "paketler",
+			"popularfeatures": "Popüler Özellikler",
+			"advanced": "gelişmiş"
+		},
+		"feature": {
+			"1-7pages": "1-7 sayfa",
+			"1-10pages": "1-10 sayfa",
+			"1logo": "x1 Logo tasarımı",
+			"2logo": "x2 Logo tasarımı",
+			"3logo": "x3 Logo tasarımı",
+			"+10pages": "+10 sayfa",
+			"dltheme": "dltheme",
+			"1-support": "1 ay destek",
+			"static-pages": "statik sayfalar",
+			"1+3-support": "1-3 ay destek",
+			"dynamic-cms": "dinamik cms",
+			"1+6-support": "1-6 ay destek",
+			"motion": "hareket",
+			"media-kit": "medya kiti",
+			"vector": "vektör",
+			"default-design": "varsayılan tasarım",
+			"responsive": "duyarlı",
+			"seo-standard": "seo standardı",
+			"1-year-free-hosting": "1 yıl ücretsiz barındırma",
+			"1-year-domain": "1 yıl alan adı",
+			"rest-api": "rest api",
+			"admin-page": "yönetici sayfası",
+			"online-shop": "online mağaza",
+			"pesonalized": "kişiselleştirilmiş",
+			"logo": "logo",
+			"web-developement": "web geliştirme",
+			"media": "medya",
+			"ssl-https": "ssl https",
+			"google-search-console": "google arama konsolu",
+			"multi-language": "çoklu dil",
+			"speed-optimization": "hız optimizasyonu",
+			"15-reels": "Ayda 10-15 Reels",
+			"1story": "Günde 1 Hikaye",
+			"Instagram-advertising": "Instagram Reklamcılığı",
+			"Facebook-ceo": "Facebook CEO'su",
+			"5videos": "İzmir'de İseniz 5 Video Yaparız",
+			"20-reels": "Ayda 20 Reels",
+			"3story": "Günde 3 Hikaye",
+			"Instagram-ceo": "Instagram CEO'su",
+			"Branding-Marketing": "Marka Pazarlama",
+			"10videos": "İzmir'de İseniz 10 Video Yaparız",
+			"30-reels": "Ayda 30 Reels",
+			"5story": "Günde 5 Hikaye",
+			"Business-Development": "İş Geliştirme",
+			"Coach-way": "Koç Yolu",
+			"15videos": "İzmir'de İseniz 15 Video Yaparız"
+		},
+		"webdesign": {
+			"title": "Web Tasarımı",
+			"long_desc": "Codespace olarak, etkileyici web tasarımları oluşturmak için Adobe XD ve Figma'yı kullanıyoruz. Yaratıcı zekamızla, tasarımlarımıza en iyi modelleri ve simgeleri entegre ediyoruz. Duyarlılık standartlarını sağlayarak ve renk psikolojisini kullanarak, tasarımlarımız kullanıcıları etkili bir şekilde cezbeder ve etkileşime sokar.",
+			"solution": {
+				"header": "Herkes İçin Dijital Deneyimler Oluşturuyoruz",
+				"title": "Web sitesi tasarımı nedir?",
+				"desc": "Web tasarımı, görsel olarak çekici ve işlevsel web siteleri oluşturmanın sürecini kapsar. Bir mesajı etkili bir şekilde iletmek, kullanıcıları etkilemek ve çeşitli cihazlar ve ekran boyutları üzerinde optimal bir gezinme deneyimi sunmak için grafik tasarımı, kullanıcı deneyimi tasarımı ve kodlama tekniklerinin bir kombinasyonunu içerir. İyi bir web tasarımı, düzen, tipografi, renk şemaları, gezinme ve multimedya gibi unsurları içerir ve estetik ve kullanılabilirlik arasında uyumlu bir denge sağlamak için çalışır, nihayetinde bir web sitesinin hedeflerine ulaşmasına katkıda bulunur."
+			},
+			"articles": {
+				"title": "AdobeXD Dosyası",
+				"text": "Sint incididunt eiusmod elit aliquip exercitation elit laborum."
+			}
+		},
+		"webdev": {
+			"title": "Web Geliştirme",
+			"long_desc": "Codespace olarak, en son programlama dilleri ve en iyi çerçeveleri kullanarak benzersiz web siteleri yapma konusunda uzmanız. Paketlerimiz, ücretsiz destek ve ücretsiz barındırma ve alan adı kaydı içerir. Planlarımız tamamen isteğinize göre ayarlanabilir, böylece fikirlerinizi gerçeğe dönüştürürüz. Ve ek özelliklere ihtiyacınız varsa, sadece isteyin! Projinizin tam olarak istediğiniz gibi olmasını sağlayacağız.",
+			"solution": {
+				"header": "Kod ve Yaratıcılıkla Web Siteleri İnşa Ediyoruz",
+				"title": "Web geliştirme nedir?",
+				"desc": "Web geliştirme, HTML, CSS ve JavaScript gibi programlama dilleri yanında React, Angular ve Vue.js gibi çerçeveler ve kütüphaneleri kullanarak web siteleri ve web uygulamalarının oluşturulmasını ve bakımını içerir. Geliştiriciler, web sitelerinin yapı, düzen ve işlevselliğini oluşturmak için kod yazarlar ve çeşitli cihazlar ve tarayıcılarda duyarlı, kullanıcı dostu ve performanslı olmalarını sağlarlar. Ayrıca, sunucu taraflı betikleme, veritabanları ve sunucu yönetimi gibi backend geliştirme üzerinde çalışarak, web sitelerinde dinamik ve etkileşimli özelliklerin etkinleştirilmesini sağlarlar."
+			}
+		},
+		"marketing": {
+			"title": "Pazarlama",
+			"long_desc": "Medya yönetimi hizmet sağlayıcınız olarak, çevrimiçi varlığınızı artırmaya yönelik geniş bir hizmet yelpazesi sunuyoruz. Her ay ilginç kısa videolar yapmaktan, etkileyici günlük güncellemeler yayınlamaya kadar, kitlenizin bağlı ve bağlı kalmasını sağlıyoruz. Instagram'da hedeflenmiş reklamlar yayınlamak ve etkili Facebook stratejileri kullanmak konusunda yetenekliyiz. Ayrıca, çekim, fotoğrafçılık ve pürüzsüz düzenleme için Adobe yazılımlarını kullanarak videolar oluşturma konusunda uzmanız. Çevrimiçi varlığınızı iyileştirmeye olan taahhüdümüzle, markanızı bugünün sürekli değişen medya dünyasında parlatmaya yardımcı oluyoruz.",
+			"solution": {
+				"header": "Bir Sosyal Medya Yöneticisinin Rolünü Anlama",
+				"title": "Bir medya yöneticisi nedir?",
+				"desc": "Bir medya yöneticisi, bir şirketin Instagram ve Facebook Business gibi sosyal medya platformlarındaki varlığıyla ilgili stratejileri denetleyen ve uygulayan birey veya ekiptir. İçerik oluşturma, programlama, takipçilerle etkileşim, reklam kampanyaları yürütme, performansı izlemek için veri analizi yapma ve sonuçları optimize etmek için stratejileri ayarlama gibi görevleri yönetirler. Temel hedefleri, markanın bu platformlarda görünürlüğünü, etkileşimini ve itibarını artırmaktır, nihayetinde pazarlama ve iş hedeflerine katkıda bulunur."
+			}
+		},
+		"startup": {
+			"title": "Başlangıç Paketi",
+			"long_desc": "Web tasarımı, logo oluşturma ve web logo tasarım hizmetlerini bir araya getirerek dijital yolculuğunuz için gerekli olanları açın. Bu kapsamlı paket, başlangıçtan itibaren güçlü bir çevrimiçi varlık kurmanıza yardımcı olacak tüm gerekli desteği ve özellikleri sağlar.",
+			"solution": {
+				"header": "Başlangıç Paketinizle İşinizi Güçlendirin, Hepsi Bir Arada Destek Paketi",
+				"title": "Başlangıç paketi nedir?",
+				"desc": "Başlangıç paketimizde, işinizi geliştirmek için kapsamlı destek sağlıyoruz. Web tasarımı, logo tasarımı, grafik tasarım ve medya pazarlama hizmetlerinden başlayarak, çevrimiçi varlığınızı güçlendirmek için gereken tüm temel unsurları kapsarız. Sunulanlar, işinizin internet üzerinde görünürlüğünü ve tanınırlığını artırarak büyümesine ve başarısına katkıda bulunur."
+			}
+		}
+	},
 	"path": {
-		"services": "Services",
-		"webdev": "Web developement",
-		"webdesign": "Web design",
-		"startup": "Startup",
-		"media": "Media"
+		"services": "Hizmetler",
+		"webdev": "Web Geliştirme",
+		"webdesign": "Web Tasarımı",
+		"startup": "Başlangıç",
+		"marketing": "Pazarlama"
 	},
 	"main": {
-		"spaseservices": "Spase Servisler",
-		"spaseteam": "Spase Takim"
+		"spaseservices": "Spase Hizmetleri",
+		"spaseteam": "Spase Ekibi"
 	},
-	"navbar": {
+	"nav": {
 		"home": "Ana Sayfa",
 		"about": "Hakkında",
-		"services": "Servisler",
-		"contact": "Iletisim",
+		"contact": "İletişim",
+		"services": "Hizmetler",
 		"subjects": "Konular",
-		"portfolio": "Portfolio"
+		"portfolio": "Portföy",
+		"webdev": "Web Geliştirme",
+		"webdesign": "Web Tasarımı",
+		"startup": "Başlangıç",
+		"marketing": "Pazarlama"
+	},
+	"sectionHome": {
+		"title": "İşletmeler için dikkat çekici Web siteleri oluşturmak ve Sosyal medyayı ustalıkla kullanmak",
+		"subTitle": "Markanızı çevrimiçi olarak hayata geçiriyor, her tıklamanın değerli olmasını sağlıyoruz",
+		"contactUs": "Bize Ulaşın",
+		"viewServices": "Hizmetleri Görüntüle"
+	},
+	"sectionSteps": {
+		"webDesign": {
+			"title": "İşletmeniz için ideal web sitesini tasarlıyor ve oluşturuyoruz",
+			"description": "CodeSpace olarak, etkileyici bir çevrimiçi varlığın etkileyici bir tasarımla başladığına inanıyoruz. Uzman ekibimiz, görsel açıdan etkileyici ve kullanıcı dostu web siteleri oluşturma konusunda uzmandır ve kalıcı bir izlenim bırakır. Sade ve duyarlı web tasarımlarından, marka kimliğinizi yansıtan büyüleyici logolara kadar, ilk hizmetimiz vizyonunuzu hayata geçirmeye adanmıştır."
+		},
+		"websiteDevelopment": {
+			"title": "Web sitenizin arama görünürlüğünü en iyi SEO uygulamalarını kullanarak artırın",
+			"description": "İkinci hizmetimizle dijital varlığınızı artırın ve sadece web siteleri oluşturmaktan öteye geçin. CodeSpace'te, standart SEO uygulamalarını geliştirme sürecine sorunsuz bir şekilde entegre ediyoruz. Web siteniz sadece harika görünmekle kalmayacak, aynı zamanda arama motorları için optimize edilecek, maksimum görünürlük sağlanacak ve çevrimiçi alanınıza organik trafik yönlendirilecektir."
+		},
+		"mediaManager": {
+			"title": "Sosyal medyanızı yönetiyoruz",
+			"description": "Bugünün hızlı tempolu dijital ortamında, etkili içerik dağıtımı önemlidir. Üçüncü hizmetimiz, Medya Yöneticisi, içeriğinizi çeşitli platformlarda düzenlemenizi sağlar. Sosyal medya planlamasından içerik takvimi yönetimine kadar, mesajınızın doğru kitleye doğru zamanda ulaşmasını sağlıyoruz, çevrimiçi varlığınızı ve etkileşiminizi artırıyoruz."
+		}
 	}
 }
