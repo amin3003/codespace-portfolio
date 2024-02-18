@@ -88,6 +88,7 @@ export default class Service extends SimpleObject {
 	}
 
 	static get_single(search: string): Service | undefined {
+		if (search.includes('-')) search = String(search.split('-').shift() || '');
 		return this.get_list().find((s) => s.url === search || s.title === search);
 	}
 	static get_subservice(search: string): SubService | undefined {
