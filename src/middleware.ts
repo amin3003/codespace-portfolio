@@ -3,7 +3,6 @@ import { defaultLocale, locales } from './i18nConfig';
 import { NextRequest } from 'next/server';
 
 export default async function middleware(request: NextRequest) {
-	// Step 2: Create and call the next-intl middleware (example)
 	const handleI18nRouting = createIntlMiddleware({
 		locales: locales,
 		defaultLocale: defaultLocale,
@@ -26,8 +25,8 @@ export const config = {
 		// all requests that have a locale prefix
 		'/(en|tr)/:path*',
 
-		// Enable redirects that add missing locales
+		// Enable redirects that add missing localesw
 		// (e.g. `/pathnames` -> `/en/pathnames`)
-		'/((?!_next|_vercel|.*\\..*).*)',
+		'/((?!_next|api|_vercel|.*\\..*).*)',
 	],
 };
