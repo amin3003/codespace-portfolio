@@ -17,7 +17,12 @@
 			"view-other": "View Other",
 			"packages": "packages",
 			"popularfeatures": "Popular Features",
-			"advanced": "advanced"
+			"advanced": "advanced",
+			"fullname":"Full Name",
+			"email":"Email",
+			"write-about":"write about your project ..",
+			"contact-text":"Have a project in mind? Tell us about it! Fill out the form below with your full name, email, and a brief description of your project. When you click on each plan, we'll understand exactly what you need.Our team will get in touch with you promptly to discuss your project further and provide tailored solutions to meet your needs.",
+			"send":"Send"
 		},
 		"feature": {
 			"1-7pages": "1-7pages",
