@@ -64,12 +64,13 @@ export default function SubServiceBlock(props: {
 								);
 							})}
 						</ul>
-						<Link
-							href={`#${sub_id}`}
+						<button
+							data-subserviceid={subservice.id}
+							id={`link-${subservice.id}`}
 							className="link link-hover text-center justify-center text-primary"
 						>
 							{translate_shared('reserve')}
-						</Link>
+						</button>
 					</div>
 				</div>
 			</div>

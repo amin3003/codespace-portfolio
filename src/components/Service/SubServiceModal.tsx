@@ -5,14 +5,30 @@ import SubServiceModalController from './SubServiceModalController';
 import TextField from '../TextField/TextField';
 import clsx from 'clsx';
 import { useLocale, useTranslations } from 'next-intl';
+import { DBManager } from '@azrico/nodeserver';
+import Service from '@/data/Service';
 
 /* -------------------------------------------------------------------------- */
 
-export default function SubServiceModal(props: { defaultHash: string; children: any }) {
+export default function SubServiceModal(props: {
+	currentService: Service;
+	children?: any;
+}) {
 	const translate_shared = useTranslations('service.shared');
+
+	const itemLinkNames = props.currentService.subservices.map((r) => `link-${r.id}`);
+
+	async function submitRequest(formData: FormData) {
+		'use server';
+		await DBManager.tryToConnect();
+		const fullname = formData.get('fullname');
+		const email = formData.get('email');
+		const desc = formData.get('desc');
+		console.log(fullname, email, desc);
+	}
 	return (
 		<div>
-			<SubServiceModalController defaultHash={props.defaultHash} />
+			<SubServiceModalController itemLinkNames={itemLinkNames} />
 			<dialog id="subservice-modal" className="modal modal-bottom outline-none">
 				<div className="modal-box px-4 py-1 lg:py-4">
 					<div className={clsx('text-center item-center flex pt-2 pb-5', 'relative')}>
@@ -23,18 +39,32 @@ export default function SubServiceModal(props: { defaultHash: string; children: 
 						</form>
 					</div>
 
-					<form method="none" name="contact-form" className={clsx('flex flex-row')}>
+					<form
+						action={submitRequest}
+						method="post"
+						name="contact-form"
+						className={clsx('flex flex-row')}
+					>
 						<div className="gap-4 flex flex-col flex-[4]">
-							<TextField placeholder={translate_shared('fullname')} className="w-full" />
-							<TextField placeholder={translate_shared('email')} className="w-full" />
+							<TextField
+								name="fullname"
+								placeholder={translate_shared('fullname')}
+								className="w-full"
+							/>
+							<TextField
+								name="email"
+								placeholder={translate_shared('email')}
+								className="w-full"
+							/>
 							<textarea
+								name="desc"
 								className={clsx(
 									'textarea textarea-md textarea-bordered resize-none h-[200px] w-full',
 									'text-white'
 								)}
 								placeholder={translate_shared('write-about')}
 							/>
-							<button type="button" className="btn btn-primary">
+							<button type="submit" className="btn btn-primary">
 								{translate_shared('send')}
 							</button>
 						</div>

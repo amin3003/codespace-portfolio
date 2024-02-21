@@ -25,7 +25,7 @@ export default function ServicePackagesArea(props: { currentService: Service }) 
 					);
 				})}
 			/>
-			<SubServiceModal defaultHash="packages" />
+			<SubServiceModal currentService={currentService} />
 		</section>
 	);
 }
