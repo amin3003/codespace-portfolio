@@ -20,11 +20,24 @@ export default function SubServiceModal(props: {
 
 	async function submitRequest(formData: FormData) {
 		'use server';
-		await DBManager.tryToConnect();
 		const fullname = formData.get('fullname');
 		const email = formData.get('email');
 		const desc = formData.get('desc');
-		console.log(fullname, email, desc);
+		/* ------------------------------ insert to db ------------------------------ */
+		await DBManager.tryToConnect();
+		const result = await DBManager.handle_update(
+			'user_requests',
+			undefined,
+			{
+				fullname,
+				email,
+				desc,
+			},
+			{ noindex: true }
+		);
+		//need to refresh....
+
+		console.log(fullname, email, desc, result);
 	}
 	return (
 		<div>
