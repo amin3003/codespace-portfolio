@@ -32,8 +32,8 @@ const Form = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async ( ) => {
+ 
     await submitRequest(formData);
     ref.current?.reset();
     setFormData({
@@ -76,7 +76,10 @@ const Form = () => {
     <div>
       <form
         ref={ref}
-        onSubmit={handleSubmit}
+        action={async (formData) => {
+          await handleSubmit();
+          ref.current?.reset();
+        }} 
         method="post"
         name="contact-form"
         className={clsx('flex flex-row')}
