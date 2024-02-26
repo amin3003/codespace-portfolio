@@ -1,12 +1,23 @@
-'use server'
-
+"use server"
 import { DBManager } from "@azrico/nodeserver";
 
-export const submitRequest = async (formData: FormData) => {
+export interface CustomFormData {
+    fullname: string;
+    email: string;
+    desc: string;
+}
+
+export const submitRequest = async (formData: CustomFormData) => {
+    const { fullname, email, desc } = formData;
+
+    // Example: Create a new FormData object
+    const formDataToSend = new FormData();
     
-    const fullname = formData.get('fullname');
-    const email = formData.get('email');
-    const desc = formData.get('desc');
+    // Example: Append fields to the FormData object
+    formDataToSend.append('fullname', fullname);
+    formDataToSend.append('email', email);
+    formDataToSend.append('desc', desc);
+
     /* ------------------------------ insert to db ------------------------------ */
     await DBManager.tryToConnect();
     const result = await DBManager.handle_update(
@@ -19,7 +30,6 @@ export const submitRequest = async (formData: FormData) => {
         },
         { noindex: true }
     );
-    //need to refresh....
 
     console.log(fullname, email, desc, result);
 }
