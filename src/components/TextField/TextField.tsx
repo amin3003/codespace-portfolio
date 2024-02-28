@@ -1,15 +1,23 @@
 import clsx from 'clsx';
 import React from 'react';
+import { Modify } from '@azrico/types';
 
 export function TextField(
-	props: Partial<
-		React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+	props: Modify<
+		Partial<
+			React.DetailedHTMLProps<
+				React.InputHTMLAttributes<HTMLInputElement>,
+				HTMLInputElement
+			>
+		>,
+		{ wrapperClassName?: string }
 	>
 ) {
+	const { wrapperClassName, ...restprops } = props;
 	return (
-		<div className={clsx('relative')}>
+		<div className={clsx('relative', wrapperClassName)}>
 			<input
-				{...props}
+				{...restprops}
 				// value={props.value || ''}
 				type="text"
 				className={clsx(

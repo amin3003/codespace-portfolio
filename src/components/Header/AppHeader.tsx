@@ -13,6 +13,10 @@ export const header_paths = [
 		name: 'home',
 		path: '/',
 	},
+	{
+		name: 'requests',
+		path: '/requests',
+	},
 	...Service.get_list().map((r) => {
 		return {
 			name: r.url,
