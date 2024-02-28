@@ -64,7 +64,9 @@ export default function Footer() {
 					);
 				})}
 			</div>
-			<p className="text-xs mb-4 text-gray-400">{`Copyright © ${currentYear}- All right reserved`}</p>
+			<p className="text-xs mb-4 text-gray-400">{`Copyright © ${
+				currentYear != 2024 ? `2024-${currentYear}` : currentYear
+			} All right reserved`}</p>
 		</footer>
 	);
 }
