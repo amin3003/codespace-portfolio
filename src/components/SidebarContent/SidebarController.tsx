@@ -4,9 +4,26 @@ import { usePathname } from 'next/navigation';
 import React from 'react';
 export function SidebarController() {
 	const pathname = usePathname();
+	 
+	function getDrawer() {
+		return document.getElementById('my-drawer') as any;
+	}
+	const closeDrawer = React.useCallback(() => {
+		console.log('closeside');
+		getDrawer().checked = false;
+	}, []);
+	/* -------------------------------------------------------------------------- */
 	React.useEffect(() => {
-		const drawer = document.getElementById('my-drawer') as any;
-		if (drawer != null) drawer.checked = false;
-	}, [pathname]);
+		closeDrawer();
+	}, [pathname, closeDrawer]);
+	/* -------------------------------------------------------------------------- */
+	React.useEffect(() => {
+		const btnclose = document.getElementById('btn-close-sidebar') as HTMLElement;
+		btnclose.removeEventListener('click', closeDrawer);
+		btnclose.addEventListener('click', closeDrawer);
+		return () => {
+			btnclose.removeEventListener('click', closeDrawer);
+		};
+	}, [closeDrawer]);
 	return <></>;
 }
