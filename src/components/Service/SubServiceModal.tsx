@@ -25,16 +25,11 @@ export default function SubServiceModal(props: {
 		const desc = formData.get('desc');
 		/* ------------------------------ insert to db ------------------------------ */
 		await DBManager.tryToConnect();
-		const result = await DBManager.handle_update(
-			'user_requests',
-			undefined,
-			{
-				fullname,
-				email,
-				desc,
-			},
-			{ noindex: true }
-		);
+		const result = await DBManager.handle_update('user_requests', undefined, {
+			fullname,
+			email,
+			desc,
+		});
 		//need to refresh....
 
 		console.log(fullname, email, desc, result);
