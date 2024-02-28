@@ -8,8 +8,8 @@ import Link from '@/navigation';
 
 const social_list = [
 	{ icon: 'bi-instagram', link: 'https://www.instagram.com/codespase.en' },
-	{ icon: 'bi-discord', link: '' },
-	{ icon: 'bi-envelope', link: '' },
+	{ icon: 'bi-discord', link: 'https://discord.gg/YgrQkcvzM5' },
+	{ icon: 'bi-envelope', link: 'mailto:codespase@gmail.com' },
 ];
 export const header_paths = [
 	{
