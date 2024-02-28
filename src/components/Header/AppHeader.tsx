@@ -69,7 +69,7 @@ export default function AppHeader() {
 							</label>
 						</div>
 						<div className="flex-1 lg:hidden"></div>
-						<AppLogo className="justify-end p-3" />
+						<AppLogo logo className="justify-end p-3" />
 					</div>
 
 					<div
