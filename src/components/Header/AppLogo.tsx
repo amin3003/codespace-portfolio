@@ -11,13 +11,7 @@ export default function AppLogo(props: {
 	return (
 		<Link href="/" className={clsx('flex justify-start items-center', props.className)}>
 			{props.logo && (
-				<Image
-					src="/images/logo.svg"
-					width={38}
-					height={38}
-					className="size-[38px]"
-					alt="logo"
-				/>
+				<Image src="/images/logo-text.svg" width={100} height={50} alt="logo" />
 			)}
 
 			{props.text && (
