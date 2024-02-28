@@ -40,7 +40,7 @@ export default function SectionSteps(props: sectionProps) {
 				width={300}
 				height={200}
 				widthMain={300}
-				className="min-h-[80lvh]"
+				className="min-h-[100lvh]"
 			>
 				<h2 className="leading-10 md:leading-tight mb-4 md:text-[50px] text-[35px]">
 					{t('mediaManager.title')}

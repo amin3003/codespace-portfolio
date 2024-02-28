@@ -36,7 +36,7 @@ export default function SectionHero(props: {
 					className={clsx(
 						`${props.mirror ? 'lg:order-first' : 'lg:order-last'}`,
 						'flex-[3] p-5 opacity-30 lg:opacity-100 ',
-						'absolute h-full max-w-[400px] md:max-w-[500px] right-[15px] z-10',
+						'absolute h-full max-w-[400px] md:max-w-[500px] z-10',
 						'hidden md:flex lg:static'
 					)}
 				>
