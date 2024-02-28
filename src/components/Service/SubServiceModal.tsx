@@ -2,21 +2,19 @@ import React from 'react';
 import SubServiceModalController from './SubServiceModalController';
 import clsx from 'clsx';
 import Service from '@/data/Service';
-import Form from '../Form/Form';
+import SubServiceModalForm from './SubServiceModalForm';
 import Image from 'next/image';
 
 /* -------------------------------------------------------------------------- */
 
 export default function SubServiceModal(props: {
-  currentService: Service;
-  children?: any;
+	currentService: Service;
+	children?: any;
 }) {
-  const itemLinkNames = props.currentService.subservices.map(
-    (r) => `link-${r.id}`
-  );
-3
-  // send server data
-  return (
+	const itemLinkNames = props.currentService.subservices.map((r) => `link-${r.id}`);
+	3;
+	// send server data
+	return (
 		<div>
 			<SubServiceModalController itemLinkNames={itemLinkNames} />
 			<dialog id="subservice-modal" className="modal modal-bottom outline-none">
@@ -36,7 +34,7 @@ export default function SubServiceModal(props: {
 							</button>
 						</form>
 					</div>
-					<Form />
+					<SubServiceModalForm />
 				</div>
 				<form method="dialog" className="modal-backdrop select-none outline-none">
 					<button className="select-none outline-none">close</button>
