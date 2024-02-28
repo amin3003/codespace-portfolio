@@ -17,7 +17,7 @@ export default async function PageRequests({ searchParams }: any) {
 	return (
 		<>
 			<ThreeCanvas>
-				<OrbitPage />
+				<OrbitPage start={1} />
 				<StarPage />
 			</ThreeCanvas>
 			<div

@@ -9,7 +9,6 @@ export function SidebarController() {
 		return document.getElementById('my-drawer') as any;
 	}
 	const closeDrawer = React.useCallback(() => {
-		console.log('closeside');
 		getDrawer().checked = false;
 	}, []);
 	/* -------------------------------------------------------------------------- */
