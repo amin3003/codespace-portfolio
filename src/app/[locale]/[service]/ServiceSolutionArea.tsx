@@ -1,4 +1,4 @@
-import SectionArea from '@/components/Section/SectionArea';
+import SectionHero from '@/components/Section/SectionHero';
 import Service from '@/data/Service';
 import { useTranslations } from 'next-intl';
 
@@ -10,7 +10,7 @@ export default function ServiceSolutionArea(props: { currentService: Service }) 
 		<div className="min-h-lvh">
 			{/* solution page */}
 			<h2 className="m-0 text-center">{translate_service('solution.header')}</h2>
-			<SectionArea
+			<SectionHero
 				mirror
 				className="py-24"
 				width={512}
@@ -20,7 +20,7 @@ export default function ServiceSolutionArea(props: { currentService: Service }) 
 					<h3 className="">{translate_service('solution.title')}</h3>
 					{translate_service('solution.desc')}
 				</div>
-			</SectionArea>
+			</SectionHero>
 			{/* related posts
 			<h3 className="m-0 text-center">Related Articles</h3>
 			<div className="flex flex-row justify-center gap-4 p-4">

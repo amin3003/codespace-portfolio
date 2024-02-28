@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
-import SectionArea from '@/components/Section/SectionArea';
+import SectionHero from '@/components/Section/SectionHero';
 import ThreeCanvas from '@/components/Three/ThreeCanvas';
 import StarPage from '@/components/Three/StarPage';
 export default function PageContact() {
@@ -11,7 +11,7 @@ export default function PageContact() {
 			<ThreeCanvas>
 				<StarPage />
 			</ThreeCanvas>
-			<SectionArea
+			<SectionHero
 				title="Contact us"
 				orientation="vertical"
 				className="flex h-100lvh justify-between gap-2 flex-col"
@@ -19,7 +19,7 @@ export default function PageContact() {
 				<div>a</div>
 				<div>a</div>
 				<div>a</div>
-			</SectionArea>
+			</SectionHero>
 		</div>
 	);
 }

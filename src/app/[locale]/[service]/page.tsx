@@ -1,11 +1,11 @@
-import SectionArea from '@/components/Section/SectionArea';
+import SectionHero from '@/components/Section/SectionHero';
 import PathBreadcrumbs from '@/components/PathBreadcrumbs/PathBreadcrumbs';
 import { capitalize } from '@azrico/string';
 import Service from '@/data/Service';
 import { useTranslations } from 'next-intl';
 import ThreeCanvas from '@/components/Three/ThreeCanvas';
 import StarPage from '@/components/Three/StarPage';
-import OrbitPage from '@/components/Three/OrbitPage'; 
+import OrbitPage from '@/components/Three/OrbitPage';
 import ServiceSolutionArea from './ServiceSolutionArea';
 import ServicePackagesArea from './ServicePackagesArea';
 import ServiceMainArea from './ServiceMainArea';
@@ -20,7 +20,6 @@ export default function PageService(props: any) {
 	const currentServiceName = props.params.service;
 	const currentService = Service.get_single(currentServiceName);
 
-	
 	//service not found. return null
 	if (!currentService) return null;
 	const service_style = { '--servicecolor': currentService.color } as React.CSSProperties;

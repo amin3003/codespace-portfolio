@@ -1,8 +1,8 @@
-import Image from "next/image";
-import clsx from "clsx";
+import Image from 'next/image';
+import clsx from 'clsx';
 import { GlassTextBehind } from '../shared/GlassTextBehind';
 
-export default function SectionArea(props: {
+export default function SectionHero(props: {
 	id?: string;
 	children: any;
 	image?: any;
@@ -36,7 +36,7 @@ export default function SectionArea(props: {
 					className={clsx(
 						`${props.mirror ? 'lg:order-first' : 'lg:order-last'}`,
 						'flex-[3] p-5 opacity-30 lg:opacity-100 ',
-						'absolute h-full max-w-[400px] right-[15px] z-10',
+						'absolute h-full max-w-[400px] md:max-w-[500px] right-[15px] z-10',
 						'hidden md:flex lg:static'
 					)}
 				>
@@ -54,21 +54,6 @@ export default function SectionArea(props: {
 					) : null}
 				</div>
 			</div>
-		</section>
-	);
-	return (
-		<section
-			className={
-				'flex gap-8 ' +
-				(props.className || '') +
-				/* -------------------------- class for orientation ------------------------- */
-				(forcedFlexClass || ` flex-col md:flex-row text md:text-start`) +
-				/* --------------------------- class for text size -------------------------- */
-				''
-			}
-		>
-			<div className={clsx('flex-[3] flex flex-col w-full')}></div>
-			<div></div>
 		</section>
 	);
 }

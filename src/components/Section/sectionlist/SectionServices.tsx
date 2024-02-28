@@ -6,15 +6,15 @@ import clsx from 'clsx';
 import Link from '@/navigation';
 import Service from '@/data/Service';
 import { capitalize } from '@azrico/string';
-import SectionArea from '@c/Section/SectionArea';
+import SectionHero from '@/components/Section/SectionHero';
 import ServiceBlock from '@/components/Service/ServiceBlock';
 import SwiperLayout from '@/components/Sliders/SwiperLayout';
 
 export default function SectionServices(props: sectionProps) {
 	const services = Service.get_list();
-	 
+
 	return (
-		<SectionArea
+		<SectionHero
 			id="section-services"
 			center
 			title={'Services'}
@@ -30,6 +30,6 @@ export default function SectionServices(props: sectionProps) {
 				})}
 			/>
 			{/* <div className="flex flex-wrap justify-center gap-3 pt-20"></div> */}
-		</SectionArea>
+		</SectionHero>
 	);
 }

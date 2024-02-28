@@ -1,4 +1,4 @@
-import SectionArea from '@/components/Section/SectionArea';
+import SectionHero from '@/components/Section/SectionHero';
 import Service from '@/data/Service';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
@@ -9,12 +9,12 @@ export default function ServiceMainArea(props: { currentService: Service }) {
 	const translate_service = useTranslations('service.' + currentService.getID());
 
 	return (
-		<SectionArea center className="min-h-lvh pt-12">
+		<SectionHero center className="min-h-lvh pt-12">
 			<div className="flex flex-col gap-2">
 				<h3 className="m-0">{translate_service('title')}</h3>
 				<AccodionArea currentService={currentService} />
 			</div>
-		</SectionArea>
+		</SectionHero>
 	);
 }
 function AccodionArea(props: { currentService: Service }) {

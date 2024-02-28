@@ -1,7 +1,7 @@
 import { sectionProps } from './types';
 import React from 'react';
 import AboutSlider from '../../Sliders/AboutSlider';
-import SectionArea from '@/components/Section/SectionArea';
+import SectionHero from '@/components/Section/SectionHero';
 const team = [
 	{
 		img: '',
@@ -41,7 +41,7 @@ const team = [
 export default function SectionAbout(props: sectionProps) {
 	return <></>;
 	return (
-		<SectionArea
+		<SectionHero
 			id="section-about"
 			center
 			orientation="vertical"
@@ -49,6 +49,6 @@ export default function SectionAbout(props: sectionProps) {
 		>
 			<h4 className="text-center">About us</h4>
 			<AboutSlider data={team} />
-		</SectionArea>
+		</SectionHero>
 	);
 }

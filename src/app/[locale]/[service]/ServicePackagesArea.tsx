@@ -1,4 +1,4 @@
-import SectionArea from '@/components/Section/SectionArea';
+import SectionHero from '@/components/Section/SectionHero';
 import Service from '@/data/Service';
 import SubServiceBlock from '@/components/Service/SubServiceBlock';
 import Link from '@/navigation';
