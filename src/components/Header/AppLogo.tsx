@@ -8,10 +8,16 @@ export default function AppLogo(props: {
 	small?: boolean;
 }) {
 	return (
-		<Link href="/" className={'flex justify-start items-center w-min ' + props.className}>
-			{/* <Image src="" alt="chiztech logo" /> */}
+		<Link href="/" className={clsx('flex justify-start items-center', props.className)}>
+			<Image
+				src="/images/logo.svg"
+				width={38}
+				height={38}
+				className="size-[38px]"
+				alt="logo"
+			/>
 			{props.text && (
-				<div className={clsx(props.small ? 'text-md' : 'text-md lg:text-2xl')}>
+				<div className={clsx(props.small ? 'text-sm' : 'text-sm')}>
 					<span
 						className={'self-center font-semibold' + ' whitespace-nowrap text-primary'}
 					>

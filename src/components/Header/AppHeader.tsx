@@ -46,7 +46,7 @@ export default function AppHeader() {
 			>
 				<ScrollDetector />
 				<React.Suspense fallback={null}>
-					<div>
+					<div className="flex-1 lg:flex-none">
 						<div className="flex-none lg:hidden">
 							<label
 								htmlFor="my-drawer"
@@ -68,7 +68,8 @@ export default function AppHeader() {
 								</svg>
 							</label>
 						</div>
-						<AppLogo text className="navbar-start hidden lg:flex" />
+						<div className="flex-1 lg:hidden"></div>
+						<AppLogo className="justify-end p-3" />
 					</div>
 
 					<div
