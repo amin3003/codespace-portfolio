@@ -9,12 +9,13 @@ export default function ServiceMainArea(props: { currentService: Service }) {
 	const translate_service = useTranslations('service.' + currentService.getID());
 
 	return (
-		<SectionHero center className="min-h-lvh pt-12">
-			<div className="flex flex-col gap-2">
+		<div className="min-h-lvh pt-24 flex">
+			<div className="flex-[5] flex flex-col gap-2">
 				<h3 className="m-0">{translate_service('title')}</h3>
 				<AccodionArea currentService={currentService} />
 			</div>
-		</SectionHero>
+			<div className="flex-[6]"></div>
+		</div>
 	);
 }
 function AccodionArea(props: { currentService: Service }) {

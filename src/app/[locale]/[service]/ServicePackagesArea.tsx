@@ -1,10 +1,9 @@
-import SectionHero from '@/components/Section/SectionHero';
 import Service from '@/data/Service';
 import SubServiceBlock from '@/components/Service/SubServiceBlock';
-import Link from '@/navigation';
 import SwiperLayout from '@/components/Sliders/SwiperLayout';
 import { useTranslations } from 'next-intl';
 import SubServiceModal from '@/components/Service/SubServiceModal';
+import { capitalize } from '@azrico/string';
 export default function ServicePackagesArea(props: { currentService: Service }) {
 	const currentService = props.currentService;
 
@@ -15,7 +14,7 @@ export default function ServicePackagesArea(props: { currentService: Service }) 
 			id="packages"
 			className="flex flex-col flex-wrap min-h-lvh justify-center align-middle pb-32"
 		>
-			<h2 className="text-center">{translate_shared('packages')}</h2>
+			<h2 className="text-center">{capitalize(translate_shared('packages'))}</h2>
 
 			<SwiperLayout
 				className={'pt-8'}

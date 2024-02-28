@@ -1,8 +1,7 @@
 // "use client";
 import MockupSite from "@c/MockupSite/MockupSite";
 import SectionHero from '@/components/Section/SectionHero';
-import { sectionProps } from './types';
-import Image from 'next/image';
+import { sectionProps } from './types'; 
 import { useTranslations } from 'next-intl';
 export default function SectionSteps(props: sectionProps) {
 	const t = useTranslations('sectionSteps');

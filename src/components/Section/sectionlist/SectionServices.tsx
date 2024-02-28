@@ -9,27 +9,19 @@ import { capitalize } from '@azrico/string';
 import SectionHero from '@/components/Section/SectionHero';
 import ServiceBlock from '@/components/Service/ServiceBlock';
 import SwiperLayout from '@/components/Sliders/SwiperLayout';
+import { GlassTextBehind } from '@/components/shared/GlassTextBehind';
 
 export default function SectionServices(props: sectionProps) {
 	const services = Service.get_list();
 
 	return (
-		<SectionHero
-			id="section-services"
-			center
-			title={'Services'}
-			dynamicMargin
-			dynamicTitleSize
-			orientation="vertical"
-			className="min-h-lvh mt-20"
-		>
+		<GlassTextBehind title={'Services'} center dynamicMargin dynamicTitleSize>
 			<SwiperLayout
-				className={'pt-8'}
+				className={'py-16'}
 				content={services.map((r, i) => {
 					return <ServiceBlock service={r} key={i} />;
 				})}
 			/>
-			{/* <div className="flex flex-wrap justify-center gap-3 pt-20"></div> */}
-		</SectionHero>
+		</GlassTextBehind>
 	);
 }

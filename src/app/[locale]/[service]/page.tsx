@@ -1,8 +1,6 @@
-import SectionHero from '@/components/Section/SectionHero';
 import PathBreadcrumbs from '@/components/PathBreadcrumbs/PathBreadcrumbs';
-import { capitalize } from '@azrico/string';
+
 import Service from '@/data/Service';
-import { useTranslations } from 'next-intl';
 import ThreeCanvas from '@/components/Three/ThreeCanvas';
 import StarPage from '@/components/Three/StarPage';
 import OrbitPage from '@/components/Three/OrbitPage';

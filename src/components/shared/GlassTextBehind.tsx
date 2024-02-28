@@ -15,7 +15,7 @@ export function GlassTextBehind(
 				className={clsx(
 					'opacity-20 select-none !leading-none !m-0 !p-0',
 					props.center && 'text-center',
-					props.dynamicTitleSize ? 'text-[20vw]' : 'text-[260px]'
+					props.dynamicTitleSize ? 'text-[min(20vw,260px)]' : 'text-[260px]'
 				)}
 			>
 				{props.title}

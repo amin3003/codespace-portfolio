@@ -1,5 +1,6 @@
 import SectionHero from '@/components/Section/SectionHero';
 import Service from '@/data/Service';
+import { capitalize } from '@azrico/string';
 import { useTranslations } from 'next-intl';
 
 export default function ServiceSolutionArea(props: { currentService: Service }) {
