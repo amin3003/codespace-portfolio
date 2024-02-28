@@ -1,5 +1,6 @@
 import Image from "next/image";
 import clsx from "clsx";
+import { GlassTextBehind } from '../shared/GlassTextBehind';
 
 export default function SectionArea(props: {
 	id?: string;
@@ -22,9 +23,41 @@ export default function SectionArea(props: {
 
 	const forcedFlexClass =
 		props.orientation == null ? '' : isVertical ? ` flex-col` : ` flex-row`;
+
+	return (
+		<section id={props.id || undefined} className={clsx('hero', props.className)}>
+			<div
+				className={clsx('hero-content h-full flex-col relative', 'lg:gap-8 lg:flex-row')}
+			>
+				<div className="flex-[5] z-20">
+					<GlassTextBehind {...props}>{props.children}</GlassTextBehind>
+				</div>
+				<div
+					className={clsx(
+						`${props.mirror ? 'lg:order-first' : 'lg:order-last'}`,
+						'flex-[3] p-5 opacity-30 lg:opacity-100 ',
+						'absolute h-full max-w-[400px] right-[15px] z-10',
+						'hidden md:flex lg:static'
+					)}
+				>
+					{typeof props.image === 'string' ? (
+						<figure className="m-auto">
+							<Image
+								src={`/images/${props.image}.webp`}
+								width={props.width || 256}
+								height={props.height || props.width || 256}
+								alt={props.image}
+							/>
+						</figure>
+					) : props.image != null ? (
+						props.image
+					) : null}
+				</div>
+			</div>
+		</section>
+	);
 	return (
 		<section
-			id={props.id || undefined}
 			className={
 				'flex gap-8 ' +
 				(props.className || '') +
@@ -34,57 +67,8 @@ export default function SectionArea(props: {
 				''
 			}
 		>
-			<div
-				className={clsx(
-					'flex-[3] flex flex-col w-full',
-					`${props.mirror ? 'order-last' : 'order-first'}`
-				)}
-			>
-				{props.title != null && (
-					<h1
-						className={clsx(
-							'opacity-20 select-none !leading-none !m-0 !p-0',
-							props.center && 'text-center',
-							props.dynamicTitleSize ? 'text-[20vw]' : 'text-[260px]'
-						)}
-					>
-						{props.title}
-					</h1>
-				)}
-
-				<div
-					className={
-						props.title != null
-							? clsx(
-									props.dynamicMargin
-										? 'mt-[-5vw] md:mt-[-100px] lg:mt-[-160px]'
-										: 'mt-[-160px]'
-							  )
-							: ''
-					}
-				>
-					{props.children}
-				</div>
-			</div>
-			<div
-				className={clsx(
-					'flex-[2] m-auto justify-center hidden md:flex',
-					props.imageClass
-				)}
-			>
-				{typeof props.image === 'string' ? (
-					<figure>
-						<Image
-							src={`/images/${props.image}.webp`}
-							width={props.width || 256}
-							height={props.height || props.width || 256}
-							alt={props.image}
-						/>
-					</figure>
-				) : props.image != null ? (
-					props.image
-				) : null}
-			</div>
+			<div className={clsx('flex-[3] flex flex-col w-full')}></div>
+			<div></div>
 		</section>
 	);
 }

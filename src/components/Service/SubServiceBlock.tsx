@@ -41,7 +41,7 @@ export default function SubServiceBlock(props: {
 					<div className="flex-1 flex flex-col gap-6">
 						<div className="h-[150px] flex flex-col">
 							<b className="card-title text-center justify-center">
-								{translate_shared(subservice.title)}
+								{capitalize(translate_shared(subservice.title))}
 							</b>
 							<p className="flex flex-1 flex-col gap-1 text-center py-3">
 								<span>{translate_shared('starting-from')}</span>
