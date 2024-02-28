@@ -1,6 +1,7 @@
 {
 	"service": {
 		"shared": {
+			"contactus": "Ileteşime geçin",
 			"see-packages": "paketlere bak",
 			"features": "özellikler",
 			"pricing-overview": "fiyatlandırma genel bakış",
