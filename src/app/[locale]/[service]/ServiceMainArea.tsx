@@ -10,11 +10,11 @@ export default function ServiceMainArea(props: { currentService: Service }) {
 
 	return (
 		<div className="min-h-lvh pt-24 flex">
-			<div className="flex-[5] flex flex-col gap-2">
+			<div className="max-w-[720px] flex flex-col gap-2">
 				<h3 className="m-0">{translate_service('title')}</h3>
 				<AccodionArea currentService={currentService} />
 			</div>
-			<div className="flex-[6]"></div>
+			<div className="hidden md:flex"></div>
 		</div>
 	);
 }

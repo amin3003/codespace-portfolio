@@ -4,6 +4,7 @@ import StarPage from '@c/Three/StarPage';
 import OrbitPage from '@c/Three/OrbitPage';
 import TextField from '@/components/TextField/TextField';
 import { DBManager } from '@azrico/nodeserver';
+import RequestLine from './RequestLine';
 
 //component to test database code
 export default async function PageRequests({ searchParams }: any) {
@@ -41,9 +42,9 @@ export default async function PageRequests({ searchParams }: any) {
 				{records_in_db.length > 0 ? (
 					<>
 						<h4>here is a list of your requests:</h4>
-						<ol className="list list-disc p-4">
+						<ol className="list p-4">
 							{records_in_db.map((r: any, i: number) => {
-								return <li key={i}>{r.desc}</li>;
+								return <RequestLine key={i} index={i} item={r} />;
 							})}
 						</ol>
 					</>

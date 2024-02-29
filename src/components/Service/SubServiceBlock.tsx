@@ -28,7 +28,7 @@ export default function SubServiceBlock(props: {
 	return (
 		<div
 			id={sub_id}
-			className="indicator w-[300px] md:w-[240px] h-full"
+			className="indicator w-[300px] md:w-[240px] min-h-[480px] h-full"
 			style={subservice_style}
 		>
 			<div
