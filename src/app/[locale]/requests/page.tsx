@@ -5,6 +5,7 @@ import OrbitPage from '@c/Three/OrbitPage';
 import TextField from '@/components/TextField/TextField';
 import { DBManager } from '@azrico/nodeserver';
 import RequestLine from './RequestLine';
+import { date_cmp, wrap_array } from '@azrico/object';
 
 //component to test database code
 export default async function PageRequests({ searchParams }: any) {
@@ -12,7 +13,9 @@ export default async function PageRequests({ searchParams }: any) {
 	let records_in_db: any[] = [];
 	if (email) {
 		await DBManager.tryToConnect();
-		records_in_db = await DBManager.find('user_requests', { email });
+		records_in_db = wrap_array(await DBManager.find('user_requests', { email: email }))
+			.sort(date_cmp)
+			.reverse();
 	}
 
 	return (
