@@ -13,9 +13,8 @@ export default async function PageRequests({ searchParams }: any) {
 	let records_in_db: any[] = [];
 	if (email) {
 		await DBManager.tryToConnect();
-		records_in_db = wrap_array(await DBManager.find('user_requests', { email: email }))
-			.sort(date_cmp)
-			.reverse();
+		const reqs = await DBManager.find('user_requests', { email: email });
+		records_in_db = wrap_array(reqs).sort(date_cmp).reverse();
 	}
 
 	return (
@@ -39,7 +38,9 @@ export default async function PageRequests({ searchParams }: any) {
 							wrapperClassName="flex-1"
 							placeholder={'Mail'}
 						/>
-						<button className="btn btn-ghost">Search</button>
+						<button type="submit" className="btn btn-ghost">
+							Search
+						</button>
 					</div>
 				</form>
 				{records_in_db.length > 0 ? (
