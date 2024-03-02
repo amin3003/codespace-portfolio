@@ -122,6 +122,15 @@
 				"title": "What is a startup package?",
 				"desc": "In our startup package, we provide comprehensive support to enhance your startup. From web design, logo design, and graphic design to media marketing services, we cover all the essentials to bolster your online presence. Our offerings ensure that your business gains visibility and recognition on the internet, aiding in its growth and success."
 			}
+		},
+		"design": {
+			"title": "Design",
+			"long_desc": "we are your design service provider",
+			"solution": {
+				"header": "Understanding the Role of a Designer",
+				"title": "What Is a Designer?",
+				"desc": ""
+			}
 		}
 	},
 	"path": {
