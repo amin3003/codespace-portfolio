@@ -14,11 +14,7 @@ const SubServiceModalForm = () => {
 	const locale = useLocale();
 	const currentLocaleName = localeNames[locale] || localeNames[defaultLocale];
 
-	const [formData, setFormData] = useState<any>({
-		fullname: undefined,
-		email: undefined,
-		desc: undefined,
-	});
+	const [formData, setFormData] = useState<any>({});
 
 	const [errors, setErrors] = useState<Partial<CustomFormData>>({});
 
@@ -32,14 +28,20 @@ const SubServiceModalForm = () => {
 		}));
 	};
 
-	const handleSubmit = async () => {
-		await submitRequest(formData);
-		ref.current?.reset();
-		setFormData({
-			fullname: undefined,
-			email: undefined,
-			desc: undefined,
+	const handleSubmit = async (fd: FormData) => {
+		/*
+		we are actually not using the `FormData State`
+		we use `fd: FormData` that the <form> sends us
+		the `FormData State` is only used for error handling
+		*/
+		await submitRequest({
+			serviceid: String(fd.get('serviceid')),
+			fullname: String(fd.get('fullname')),
+			email: String(fd.get('email')),
+			desc: String(fd.get('desc')),
 		});
+		ref.current?.reset();
+		setFormData({});
 	};
 
 	const isValidEmail = (email: string) => {
@@ -75,15 +77,17 @@ const SubServiceModalForm = () => {
 		<div>
 			<form
 				ref={ref}
-				action={async (formData) => {
-					await handleSubmit();
+				action={async (fd: FormData) => {
+					await handleSubmit(fd);
 					ref.current?.reset();
 				}}
 				method="post"
+				id="contact-form"
 				name="contact-form"
 				className={clsx('flex flex-row')}
 			>
 				<div className="gap-4 flex flex-col flex-[4]">
+					<input hidden id="subservice-modal-serviceid" name="serviceid"></input>
 					<TextField
 						name="fullname"
 						value={formData.fullname ?? ''}

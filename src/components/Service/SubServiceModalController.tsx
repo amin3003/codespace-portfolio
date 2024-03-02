@@ -16,7 +16,6 @@ const getHash = () =>
 
 export default function SubServiceModalController(props: { itemLinkNames: string[] }) {
 	const modalRef = React.useRef<HTMLDialogElement>();
-	const [hash, set_hash] = React.useState(getHash());
 
 	const [currentSubService, set_currentSubService] = React.useState<SubService>();
 	const [currentService, set_currentService] = React.useState<Service>();
@@ -46,6 +45,10 @@ export default function SubServiceModalController(props: { itemLinkNames: string
 	React.useEffect(() => {
 		if (!modalRef.current) return;
 		if (currentSubService) modalRef.current.showModal();
+		document.getElementsByName('serviceid').forEach((e) => {
+			const ssid = currentSubService?.getID() || 'default';
+			e.setAttribute('value', ssid);
+		});
 	}, [currentSubService]);
 	/* --------------------------------- events --------------------------------- */
 	React.useEffect(() => {
