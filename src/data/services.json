@@ -95,6 +95,54 @@
 		]
 	},
 	{
+		"color": "#9FA8DA",
+		"url": "design",
+		"icon": "bi-window-stack",
+		"solution_image": "quatifired",
+		"features": [
+			["cardvisit", "cardvisit"],
+			["logodesign", "1logo"],
+			["letterhead", "letterhead"],
+			["poster", "poster"],
+			["notesheet", "notesheet"],
+			["brand-typography", "brand-typography"],
+			["bussinesscard", "bussinesscard"]
+		],
+		"subservices": [
+			{
+				"title": "basic",
+				"color": "#81D4FA",
+				"price": {
+					"tr": "400",
+					"en": 29
+				},
+				"features": []
+			},
+			{
+				"title": "standard",
+				"color": "#E6EE9C",
+				"price": {
+					"tr": "800",
+					"en": 49
+				},
+				"features": [
+					["brochure", "brochure"],
+					["calender", "calender"],
+					["banner", "banner"]
+				]
+			},
+			{
+				"title": "advanced",
+				"color": "#FF8A65",
+				"price": {
+					"tr": "1000",
+					"en": 69
+				},
+				"features": [["videoediting", "videoediting"]]
+			}
+		]
+	},
+	{
 		"color": "#0d9488",
 		"url": "startup",
 		"icon": "bi-code-slash",

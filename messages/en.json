@@ -71,7 +71,17 @@
 			"5story": "5 Stories Per Day",
 			"Business-Development": "Business Development",
 			"Coach-way": "Coach Way",
-			"15videos": "Make 15 Videos If You Are In Izmir"
+			"15videos": "Make 15 Videos If You Are In Izmir",
+			"letterhead": "Letterhead",
+			"poster": "Poster",
+			"notesheet": "Notesheet",
+			"calender": "Calender",
+			"brand-typography": "Typography",
+			"brochure": "Brochure",
+			"banner": "Banner",
+			"videoediting": "Video editing",
+			"cardvisit": "Card visit",
+			"bussinesscard": "Bussiness card"
 		},
 		"webdesign": {
 			"title": "Web Design",
@@ -135,6 +145,7 @@
 		"portfolio": "Portfolio",
 		"webdev": "Web Developement",
 		"webdesign": "Web design",
+		"design": "Design",
 		"startup": "Startup",
 		"marketing": "Marketing"
 	},
