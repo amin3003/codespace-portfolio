@@ -2,6 +2,7 @@ import clsx from 'clsx';
 
 export function GlassTextBehind(
 	props: Partial<{
+		id?: string;
 		center: boolean;
 		dynamicTitleSize: boolean;
 		dynamicMargin: boolean;
@@ -10,7 +11,7 @@ export function GlassTextBehind(
 	}>
 ) {
 	return (
-		<div>
+		<div id={props.id || undefined}>
 			<h1
 				className={clsx(
 					'opacity-20 select-none !leading-none !m-0 !p-0',

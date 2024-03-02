@@ -15,7 +15,13 @@ export default function SectionServices(props: sectionProps) {
 	const services = Service.get_list();
 
 	return (
-		<GlassTextBehind title={'Services'} center dynamicMargin dynamicTitleSize>
+		<GlassTextBehind
+			id="section-services"
+			title={'Services'}
+			center
+			dynamicMargin
+			dynamicTitleSize
+		>
 			<SwiperLayout
 				className={'py-16'}
 				content={services.map((r, i) => {
