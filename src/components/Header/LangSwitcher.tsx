@@ -25,12 +25,16 @@ export default function LangSwitcher(props: {
     //only pushing the new locale should be enough,
     //but to avoid very rare errors we fully reload the page
     if (FULL_RELOAD) {
-		//test fix1: reload the page if the path is not changed after 1sec
+      //test fix1: reload the page if the path is not changed after 1sec
       setTimeout(() => {
         if (!window.location.pathname.includes(newLocale)) {
-          console.log('path is NOT OK reload :',newLocale,window.location.pathname);
-           location.reload()
-        }   
+          console.log(
+            'path is NOT OK reload :',
+            newLocale,
+            window.location.pathname
+          );
+          location.reload();
+        }
       }, 1000);
     }
   }
