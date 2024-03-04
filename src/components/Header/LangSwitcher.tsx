@@ -10,6 +10,7 @@ export default function LangSwitcher(props: {
   className?: string;
   openUp?: boolean;
 }) {
+  const [isLoading, set_isLoading] = React.useState(false);
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -20,6 +21,7 @@ export default function LangSwitcher(props: {
    * @param newLocale
    */
   function switchLang(newLocale = 'en') {
+    set_isLoading(true);
     router.push(pathname, { locale: newLocale }); //update the url to new url
 
     //only pushing the new locale should be enough,
@@ -35,6 +37,7 @@ export default function LangSwitcher(props: {
           );
           location.reload();
         }
+        set_isLoading(false);
       }, 1000);
     }
   }
@@ -48,15 +51,23 @@ export default function LangSwitcher(props: {
           `${props.openUp ? 'dropdown-top' : 'dropdown-bottom'}`
         )}
       >
-        <button tabIndex={0} role="button" className="btn btn-sm btn-ghost">
+        <button
+          tabIndex={0}
+          role="button"
+          className="btn btn-sm btn-ghost flex flex-col"
+        >
           <div className="flex flex-row gap-2">
+            {isLoading && (
+              <span className="loading loading-dots loading-md"></span>
+            )}
+
             <i
               className={clsx(
-                'bi',
+                'bi items-center flex',
                 props.openUp ? 'bi-chevron-up' : 'bi-chevron-down'
               )}
             ></i>
-            <p>{currentLocaleName}</p>
+            <p className="items-center flex">{currentLocaleName}</p>
           </div>
         </button>
 
