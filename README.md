@@ -30,7 +30,7 @@ Frontend:
 ---
 
 🛠️ Run Locally
-
+```bash
 git clone https://github.com/YourUsername/codespace-portfolio.git
 cd codespace-portfolio
 npm install
