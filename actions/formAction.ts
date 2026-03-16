@@ -20,6 +20,6 @@ export const submitRequest = async (formData: CustomFormData) => {
       email,
       desc,
     },
-    { noindex: true, user: formData },
+    { noindex: true, user: {} as any },
   );
 };
