@@ -9,8 +9,8 @@
 				"title": "basic",
 				"color": "#81D4FA",
 				"price": {
-					"tr": "999",
-					"en": 49
+					"tr": "3000",
+					"en": 55
 				},
 				"features": [
 					["pages", "1-7pages"],
@@ -21,8 +21,8 @@
 				"title": "standard",
 				"color": "#E6EE9C",
 				"price": {
-					"tr": "1499",
-					"en": 69
+					"tr": "4500",
+					"en": 100
 				},
 				"features": [["pages", "1-10pages"], ["logo", "2logo"], "motion", "media-kit"]
 			},
@@ -30,8 +30,8 @@
 				"title": "advanced",
 				"color": "#FF8A65",
 				"price": {
-					"tr": "1999",
-					"en": 99
+					"tr": "6000",
+					"en": 200
 				},
 				"features": [
 					["pages", "+10pages"],
@@ -59,8 +59,8 @@
 				"title": "basic",
 				"color": "#81D4FA",
 				"price": {
-					"tr": "5499",
-					"en": 69
+					"tr": "7500",
+					"en": 150
 				},
 				"features": [
 					["pages", "1-7pages"],
@@ -72,8 +72,8 @@
 				"title": "standard",
 				"color": "#E6EE9C",
 				"price": {
-					"tr": "7499",
-					"en": 99
+					"tr": "9500",
+					"en": 250
 				},
 				"features": [
 					["pages", "1-10pages"],
@@ -87,8 +87,8 @@
 				"title": "e-commerce",
 				"color": "#FF8A65",
 				"price": {
-					"tr": "9499",
-					"en": 129
+					"tr": "15000",
+					"en": 350
 				},
 				"features": [["pages", "+10pages"], ["support", "1+6-support"], "online-shop"]
 			}
@@ -163,8 +163,8 @@
 				"title": "basic",
 				"color": "#81D4FA",
 				"price": {
-					"tr": "5499",
-					"en": 149
+					"tr": "20000",
+					"en": 500
 				},
 				"features": [
 					["pages", "1-7pages"],
@@ -175,8 +175,8 @@
 				"title": "standard",
 				"color": "#E6EE9C",
 				"price": {
-					"tr": "8499",
-					"en": 249
+					"tr": "25000",
+					"en": 600
 				},
 				"features": [
 					["pages", "1-10pages"],
@@ -191,8 +191,8 @@
 				"title": "advanced",
 				"color": "#FF8A65",
 				"price": {
-					"tr": "11499",
-					"en": 349
+					"tr": "30000",
+					"en": 700
 				},
 				"features": [
 					["pages", "+10pages"],

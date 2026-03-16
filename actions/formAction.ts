@@ -13,13 +13,13 @@ export const submitRequest = async (formData: CustomFormData) => {
 	/* ------------------------------ insert to db ------------------------------ */
 	await DBManager.tryToConnect();
 	const result = await DBManager.insert(
-		'user_requests',
-		{
-			serviceid: serviceid || 'serviceid',
-			fullname,
-			email,
-			desc,
-		},
-		{ noindex: true }
-	);
+    'user_requests',
+    {
+      serviceid: serviceid || 'serviceid',
+      fullname,
+      email,
+      desc,
+    },
+    { noindex: true, user: formData },
+  );
 };
